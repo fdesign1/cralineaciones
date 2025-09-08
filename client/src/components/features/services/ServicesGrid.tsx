@@ -6,43 +6,43 @@ const services = [
   {
     title: 'Professional Detailing',
     imageUrl: '/assets/detailing.jpg',
-    href: '/services/detailing',
+    href: '/services#detailing', // Example, assuming this service will be added later
     gridClass: 'md:col-span-2',
   },
   {
     title: 'Auto Spa Zone',
     imageUrl: '/assets/auto-spa.jpg',
-    href: '/services/auto-spa',
+    href: '/services#auto-spa', // Example, assuming this service will be added later
     gridClass: 'md:col-span-1',
   },
   {
     title: 'Vehicle Inspection',
     imageUrl: '/assets/inspection.jpg',
-    href: '/services/inspection',
+    href: '/services#inspection', // Example, assuming this service will be added later
     gridClass: 'md:col-span-1',
   },
   {
     title: 'Vehicle Mechanics',
     imageUrl: '/assets/mechanics.jpg',
-    href: '/services/mechanics',
+    href: '/services#mechanics', // Example, assuming this service will be added later
     gridClass: 'md:col-span-1',
   },
   {
     title: 'Suspension Geometry',
     imageUrl: '/assets/alignment.jpg',
-    href: '/services/3d-alignment',
+    href: '/services#3d-alignment',
     gridClass: 'md:col-span-1',
   },
   {
     title: 'Tire Service',
     imageUrl: '/assets/tires.jpg',
-    href: '/services/wheel-alignment',
+    href: '/services#wheel-alignment',
     gridClass: 'md:col-span-1',
   },
   {
     title: 'Air Conditioning',
     imageUrl: '/assets/ac.jpg',
-    href: '/services/ac-service',
+    href: '/services#ac-service', // Example, assuming this service will be added later
     gridClass: 'md:col-span-2',
   },
 ];

@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { HomePage } from '@/pages/HomePage';
+import { ServicesPage } from '@/pages/ServicesPage';
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<HomePage />} />
-            {/* Define other routes here for Services and Contact pages when they are created */}
+            <Route path="/services" element={<ServicesPage />} />
+            {/* Define other routes here for Contact page when it is created */}
           </Routes>
         </main>
         <Footer />

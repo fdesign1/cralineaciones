@@ -15,11 +15,11 @@ interface NavigationProps {
 }
 
 const services = [
-  { name: 'Oil Service', href: '/services/oil-service' },
-  { name: 'Brakes', href: '/services/brakes' },
-  { name: 'Suspension', href: '/services/suspension' },
-  { name: '3D Alignment', href: '/services/3d-alignment' },
-  { name: 'Wheel Alignment', href: '/services/wheel-alignment' },
+  { name: 'Oil Service', href: '/services#oil-service' },
+  { name: 'Brakes', href: '/services#brakes' },
+  { name: 'Suspension', href: '/services#suspension' },
+  { name: '3D Alignment', href: '/services#3d-alignment' },
+  { name: 'Wheel Alignment', href: '/services#wheel-alignment' },
 ];
 
 export function Navigation({ isMobile = false, onLinkClick }: NavigationProps) {
