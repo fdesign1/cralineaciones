@@ -1,14 +1,22 @@
-import * as React from 'react';
-import { Button } from '@/components/ui/button';
 
-// Extract the error message
+import * as React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Header } from '@/components/layout/Header';
+import { HomePage } from '@/pages/HomePage';
+
 function App() {
   return (
-    <div className="min-h-screen">
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold">Instance starter</h1>
+    <Router>
+      <div className="min-h-screen flex flex-col bg-background text-foreground">
+        <Header />
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            {/* Define other routes here for Services and Contact pages when they are created */}
+          </Routes>
+        </main>
       </div>
-    </div>
+    </Router>
   );
 }
 
