@@ -2,6 +2,7 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from '@/components/layout/Header';
+import { Footer } from '@/components/layout/Footer';
 import { HomePage } from '@/pages/HomePage';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
             {/* Define other routes here for Services and Contact pages when they are created */}
           </Routes>
         </main>
+        <Footer />
       </div>
     </Router>
   );
