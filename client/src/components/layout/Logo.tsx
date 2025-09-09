@@ -6,10 +6,13 @@ interface LogoProps {
   className?: string;
 }
 
-export function Logo({ className }: LogoProps) {
+export function Logo({ className, imgUrl }: LogoProps) {
   return (
     <Link to="/" className={cn("flex items-center space-x-2", className)}>
-      <span className="font-bold text-lg">CR alineaciones</span>
-    </Link>
+ <img
+        src="https://i.imgur.com/zhJjDfK.png"
+        alt="Logo CR Alineaciones"
+        className="h-14 w-auto ml-4" // Ajusta la altura según necesites
+      />    </Link>
   );
 }

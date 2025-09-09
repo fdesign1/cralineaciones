@@ -5,45 +5,52 @@ import { ServiceCard } from "./ServiceCard";
 const services = [
   {
     title: "Cambio de Aceite",
-    imageUrl: "/assets/detailing.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     href: "/services#detailing", // Example, assuming this service will be added later
     gridClass: "md:col-span-2",
+    overlay: "bg-black/80"
   },
   {
     title: "Frenos",
-    imageUrl: "/assets/auto-spa.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1613214150384-14921ff659b2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YnJha2VzJTIwY2FyfGVufDB8fDB8fHwy",
     href: "/services#auto-spa", // Example, assuming this service will be added later
     gridClass: "md:col-span-1",
+    overlay: "bg-red-900/70"
   },
   {
     title: "Balanceo Computado",
-    imageUrl: "/assets/inspection.jpg",
+    imageUrl: "https://i.imgur.com/pNJC9wT.jpeg",
     href: "/services#inspection", // Example, assuming this service will be added later
     gridClass: "md:col-span-1",
+    overlay: "bg-black/60"
   },
   {
     title: "Lubricentro",
-    imageUrl: "/assets/mechanics.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1642075223291-f9ec545889fa?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     href: "/services#mechanics", // Example, assuming this service will be added later
     gridClass: "md:col-span-1",
+    overlay: "bg-red-900/70"
   },
   {
     title: "Alineación 3D",
-    imageUrl: "/assets/alignment.jpg",
+    imageUrl: "https://i.imgur.com/pNJC9wT.jpeg",
     href: "/services#3d-alignment",
     gridClass: "md:col-span-1",
+    overlay: "bg-black/60"
   },
   {
     title: "Tren Delantero",
-    imageUrl: "/assets/tires.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1640021042525-5610f9f75444?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     href: "/services#wheel-alignment",
     gridClass: "md:col-span-1",
+    overlay: "bg-red-900/70"
   },
   {
     title: "Enderezado de Llantas",
-    imageUrl: "/assets/ac.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1596923220081-3ed95f568a8f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     href: "/services#ac-service", // Example, assuming this service will be added later
     gridClass: "md:col-span-2",
+    overlay: "bg-black/60"
   },
 ];
 
@@ -63,6 +70,8 @@ export function ServicesGrid() {
             imageUrl={service.imageUrl}
             href={service.href}
             className={service.gridClass}
+            overlay={service.overlay}
+
           />
         ))}
       </div>

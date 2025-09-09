@@ -14,12 +14,12 @@ export function Footer() {
               CR Alineaciones Lubricentro
             </h3>
             <p className="text-sm text-muted-foreground">
-              123 Automotive Lane
+              Remedios de Escalada 366
               <br />
-              Car City, ST 12345
+              Bahía Blanca, B8000
             </p>
             <p className="text-sm text-muted-foreground mt-2">
-              Phone: +54 9 291 446-0056
+              Teléfono: +54 9 291 446-0056
             </p>
             <p className="text-sm text-muted-foreground mt-1">
               Email: contacto@cralineaciones.com
@@ -43,8 +43,16 @@ export function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-4">Nuestra ubicación</h3>
             <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
-              <p className="text-muted-foreground text-sm">Mapa</p>
-            </div>
+   <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.4585442593675!2d-62.24657642402484!3d-38.730238571760324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95eda312c15fc1cd%3A0x50b1cf900bcdcd5d!2sCR%20ALINEACIONES%20LUBRICENTRO!5e0!3m2!1ses-419!2spl!4v1757430983622!5m2!1ses-419!2spl"
+      width="600"
+      height="200"
+      style={{ border: 0 }}
+      allowFullScreen
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      title="Ubicación CR Alineaciones"
+    />            </div>
           </div>
         </div>
         <div className="border-t border-border/40 mt-8 pt-6 text-center text-sm text-muted-foreground">
