@@ -1,3 +1,4 @@
+
 import * as React from "react";
 import { ServiceCard } from "./ServiceCard";
 
@@ -53,17 +54,17 @@ export function ServicesGrid() {
         <h2 className="text-3xl font-bold text-center mb-12">
           Nuestros Servicios
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-          {services.map((service) => (
-            <ServiceCard
-              key={service.title}
-              title={service.title}
-              imageUrl={service.imageUrl}
-              href={service.href}
-              className={service.gridClass}
-            />
-          ))}
-        </div>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3">
+        {services.map((service) => (
+          <ServiceCard
+            key={service.title}
+            title={service.title}
+            imageUrl={service.imageUrl}
+            href={service.href}
+            className={service.gridClass}
+          />
+        ))}
       </div>
     </section>
   );

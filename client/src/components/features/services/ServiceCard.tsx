@@ -2,7 +2,6 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 import { ArrowRight } from 'lucide-react';
 
@@ -15,7 +14,7 @@ interface ServiceCardProps {
 
 export function ServiceCard({ title, imageUrl, href, className }: ServiceCardProps) {
   return (
-    <Card className={cn('group relative overflow-hidden rounded-lg shadow-lg', className)}>
+    <div className={cn('group relative overflow-hidden', className)}>
       <Link to={href} className="absolute inset-0 z-10">
         <span className="sr-only">View {title}</span>
       </Link>
@@ -30,6 +29,6 @@ export function ServiceCard({ title, imageUrl, href, className }: ServiceCardPro
           Learn More <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </div>
-    </Card>
+    </div>
   );
 }
