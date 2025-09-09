@@ -14,11 +14,13 @@ interface NavigationProps {
 }
 
 const services = [
-  { name: "Cambio de Aceite", href: "/services#oil-service" },
-  { name: "Frenos", href: "/services#brakes" },
-  { name: "Suspensión", href: "/services#suspension" },
-  { name: "Alineación 3D", href: "/services#3d-alignment" },
-  { name: "Balanceo de Ruedas", href: "/services#wheel-alignment" },
+  { name: "Cambio de Aceite", href: "/services#aceite" },
+  { name: "Frenos", href: "/services#frenos" },
+  { name: "Balanceo", href: "/services#balanceo" },
+  { name: "Lubricentro", href: "/services#lubricentro" },
+  { name: "Alineación 3D", href: "/services#alineacion3d" },
+  { name: "Tren Delantero", href: "/services#trendelantero" },
+  { name: "Enderezado de llantas", href: "/services#enderezadodellantas" },
 ];
 
 export function Navigation({ isMobile = false, onLinkClick }: NavigationProps) {
