@@ -64,6 +64,7 @@ export function Navigation({ isMobile = false, onLinkClick }: NavigationProps) {
           </div>
         </PopoverContent>
       </Popover>
+      <NavLink to="/products">Productos</NavLink>
       <NavLink to="/contact">Contacto</NavLink>
     </nav>
   );

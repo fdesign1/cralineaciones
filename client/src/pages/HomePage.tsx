@@ -1,7 +1,9 @@
+
 import * as React from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ServicesGrid } from "@/components/features/services/ServicesGrid";
+import { ProductsAndBrands } from "@/components/features/products/ProductsAndBrands";
 
 export function HomePage() {
   return (
@@ -42,6 +44,9 @@ export function HomePage() {
 
       {/* Servicios debajo del Hero */}
       <ServicesGrid />
+
+      {/* Productos y Marcas */}
+      <ProductsAndBrands />
     </>
   );
 }
