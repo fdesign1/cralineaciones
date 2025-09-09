@@ -1,3 +1,4 @@
+
 import * as React from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
@@ -20,6 +21,8 @@ const services = [
   { name: "Lubricentro", href: "/services#lubricentro" },
   { name: "Alineación 3D", href: "/services#alineacion3d" },
   { name: "Tren Delantero", href: "/services#trendelantero" },
+  { name: "Suspensión", href: "/services#suspension" },
+  { name: "Baterías", href: "/services#baterias" },
   { name: "Enderezado de llantas", href: "/services#enderezadodellantas" },
 ];
 

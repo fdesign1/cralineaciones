@@ -2,14 +2,12 @@
 import * as React from "react";
 import { ServiceCard } from "./ServiceCard";
 
-
-
 const services = [
   {
     title: "Cambio de Aceite",
     imageUrl: "https://cdn11.bigcommerce.com/s-oqiq1jbcnv/images/stencil/1280x1280/products/758886/4175256/pouring-motor-oil-into-engine__69564.1657653013.jpg?c=1",
     href: "/services#aceite",
-    gridClass: "md:col-span-2",
+    gridClass: "md:col-span-1",
     overlay: "bg-black/80"
   },
   {
@@ -48,10 +46,24 @@ const services = [
     overlay: "bg-red-900/70"
   },
   {
+    title: "Suspensión",
+    imageUrl: "https://www.ford.com/is/image/content/dam/vdm_ford/live/en_us/ford/nameplate/f-150/2024/collections/dm/24_FRD_F15_62129_Tremor_Ext.tif?croppathe=1_3x2&wid=720",
+    href: "/services#suspension",
+    gridClass: "md:col-span-1",
+    overlay: "bg-black/80"
+  },
+  {
+    title: "Baterías",
+    imageUrl: "https://www.elcarrocolombiano.com/wp-content/uploads/2021/01/20210121-GUIA-PRACTICA-BATERIA-CARRO-01.jpg",
+    href: "/services#baterias",
+    gridClass: "md:col-span-1",
+    overlay: "bg-red-900/70"
+  },
+  {
     title: "Enderezado de Llantas",
     imageUrl: "https://images.unsplash.com/photo-1596923220081-3ed95f568a8f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     href: "/services#enderezadodellantas",
-    gridClass: "md:col-span-2",
+    gridClass: "md:col-span-1",
     overlay: "bg-black/80"
   },
 ];

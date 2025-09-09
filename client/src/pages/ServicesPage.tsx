@@ -1,3 +1,4 @@
+
 import * as React from 'react';
 import { useLocation } from 'react-router-dom';
 import { ServiceSection } from '@/components/features/services/ServiceSection';
@@ -44,6 +45,20 @@ const servicesData = [
     title: 'Tren Delantero',
     description: 'Nos especializamos en la reparación y ajuste del tren delantero: rótulas, parrillas, bujes, extremos de dirección y amortiguadores. Un tren delantero en buen estado brinda seguridad, confort y mayor vida útil a tus neumáticos.',
     imageUrl: 'https://paautos.gt/inicio/wp-content/uploads/2021/06/05.-Tren-delantero.jpg',
+    imagePosition: 'left',
+  },
+  {
+    id: 'suspension',
+    title: 'Suspensión',
+    description: 'Revisamos y reparamos amortiguadores, espirales y otros componentes de la suspensión para garantizar un manejo suave y seguro. Una suspensión en buen estado absorbe irregularidades del camino y mejora la estabilidad.',
+    imageUrl: 'https://www.ford.com/is/image/content/dam/vdm_ford/live/en_us/ford/nameplate/f-150/2024/collections/dm/24_FRD_F15_62129_Tremor_Ext.tif?croppathe=1_3x2&wid=720',
+    imagePosition: 'right',
+  },
+  {
+    id: 'baterias',
+    title: 'Baterías',
+    description: 'Ofrecemos control, diagnóstico y reemplazo de baterías. Trabajamos con las mejores marcas para asegurar un arranque confiable y el correcto funcionamiento del sistema eléctrico de tu vehículo.',
+    imageUrl: 'https://www.elcarrocolombiano.com/wp-content/uploads/2021/01/20210121-GUIA-PRACTICA-BATERIA-CARRO-01.jpg',
     imagePosition: 'left',
   },
   {
