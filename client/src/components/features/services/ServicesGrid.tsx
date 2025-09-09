@@ -7,7 +7,7 @@ import { ServiceCard } from "./ServiceCard";
 const services = [
   {
     title: "Cambio de Aceite",
-    imageUrl: "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imageUrl: "https://cdn11.bigcommerce.com/s-oqiq1jbcnv/images/stencil/1280x1280/products/758886/4175256/pouring-motor-oil-into-engine__69564.1657653013.jpg?c=1",
     href: "/services#aceite",
     gridClass: "md:col-span-2",
     overlay: "bg-black/80"
@@ -20,15 +20,15 @@ const services = [
     overlay: "bg-red-900/70"
   },
   {
-    title: "Balanceo Computado",
-    imageUrl: "https://i.imgur.com/pNJC9wT.jpeg",
+    title: "Balanceo",
+    imageUrl: "https://img.zsmotor.cl/wp-content/uploads/2023/05/balanceo-rueda-2-1024x682-1.jpg",
     href: "/services#balanceo",
     gridClass: "md:col-span-1",
-    overlay: "bg-black/60"
+    overlay: "bg-black/80"
   },
   {
     title: "Lubricentro",
-    imageUrl: "https://images.unsplash.com/photo-1642075223291-f9ec545889fa?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imageUrl: "https://neumarep.cl/wp-content/uploads/2025/03/Lubricentro.webp",
     href: "/services#lubricentro",
     gridClass: "md:col-span-1",
     overlay: "bg-red-900/70"
@@ -42,7 +42,7 @@ const services = [
   },
   {
     title: "Tren Delantero",
-    imageUrl: "https://images.unsplash.com/photo-1640021042525-5610f9f75444?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imageUrl: "https://paautos.gt/inicio/wp-content/uploads/2021/06/05.-Tren-delantero.jpg",
     href: "/services#trendelantero",
     gridClass: "md:col-span-1",
     overlay: "bg-red-900/70"
@@ -52,7 +52,7 @@ const services = [
     imageUrl: "https://images.unsplash.com/photo-1596923220081-3ed95f568a8f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     href: "/services#enderezadodellantas",
     gridClass: "md:col-span-2",
-    overlay: "bg-black/60"
+    overlay: "bg-black/80"
   },
 ];
 

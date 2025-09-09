@@ -20,7 +20,7 @@ export function HomePage() {
             Su taller de confianza para el cuidado de su automóvil, desde el
             mantenimiento, hasta alineación avanzada de ruedas 3D.
           </p>
-           {/* Dirección/Domicilio */}
+          {/* Dirección/Domicilio */}
           <p className="text-md font-bold md:text-lg text-white-300 mb-8">
             Remedios de Escalada 366, Bahía Blanca | 291 446-0056
           </p>
@@ -34,7 +34,7 @@ export function HomePage() {
               size="lg"
               className="text-white border-white hover:bg-white/10"
             >
-              <Link to="/contact">Programa una cita</Link>
+              <Link to="/contact">Solicita tu turno</Link>
             </Button>
           </div>
         </section>

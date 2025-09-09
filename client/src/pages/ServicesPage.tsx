@@ -8,7 +8,7 @@ const servicesData = [
     id: 'aceite',
     title: 'Cambio de Aceite',
     description: 'Realizamos cambios de aceite con productos de primera calidad, tanto sintéticos como minerales. Mantener el aceite limpio y en buen estado protege el motor, mejora su rendimiento y alarga su vida útil.',
-    imageUrl: 'https://images.unsplash.com/photo-1487754180451-c456f719a1fc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    imageUrl: 'https://images.unsplash.com/photo-1642075223291-f9ec545889fa?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     imagePosition: 'right',
   },
   {
@@ -22,14 +22,14 @@ const servicesData = [
     id: 'balanceo',
     title: 'Balanceo',
     description: 'El balanceo de ruedas evita vibraciones al conducir y mejora la estabilidad del vehículo. Utilizamos equipamiento computarizado para asegurar un desgaste uniforme de los neumáticos y mayor confort al manejar.',
-    imageUrl: 'https://i.imgur.com/pNJC9wT.jpeg',
+    imageUrl: 'https://img.zsmotor.cl/wp-content/uploads/2023/05/balanceo-rueda-2-1024x682-1.jpg',
     imagePosition: 'right',
   },
   {
     id: 'lubricentro',
     title: 'Lubricentro',
     description: 'Ofrecemos un servicio completo de lubricación para motor, caja y diferencial, además del control y reposición de fluidos. Esto ayuda a prevenir desgastes prematuros y mantiene tu vehículo siempre en óptimas condiciones.',
-    imageUrl: 'https://images.unsplash.com/photo-1642075223291-f9ec545889fa?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    imageUrl: 'https://neumarep.cl/wp-content/uploads/2025/03/Lubricentro.webp',
     imagePosition: 'left',
   },
   {
@@ -43,7 +43,7 @@ const servicesData = [
     id: 'trendelantero',
     title: 'Tren Delantero',
     description: 'Nos especializamos en la reparación y ajuste del tren delantero: rótulas, parrillas, bujes, extremos de dirección y amortiguadores. Un tren delantero en buen estado brinda seguridad, confort y mayor vida útil a tus neumáticos.',
-    imageUrl: 'https://images.unsplash.com/photo-1640021042525-5610f9f75444?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    imageUrl: 'https://paautos.gt/inicio/wp-content/uploads/2021/06/05.-Tren-delantero.jpg',
     imagePosition: 'left',
   },
   {
