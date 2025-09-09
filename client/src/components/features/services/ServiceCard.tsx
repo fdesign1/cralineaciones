@@ -1,3 +1,4 @@
+
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -9,7 +10,7 @@ interface ServiceCardProps {
   imageUrl: string;
   href: string;
   className?: string;
-  overlay?: string; // 👈 nuevo
+  overlay?: string;
 }
 
 export function ServiceCard({
@@ -17,32 +18,30 @@ export function ServiceCard({
   imageUrl,
   href,
   className,
-  overlay = "bg-black/50", // 👈 valor por defecto
+  overlay = "bg-black/50",
 }: ServiceCardProps) {
   return (
     <div className={cn('group relative overflow-hidden', className)}>
-      {/* Link en toda la tarjeta */}
-      <Link to={href} className="absolute inset-0 z-10">
-        <span className="sr-only">View {title}</span>
-      </Link>
-
-      {/* Overlay dinámico */}
-      <div className={`absolute inset-0 ${overlay} group-hover:opacity-70 transition-opacity`} />
-
       {/* Imagen de fondo */}
       <div
         className="h-96 bg-cover bg-center"
         style={{ backgroundImage: `url(${imageUrl})` }}
       />
+      
+      {/* Overlay dinámico */}
+      <div className={`absolute inset-0 ${overlay} group-hover:opacity-70 transition-opacity`} />
 
       {/* Contenido */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-white z-20">
+      <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-white">
         <h3 className="text-2xl font-bold text-center mb-4">{title}</h3>
         <Button
+          asChild
           variant="outline"
-          className="bg-transparent text-white border-white group-hover:bg-white group-hover:text-black transition-colors"
+          className="bg-transparent text-white border-white group-hover:bg-white group-hover:text-black transition-colors z-10"
         >
-          Learn More <ArrowRight className="ml-2 h-4 w-4" />
+          <Link to={href}>
+            Learn More <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
         </Button>
       </div>
     </div>
