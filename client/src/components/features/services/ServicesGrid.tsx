@@ -47,14 +47,14 @@ const services = [
   },
   {
     title: "Suspensión",
-    imageUrl: "https://www.ford.com/is/image/content/dam/vdm_ford/live/en_us/ford/nameplate/f-150/2024/collections/dm/24_FRD_F15_62129_Tremor_Ext.tif?croppathe=1_3x2&wid=720",
+    imageUrl: "https://www.in2tires.com/image/catalog/AMORTIGUADORES/DESCRIPCION/Amortiguadores-banner-2020.jpg",
     href: "/services#suspension",
     gridClass: "md:col-span-1",
     overlay: "bg-black/80"
   },
   {
     title: "Baterías",
-    imageUrl: "https://www.elcarrocolombiano.com/wp-content/uploads/2021/01/20210121-GUIA-PRACTICA-BATERIA-CARRO-01.jpg",
+    imageUrl: "https://www.suzuki.com.ar/media/aq0hjisp/c%C3%B3mo-desconectar-la-bater%C3%ADa-de-un-auto.webp?rmode=max&width=1000&height=700",
     href: "/services#baterias",
     gridClass: "md:col-span-1",
     overlay: "bg-red-900/70"
