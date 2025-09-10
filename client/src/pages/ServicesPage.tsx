@@ -51,14 +51,14 @@ const servicesData = [
     id: 'suspension',
     title: 'Suspensión',
     description: 'Revisamos y reparamos amortiguadores, espirales y otros componentes de la suspensión para garantizar un manejo suave y seguro. Una suspensión en buen estado absorbe irregularidades del camino y mejora la estabilidad.',
-    imageUrl: 'https://www.in2tires.com/image/catalog/AMORTIGUADORES/DESCRIPCION/Amortiguadores-banner-2020.jpg',
+    imageUrl: 'https://www.ford.com/is/image/content/dam/vdm_ford/live/en_us/ford/nameplate/f-150/2024/collections/dm/24_FRD_F15_62129_Tremor_Ext.tif?croppathe=1_3x2&wid=720',
     imagePosition: 'right',
   },
   {
     id: 'baterias',
     title: 'Baterías',
     description: 'Ofrecemos control, diagnóstico y reemplazo de baterías. Trabajamos con las mejores marcas para asegurar un arranque confiable y el correcto funcionamiento del sistema eléctrico de tu vehículo.',
-    imageUrl: 'https://www.suzuki.com.ar/media/aq0hjisp/c%C3%B3mo-desconectar-la-bater%C3%ADa-de-un-auto.webp?rmode=max&width=1000&height=700',
+    imageUrl: 'https://www.elcarrocolombiano.com/wp-content/uploads/2021/01/20210121-GUIA-PRACTICA-BATERIA-CARRO-01.jpg',
     imagePosition: 'left',
   },
   {
