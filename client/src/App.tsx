@@ -7,6 +7,7 @@ import { HomePage } from '@/pages/HomePage';
 import { ServicesPage } from '@/pages/ServicesPage';
 import { ContactPage} from '@/pages/ContactPage';
 import { ProductsPage } from '@/pages/ProductsPage';
+import { FloatingWhatsApp } from '@/components/layout/FloatingWhatsApp';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             {/* Define other routes here for Contact page when it is created */}
           </Routes>
         </main>
+        <FloatingWhatsApp />
         <Footer />
       </div>
     </Router>

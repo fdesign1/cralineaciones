@@ -1,3 +1,4 @@
+
 import * as React from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -26,7 +27,7 @@ export function HomePage() {
             Remedios de Escalada 366, Bahía Blanca | 291 446-0056
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
-            <Button asChild size="lg" className="bg-primary text-white">
+            <Button asChild size="lg" className="bg-red-700 text-white hover:bg-red-800">
               <Link to="/services">Nuestros Servicios</Link>
             </Button>
             <Button
