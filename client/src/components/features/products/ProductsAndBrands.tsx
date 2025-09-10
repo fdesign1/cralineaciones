@@ -31,19 +31,19 @@ const products = [
     imageUrl: "https://www.filtrosmareno.com.ar/assets/img/aire/aire_2.jpg",
   },
   {
-    name: "Batería de 12V",
+    name: "Baterías",
     description: "Batería de alta durabilidad y arranque confiable para todo tipo de vehículos.",
-    imageUrl: "https://http2.mlstatic.com/D_NQ_NP_802112-MLA46374942391_062021-O.webp",
+    imageUrl: "https://www.suzuki.com.ar/media/aq0hjisp/c%C3%B3mo-desconectar-la-bater%C3%ADa-de-un-auto.webp?rmode=max&width=1000&height=700",
   },
   {
     name: "Líquido Refrigerante",
     description: "Protege tu motor del sobrecalentamiento y la corrosión con nuestro líquido refrigerante.",
-    imageUrl: "https://http2.mlstatic.com/D_NQ_NP_803698-MLA48040999693_102021-O.webp",
+    imageUrl: "https://www.repsol.com/content/dam/images-ecommerce/particulares/asesoramiento/cards-asesoramiento/card-asesoramiento-cambiar-anticongelante-coche.jpg",
   },
   {
     name: "Amortiguadores",
     description: "Amortiguadores de alta calidad para una conducción suave y segura.",
-    imageUrl: "https://http2.mlstatic.com/D_NQ_NP_787759-MLA46374942395_062021-O.webp",
+    imageUrl: "https://motor.elpais.com/wp-content/uploads/2022/02/shock-absorber-gd7b088548_1920.jpg",
   },
 ];
 
