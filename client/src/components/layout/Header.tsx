@@ -6,7 +6,7 @@ import { Logo } from './Logo';
 import { Navigation } from './Navigation';
 import { SocialLinks } from './SocialLinks';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet';
 
 export function Header() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -28,6 +28,7 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left">
+              <SheetTitle className="sr-only">Menu</SheetTitle>
               <div className="flex flex-col space-y-6 p-4">
                 <Logo />
                 <Navigation isMobile={true} onLinkClick={() => setIsOpen(false)} />
