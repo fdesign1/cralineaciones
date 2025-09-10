@@ -11,6 +11,7 @@ interface ServiceCardProps {
   href: string;
   className?: string;
   overlay?: string;
+  aosEffect?: string;
 }
 
 export function ServiceCard({
@@ -19,17 +20,21 @@ export function ServiceCard({
   href,
   className,
   overlay = "bg-black/50",
+  aosEffect = "fade-up",
 }: ServiceCardProps) {
   return (
-    <div className={cn('group relative overflow-hidden', className)}>
+    <div 
+      className={cn('group relative overflow-hidden', className)}
+      data-aos={aosEffect}
+    >
       {/* Imagen de fondo */}
       <div
-        className="h-96 bg-cover bg-center"
+        className="h-96 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
         style={{ backgroundImage: `url(${imageUrl})` }}
       />
       
       {/* Overlay dinámico */}
-      <div className={`absolute inset-0 ${overlay} group-hover:opacity-70 transition-opacity`} />
+      <div className={`absolute inset-0 ${overlay} transition-opacity duration-300 group-hover:opacity-70`} />
 
       {/* Contenido */}
       <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-white">
@@ -37,10 +42,10 @@ export function ServiceCard({
         <Button
           asChild
           variant="outline"
-          className="bg-transparent text-white border-white group-hover:bg-white group-hover:text-black transition-colors z-10"
+          className="bg-transparent text-white border-white group-hover:bg-white group-hover:text-black transition-all duration-300 z-10"
         >
           <Link to={href}>
-            Más información <ArrowRight className="ml-2 h-4 w-4" />
+            Ver más <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </Button>
       </div>
