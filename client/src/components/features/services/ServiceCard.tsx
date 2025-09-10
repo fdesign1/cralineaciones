@@ -40,7 +40,7 @@ export function ServiceCard({
           className="bg-transparent text-white border-white group-hover:bg-white group-hover:text-black transition-colors z-10"
         >
           <Link to={href}>
-            Learn More <ArrowRight className="ml-2 h-4 w-4" />
+            Más información <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </Button>
       </div>
