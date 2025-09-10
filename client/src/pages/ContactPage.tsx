@@ -18,7 +18,7 @@ export function ContactPage() {
       </div>
 
       {/* Contact Form Section */}
-      <div className="flex-1 bg-gray-50 py-12 px-4 md:px-8 flex justify-center">
+      <div className="flex-1 bg-gray-50 py-32 px-4 md:px-8 flex justify-center">
         <div className="w-full max-w-3xl bg-white shadow-md rounded-2xl p-8">
           <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
             Contacto
