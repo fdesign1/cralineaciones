@@ -9,6 +9,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
+const storeUrl = "https://cralineacionestienda.infinityfree.me/";
+
 const products = [
   {
     name: "Aceite Sintético 5W-30",
@@ -97,8 +99,8 @@ export function ProductsAndBrands() {
               <CarouselContent className="-ml-2 md:-ml-4">
                 {products.map((product, index) => (
                   <CarouselItem key={index} className="pl-2 md:pl-4 basis-[95%] sm:basis-1/2 md:basis-1/2 lg:basis-1/3">
-                    <div className="p-1">
-                      <ProductCard {...product} />
+                    <div className="p-1 h-full">
+                      <ProductCard {...product} href={storeUrl} />
                     </div>
                   </CarouselItem>
                 ))}
