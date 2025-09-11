@@ -5,7 +5,7 @@ import { WordPress } from "@/components/features/products/WordPress";
 
 export function ProductsPage() {
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col flex-grow">
       <WordPress/>
     </div>
   );
