@@ -24,7 +24,7 @@ function App() {
     <Router>
       <div className="min-h-screen flex flex-col bg-background text-foreground overflow-x-hidden">
         <Header />
-        <main className="flex-grow overflow-x-hidden">
+        <main className="flex-grow flex flex-col overflow-x-hidden">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/services" element={<ServicesPage />} />

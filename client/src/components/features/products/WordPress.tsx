@@ -1,8 +1,9 @@
+
 import React from "react";
 
 export const WordPress: React.FC = () => {
   return (
-    <div className="w-full h-screen">
+    <div className="w-full flex-grow">
       <iframe
         src="https://cralineacionestienda.infinityfree.me/tienda/"
         width="100%"
@@ -13,4 +14,3 @@ export const WordPress: React.FC = () => {
     </div>
   );
 };
-
