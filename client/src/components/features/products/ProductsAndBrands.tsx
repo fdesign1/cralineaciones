@@ -85,25 +85,28 @@ export function ProductsAndBrands() {
         {/* Productos */}
         <div className="mb-16" data-aos="fade-up" data-aos-delay="100">
           <h3 className="text-2xl font-semibold text-center mb-8">Tienda</h3>
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full max-w-xs sm:max-w-2xl md:max-w-4xl lg:max-w-6xl mx-auto"
-          >
-            <CarouselContent>
-              {products.map((product, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-1">
-                    <ProductCard {...product} />
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
+          <div className="relative overflow-hidden px-0 sm:px-12 md:px-16 lg:px-20">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+                dragFree: true,
+              }}
+              className="w-full max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-6xl mx-auto"
+            >
+              <CarouselContent className="-ml-2 md:-ml-4">
+                {products.map((product, index) => (
+                  <CarouselItem key={index} className="pl-2 md:pl-4 basis-[95%] sm:basis-1/2 md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1">
+                      <ProductCard {...product} />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden sm:flex" />
+              <CarouselNext className="hidden sm:flex" />
+            </Carousel>
+          </div>
         </div>
 
         {/* Marcas */}
@@ -111,16 +114,17 @@ export function ProductsAndBrands() {
           <h3 className="text-2xl font-semibold text-center mb-8">
             Marcas con las que trabajamos
           </h3>
-          <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-6 md:gap-x-16">
+          <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-4 md:gap-x-8 md:gap-y-6 lg:gap-x-16 overflow-hidden">
             {brands.map((brand, index) => (
-              <img
-                key={brand.name}
-                src={brand.logoUrl}
-                alt={brand.name}
-                className="h-10 md:h-12 object-contain grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-                data-aos="fade-up"
-                data-aos-delay={100 * index}
-              />
+              <div key={brand.name} className="flex-shrink-0">
+                <img
+                  src={brand.logoUrl}
+                  alt={brand.name}
+                  className="h-8 md:h-10 lg:h-12 max-w-[80px] md:max-w-[100px] lg:max-w-none object-contain grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                  data-aos="fade-up"
+                  data-aos-delay={100 * index}
+                />
+              </div>
             ))}
           </div>
         </div>

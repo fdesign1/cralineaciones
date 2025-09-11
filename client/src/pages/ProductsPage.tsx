@@ -1,14 +1,12 @@
 
 import * as React from 'react';
+import { WordPress } from "@/components/features/products/WordPress";
+
 
 export function ProductsPage() {
   return (
-    <div className="container mx-auto px-4 py-12 flex flex-col items-center justify-center min-h-[calc(100vh-200px)]">
-      <h1 className="text-4xl font-bold text-center mb-12">Nuestros Productos</h1>
-      <div className="text-center text-muted-foreground">
-        <p>Página de productos en construcción.</p>
-        <p>Próximamente podrás ver nuestro catálogo completo aquí.</p>
-      </div>
-    </div>
+  
+        <WordPress/>
+     
   );
 }

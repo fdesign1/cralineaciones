@@ -18,53 +18,53 @@ export function ContactPage() {
       </div>
 
       {/* Contact Form Section */}
-      <div className="flex-1 bg-gray-50 py-32 px-4 md:px-8 flex justify-center">
-        <div className="w-full max-w-3xl bg-white shadow-md rounded-2xl p-8">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+      <div className="flex-1 bg-black-900 py-32 px-4 md:px-8 flex justify-center">
+        <div className="w-full max-w-3xl bg-gray-800 shadow-md rounded-2xl p-8">
+          <h2 className="text-3xl font-bold text-white mb-6 text-center">
             Contacto
           </h2>
           <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Name */}
             <div className="flex flex-col">
-              <label className="text-sm font-medium text-gray-600 mb-1">
+              <label className="text-sm font-medium text-gray-300 mb-1">
                 Nombre
               </label>
               <input
                 type="text"
-                className="rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-primary focus:outline-none"
+                className="rounded-lg border border-gray-600 bg-gray-700 text-white px-4 py-2 focus:ring-2 focus:ring-primary focus:outline-none placeholder-gray-400"
                 placeholder="Tu nombre"
               />
             </div>
             {/* Email */}
             <div className="flex flex-col">
-              <label className="text-sm font-medium text-gray-600 mb-1">
+              <label className="text-sm font-medium text-gray-300 mb-1">
                 Email
               </label>
               <input
                 type="email"
-                className="rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-primary focus:outline-none"
+                className="rounded-lg border border-gray-600 bg-gray-700 text-white px-4 py-2 focus:ring-2 focus:ring-primary focus:outline-none placeholder-gray-400"
                 placeholder="contacto@email.com"
               />
             </div>
             {/* Phone */}
             <div className="flex flex-col md:col-span-2">
-              <label className="text-sm font-medium text-gray-600 mb-1">
+              <label className="text-sm font-medium text-gray-300 mb-1">
                 Teléfono
               </label>
               <input
                 type="tel"
-                className="rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-primary focus:outline-none"
+                className="rounded-lg border border-gray-600 bg-gray-700 text-white px-4 py-2 focus:ring-2 focus:ring-primary focus:outline-none placeholder-gray-400"
                 placeholder="+5492914556688"
               />
             </div>
             {/* Message */}
             <div className="flex flex-col md:col-span-2">
-              <label className="text-sm font-medium text-gray-600 mb-1">
+              <label className="text-sm font-medium text-gray-300 mb-1">
                 Mensaje
               </label>
               <textarea
                 rows={5}
-                className="rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-primary focus:outline-none"
+                className="rounded-lg border border-gray-600 bg-gray-700 text-white px-4 py-2 focus:ring-2 focus:ring-primary focus:outline-none placeholder-gray-400"
                 placeholder="Escribe tu mensaje..."
               ></textarea>
             </div>
@@ -72,7 +72,7 @@ export function ContactPage() {
             <div className="md:col-span-2">
               <button
                 type="submit"
-                className="w-full bg-primary text-white font-medium py-3 rounded-lg hover:bg-primary/90 transition"
+                className="w-full bg-red-700 text-white font-medium py-3 rounded-lg hover:bg-red/800 transition"
               >
                 Enviar Mensaje
               </button>
