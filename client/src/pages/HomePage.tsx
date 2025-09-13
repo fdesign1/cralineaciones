@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-
+import { WeatherWidget } from "@/components/layout/Weather";
 import { ServicesGrid } from "@/components/features/services/ServicesGrid";
 import { ProductsAndBrands } from "@/components/features/products/ProductsAndBrands";
 
@@ -22,19 +22,19 @@ export function HomePage() {
     document.body.appendChild(script);
 
     // Esperar un poco y luego eliminar el elemento no deseado
-      const removeUnwantedElement1 = setInterval(() => {
-        const unwantedElement1 = document.querySelector(
-          "#eapps-google-reviews-8bda86cd-6072-40eb-9e74-4035f030e02b > div > div > div > div.WidgetBackground__ContentContainer-sc-1ho7q3r-1.jUKeJm > div > a"
-        );
-        if (unwantedElement1) {
-          unwantedElement1.remove();
-          clearInterval(removeUnwantedElement1); // Detiene el intervalo una vez eliminado
-        }
-      }, 1000);
+    const removeUnwantedElement1 = setInterval(() => {
+      const unwantedElement1 = document.querySelector(
+        "#eapps-google-reviews-8bda86cd-6072-40eb-9e74-4035f030e02b > div > div > div > div.WidgetBackground__ContentContainer-sc-1ho7q3r-1.jUKeJm > div > a"
+      );
+      if (unwantedElement1) {
+        unwantedElement1.remove();
+        clearInterval(removeUnwantedElement1); // Detiene el intervalo una vez eliminado
+      }
+    }, 1000);
 
 
-     // Eliminar el segundo elemento no deseado
-     const removeUnwantedElement2 = setInterval(() => {
+    // Eliminar el segundo elemento no deseado
+    const removeUnwantedElement2 = setInterval(() => {
       const unwantedElement2 = document.querySelector(
         "[id^='eapps-instagram-feed-'] > a"
       );
@@ -60,7 +60,7 @@ export function HomePage() {
     script.src = "elfsight-app-e64d9b84-7a8d-4ef1-878b-673768e86871";
     script.async = true;
     document.body.appendChild(script);
-  
+
     return () => {
       document.body.removeChild(script);
     };
@@ -84,8 +84,12 @@ export function HomePage() {
           </p>
           {/* Dirección/Domicilio */}
           <p className="text-sm sm:text-md md:text-lg font-bold text-white-300 mb-8 px-4 max-w-lg">
-            Remedios de Escalada 366, Bahía Blanca | 291 446-0056
+            Remedios de Escalada 366, Bahía Blanca | 2914460056
           </p>
+          {/* Información del clima */}
+          <div className="mb-8 px-4">
+            <WeatherWidget />
+          </div>
           <div className="flex justify-center gap-4 flex-wrap px-4">
             <Button asChild size="lg" className="bg-red-700 text-white hover:bg-red-800">
               <Link to="/services">Nuestros Servicios</Link>
@@ -107,12 +111,12 @@ export function HomePage() {
 
 
       {/* Insta */}
-       {/*<Insta />*/} 
+      {/*<Insta />*/}
 
       {/* Productos y Marcas */}
       <ProductsAndBrands />
 
-      
+
 
     </>
   );

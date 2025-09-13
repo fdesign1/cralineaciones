@@ -56,9 +56,9 @@ const brands = [
       "https://cdn.freebiesupply.com/logos/large/2x/castrol-12-logo-png-transparent.png",
   },
   {
-    name: "Pirelli",
+    name: "Shell Helix",
     logoUrl:
-      "https://1000logos.net/wp-content/uploads/2017/08/Michelin-logo.png",
+      "https://i.imgur.com/KhdBfU6.png",
   },
   {
     name: "Motul",
@@ -73,6 +73,21 @@ const brands = [
     name: "Continental",
     logoUrl:
       "https://i.imgur.com/vPbF2pO.png",
+  },
+   {
+    name: "Quartz",
+    logoUrl:
+      "https://i.imgur.com/D3zXYjN.png",
+  },
+  {
+    name: "Bosch",
+    logoUrl:
+      "https://i.imgur.com/gyfaBG2.png",
+  },
+   {
+    name: "Mann Filter",
+    logoUrl:
+      "https://i.imgur.com/cLaccJN.png",
   },
 ];
 

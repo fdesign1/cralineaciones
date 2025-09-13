@@ -5,7 +5,7 @@ export const WordPress: React.FC = () => {
   return (
     <div className="w-full flex-grow">
       <iframe
-        src="https://cralineacionestienda.hstn.me/tienda/"
+        src="cralineacionestienda.infinityfree.me/tienda"
         width="50%"
         height="50%"
         style={{ border: "none" }}
