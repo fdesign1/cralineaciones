@@ -2,12 +2,70 @@
 import * as React from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+
+
 import { ServicesGrid } from "@/components/features/services/ServicesGrid";
 import { ProductsAndBrands } from "@/components/features/products/ProductsAndBrands";
 
 //import { Insta } from "@/components/features/products/Insta";
 
 export function HomePage() {
+
+
+  useEffect(() => {
+    // Agregar el script de Elfsight
+    const script = document.createElement("script");
+    script.src = "https://static.elfsight.com/platform/platform.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    // Esperar un poco y luego eliminar el elemento no deseado
+      const removeUnwantedElement1 = setInterval(() => {
+        const unwantedElement1 = document.querySelector(
+          "#eapps-google-reviews-8bda86cd-6072-40eb-9e74-4035f030e02b > div > div > div > div.WidgetBackground__ContentContainer-sc-1ho7q3r-1.jUKeJm > div > a"
+        );
+        if (unwantedElement1) {
+          unwantedElement1.remove();
+          clearInterval(removeUnwantedElement1); // Detiene el intervalo una vez eliminado
+        }
+      }, 1000);
+
+
+     // Eliminar el segundo elemento no deseado
+     const removeUnwantedElement2 = setInterval(() => {
+      const unwantedElement2 = document.querySelector(
+        "[id^='eapps-instagram-feed-'] > a"
+      );
+      if (unwantedElement2) {
+        unwantedElement2.remove();
+        clearInterval(removeUnwantedElement2); // Detiene el intervalo una vez eliminado
+      }
+    }, 1000);
+
+
+    return () => {
+      document.body.removeChild(script);
+      clearInterval(removeUnwantedElement1);
+      clearInterval(removeUnwantedElement2);
+    };
+  }, []);
+  const { ref, inView } = useInView({
+    threshold: 0.5, // trigger the effect when 50% of the image is in the viewport
+  });
+
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "elfsight-app-e64d9b84-7a8d-4ef1-878b-673768e86871";
+    script.async = true;
+    document.body.appendChild(script);
+  
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <>
       {/* Hero Section */}
@@ -49,7 +107,7 @@ export function HomePage() {
 
 
       {/* Insta */}
-      {/* <Insta /> */}
+       {/*<Insta />*/} 
 
       {/* Productos y Marcas */}
       <ProductsAndBrands />

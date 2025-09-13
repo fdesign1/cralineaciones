@@ -70,9 +70,9 @@ const brands = [
     logoUrl: "https://qsv.co.za/wp-content/uploads/2020/06/Mahle.png",
   },
   {
-    name: "Goodyear",
+    name: "Continental",
     logoUrl:
-      "https://purepng.com/public/uploads/large/purepng.com-goodyear-logologobrand-logoiconslogos-251519939956sipnb.png",
+      "https://i.imgur.com/vPbF2pO.png",
   },
 ];
 
