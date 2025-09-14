@@ -1,6 +1,9 @@
 
 import * as React from "react";
+import { Link } from "react-router-dom";
 import { ProductCard } from "./ProductCard";
+import { Button } from "@/components/ui/button";
+
 import {
   Carousel,
   CarouselContent,
@@ -35,12 +38,12 @@ const products = [
   {
     name: "Baterías",
     description: "Batería de alta durabilidad y arranque confiable para todo tipo de vehículos.",
-    imageUrl: "https://www.suzuki.com.ar/media/aq0hjisp/c%C3%B3mo-desconectar-la-bater%C3%ADa-de-un-auto.webp?rmode=max&width=1000&height=700",
+    imageUrl: "https://www.sermat.com.ar/wp-content/uploads/2023/01/bateria65am.png",
   },
   {
-    name: "Líquido Refrigerante",
-    description: "Protege tu motor del sobrecalentamiento y la corrosión con nuestro líquido refrigerante.",
-    imageUrl: "https://www.repsol.com/content/dam/images-ecommerce/particulares/asesoramiento/cards-asesoramiento/card-asesoramiento-cambiar-anticongelante-coche.jpg",
+    name: "Neumáticos",
+    description: "Encuentra neumáticos de calidad para todo tipo de vehículos. Ofrecemos asesoramiento profesional para elegir la mejor opción según tu auto y estilo de manejo, garantizando seguridad y rendimiento en cada viaje",
+    imageUrl: "https://www.oponeo.pl/ndcr/temp/25620/continental-allseasoncontact-2-s2-f-f-l672x750-sk7.png",
   },
   {
     name: "Amortiguadores",
@@ -74,7 +77,7 @@ const brands = [
     logoUrl:
       "https://i.imgur.com/vPbF2pO.png",
   },
-   {
+  {
     name: "Quartz",
     logoUrl:
       "https://i.imgur.com/D3zXYjN.png",
@@ -84,7 +87,7 @@ const brands = [
     logoUrl:
       "https://i.imgur.com/gyfaBG2.png",
   },
-   {
+  {
     name: "Mann Filter",
     logoUrl:
       "https://i.imgur.com/cLaccJN.png",
@@ -101,7 +104,14 @@ export function ProductsAndBrands() {
 
         {/* Productos */}
         <div className="mb-16" data-aos="fade-up" data-aos-delay="100">
-          <h3 className="text-2xl font-semibold text-center mb-8">Tienda</h3>
+          <div className="flex justify-center mb-3">
+            <Button asChild size="lg" className="bg-red-700 text-white hover:bg-gray-800">
+              <Link to="https://cralineacionestienda.infinityfree.me/tienda" target="_blank">
+                Nuestro catálogo
+              </Link>
+            </Button>
+          </div>
+
           <div className="relative overflow-hidden px-0 sm:px-12 md:px-16 lg:px-20">
             <Carousel
               opts={{
