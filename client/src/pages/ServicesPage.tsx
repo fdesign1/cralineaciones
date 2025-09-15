@@ -97,7 +97,7 @@ export function ServicesPage() {
     } else {
       window.scrollTo(0, 0);
     }
-  }, [location]);
+  }, [location.hash, location.pathname]);
 
   return (
     <div className="container mx-auto px-4 py-12">
