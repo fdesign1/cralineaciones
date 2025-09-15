@@ -1,6 +1,6 @@
 
 import * as React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 import {
   Popover,
@@ -29,45 +29,84 @@ const services = [
 ];
 
 export function Navigation({ isMobile = false, onLinkClick }: NavigationProps) {
+  const [isServicesOpen, setIsServicesOpen] = React.useState(false);
+  const navigate = useNavigate();
+
+  const handleServiceClick = (href: string) => {
+    if (onLinkClick) {
+      onLinkClick();
+    }
+    setIsServicesOpen(false);
+    navigate(href);
+  };
+
   const NavLink = ({
     to,
     children,
+    isExternal = false,
   }: {
     to: string;
     children: React.ReactNode;
-  }) => (
-    <Link
-      to={to}
-      onClick={onLinkClick}
-      className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
-    >
-      {children}
-    </Link>
-  );
+    isExternal?: boolean;
+  }) => {
+    if (isExternal) {
+      return (
+        <a
+          href={to}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={onLinkClick}
+          className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+        >
+          {children}
+        </a>
+      );
+    }
+    return (
+      <Link
+        to={to}
+        onClick={onLinkClick}
+        className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+      >
+        {children}
+      </Link>
+    );
+  };
 
   const navClasses = cn(
     "flex items-center gap-6",
-    isMobile && "flex-col items-start gap-4",
+    isMobile && "flex-col items-start gap-4"
   );
 
   return (
     <nav className={navClasses}>
       <NavLink to="/">Inicio</NavLink>
-      <Popover>
-        <PopoverTrigger className="flex items-center gap-1 text-sm font-medium text-muted-foreground transition-colors hover:text-primary focus:outline-none">
-          Servicios <ChevronDown className="h-4 w-4" />
-        </PopoverTrigger>
-        <PopoverContent className="w-48">
-          <div className="grid gap-4">
-            {services.map((service) => (
-              <NavLink key={service.name} to={service.href}>{service.name}
-              </NavLink>
-            ))}
+      <div className="relative">
+        <button
+          onClick={() => setIsServicesOpen(!isServicesOpen)}
+          onBlur={() => setTimeout(() => setIsServicesOpen(false), 150)}
+          className="flex items-center gap-1 text-sm font-medium text-muted-foreground transition-colors hover:text-primary focus:outline-none"
+        >
+          Servicios <ChevronDown className={`h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
+        </button>
+        {isServicesOpen && (
+          <div className="absolute z-50 mt-2 w-48 rounded-md border bg-popover p-1 text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95">
+            <div className="grid gap-1">
+              {services.map((service) => (
+                <button
+                  key={service.name}
+                  onClick={() => handleServiceClick(service.href)}
+                  className="w-full text-left px-2 py-1.5 text-sm font-medium text-muted-foreground rounded-sm transition-colors hover:bg-accent hover:text-accent-foreground"
+                >
+                  {service.name}
+                </button>
+              ))}
+            </div>
           </div>
-        </PopoverContent>
-      </Popover>
-      <NavLink to="https://cralineacionestienda.infinityfree.me/tienda">Catálogo</NavLink>
-       <NavLink to="https://cralineacionestienda.infinityfree.me/turnos">Turnos</NavLink>
+        )}
+      </div>
+      <NavLink to="https://cralineacionestienda.infinityfree.me/tienda" isExternal>Catálogo</NavLink>
+      <NavLink to="https://cralineacionestienda.infinityfree.me/turnos" isExternal>Turnos</NavLink>
       <NavLink to="/contact">Quiénes somos?</NavLink>
     </nav>
   );
