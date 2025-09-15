@@ -47,7 +47,7 @@ const services = [
   },
   {
     title: "Suspensión",
-    imageUrl: "https://motor.elpais.com/wp-content/uploads/2022/02/shock-absorber-gd7b088548_1920.jpg",
+    imageUrl: "https://www.jeep.es/content/dam/moc/common/parts_tips/suspension_shock_absorvers/tips/mobile/shock_absorver_springs_thumb.png",
     href: "/services#suspension",
     gridClass: "md:col-span-1",
     overlay: "bg-black/80"

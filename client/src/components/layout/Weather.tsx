@@ -40,7 +40,7 @@ export function WeatherWidget() {
       <img 
         src={weather.condition.icon} 
         alt={weather.condition.text}
-        className="w-6 h-6"
+        className="w-10 h-10"
       />
       <span>{Math.round(weather.temp_c)}°C</span>
       <span>•</span>

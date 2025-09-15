@@ -64,8 +64,9 @@ export function Navigation({ isMobile = false, onLinkClick }: NavigationProps) {
           </div>
         </PopoverContent>
       </Popover>
-      <NavLink to="https://cralineacionestienda.infinityfree.me">Productos</NavLink>
-      <NavLink to="/contact">Contacto</NavLink>
+      <NavLink to="https://cralineacionestienda.infinityfree.me/tienda">Catálogo</NavLink>
+       <NavLink to="https://cralineacionestienda.infinityfree.me/turnos">Turnos</NavLink>
+      <NavLink to="/contact">Quiénes somos?</NavLink>
     </nav>
   );
 }

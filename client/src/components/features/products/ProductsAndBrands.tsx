@@ -16,41 +16,45 @@ const storeUrl = "https://cralineacionestienda.infinityfree.me/";
 
 const products = [
   {
-    name: "Aceite Sintético 5W-30",
+    name: "Aceites Sintéticos-Semi Sintéticos ",
     description:
-      "Aceite de motor 100% sintético para un rendimiento superior y mayor protección.",
+      "Protección y rendimiento superior para tu motor. Ideal para cuidar tu vehículo en cada kilómetro.",
     imageUrl:
       "https://www.shell.com.ar/motorists/oils-lubricants/helix-for-cars/helix-fully-synthetic/shell-helix-ultra-5w-40/_jcr_content/root/main/section/standalone_asset.shellimg.png/1702283589706/shell-helix-ultra-5w-40.png?imwidth=301&impolicy=amidala-image&imdensity=1",
   },
   {
-    name: "Pastillas de Freno Cerámicas",
+    name: "Pastillas de Freno",
     description:
-      "Pastillas de freno de alto rendimiento que ofrecen una frenada silenciosa y duradera.",
+      "Frenado seguro, silencioso y de larga duración. Conduce con confianza en todo momento.",
     imageUrl:
       "https://m.media-amazon.com/images/I/41J9VgxiYQL._AC_UF894,1000_QL80_.jpg",
   },
   {
-    name: "Filtro de Aire",
+    name: "Filtro de Aire, Nafta y Cabina",
     description:
-      "Filtro de aire de alta eficiencia que mejora el rendimiento del motor y el consumo de combustible.",
+      "Mantén tu motor limpio y eficiente. Mejora el rendimiento y reduce el consumo de combustible.",
     imageUrl: "https://www.filtrosmareno.com.ar/assets/img/aire/aire_2.jpg",
   },
   {
     name: "Baterías",
-    description: "Batería de alta durabilidad y arranque confiable para todo tipo de vehículos.",
+    description:
+      "Energía confiable y arranque seguro en todo momento. Diseñadas para durar más.",
     imageUrl: "https://www.sermat.com.ar/wp-content/uploads/2023/01/bateria65am.png",
   },
   {
     name: "Neumáticos",
-    description: "Encuentra neumáticos de calidad para todo tipo de vehículos. Ofrecemos asesoramiento profesional para elegir la mejor opción según tu auto y estilo de manejo, garantizando seguridad y rendimiento en cada viaje",
+    description:
+      "Neumáticos para cada estilo de manejo. Seguridad, confort y el mejor rendimiento en tus viajes.",
     imageUrl: "https://www.oponeo.pl/ndcr/temp/25620/continental-allseasoncontact-2-s2-f-f-l672x750-sk7.png",
   },
   {
     name: "Amortiguadores",
-    description: "Amortiguadores de alta calidad para una conducción suave y segura.",
-    imageUrl: "https://motor.elpais.com/wp-content/uploads/2022/02/shock-absorber-gd7b088548_1920.jpg",
+    description:
+      "Conduce con suavidad y estabilidad. Amortiguadores que garantizan seguridad en cada trayecto.",
+    imageUrl: "https://cdn.club-magazin.autodoc.de/uploads/sites/11/2020/11/amortiguador-de-coche.jpg",
   },
 ];
+
 
 const brands = [
   {
