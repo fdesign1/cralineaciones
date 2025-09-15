@@ -2,11 +2,6 @@
 import * as React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
 
 interface NavigationProps {
@@ -33,11 +28,11 @@ export function Navigation({ isMobile = false, onLinkClick }: NavigationProps) {
   const navigate = useNavigate();
 
   const handleServiceClick = (href: string) => {
+    navigate(href);
     if (onLinkClick) {
       onLinkClick();
     }
     setIsServicesOpen(false);
-    navigate(href);
   };
 
   const NavLink = ({
@@ -49,13 +44,19 @@ export function Navigation({ isMobile = false, onLinkClick }: NavigationProps) {
     children: React.ReactNode;
     isExternal?: boolean;
   }) => {
+    const handleClick = () => {
+      if (onLinkClick) {
+        onLinkClick();
+      }
+    };
+
     if (isExternal) {
       return (
         <a
           href={to}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={onLinkClick}
+          onClick={handleClick}
           className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
         >
           {children}
@@ -65,7 +66,7 @@ export function Navigation({ isMobile = false, onLinkClick }: NavigationProps) {
     return (
       <Link
         to={to}
-        onClick={onLinkClick}
+        onClick={handleClick}
         className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
       >
         {children}
@@ -90,8 +91,14 @@ export function Navigation({ isMobile = false, onLinkClick }: NavigationProps) {
           Servicios <ChevronDown className={`h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
         </button>
         {isServicesOpen && (
-          <div className="absolute z-50 mt-2 w-48 rounded-md border bg-popover p-1 text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95">
-            <div className="grid gap-1">
+          <div className={cn(
+            "absolute z-50 mt-2 w-48 rounded-md border bg-popover p-1 text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95",
+            isMobile && "relative !w-full !mt-1 !border-none !shadow-none !bg-transparent !p-0"
+          )}>
+            <div className={cn(
+              "grid gap-1",
+              isMobile && "grid-cols-1 gap-2 pl-4"
+            )}>
               {services.map((service) => (
                 <button
                   key={service.name}
