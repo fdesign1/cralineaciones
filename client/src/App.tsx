@@ -8,6 +8,7 @@ import { Footer } from '@/components/layout/Footer';
 import { HomePage } from '@/pages/HomePage';
 import { ServicesPage } from '@/pages/ServicesPage';
 import { ContactPage} from '@/pages/ContactPage';
+import { PrivacyPolicyPage } from '@/pages/PrivacyPolicyPage';
 //import { ProductsPage } from '@/pages/ProductsPage';
 import { FloatingWhatsApp } from '@/components/layout/FloatingWhatsApp';
 
@@ -29,6 +30,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
 
 
             {/* Define other routes here for Contact page when it is created */}
