@@ -12,7 +12,7 @@ export function PrivacyPolicyPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-center mb-8">Política de Privacidad</h1>
         
         <div className="space-y-6 text-muted-foreground">
-          <p><strong>Última actualización:</strong> 1 de Octubre de 2024</p>
+          <p><strong>Última actualización:</strong> 15 de Setiembre de 2025</p>
 
           <p>
             En CR Alineaciones Lubricentro, valoramos su privacidad y nos comprometemos a proteger su información personal. Esta Política de Privacidad explica cómo recopilamos, usamos y protegemos los datos que nos proporciona a través de nuestro sitio web.

@@ -41,6 +41,20 @@ const servicesData = [
     imagePosition: 'right',
   },
   {
+    id: 'embragues',
+    title: 'Embragues',
+    description: 'En nuestro taller realizamos mantenimiento y reparación de embragues, asegurando un cambio suave de marchas y prolongando la vida útil de tu vehículo. Sustituimos discos, platillos y rodamientos con repuestos de calidad para un funcionamiento óptimo.',
+    imageUrl: 'https://salamancachile.cl/wp-content/uploads/2024/04/cesta-disco-mecanismo-embrague-automotriz-cojinete-auto-sobre-fondo-negro.jpg',
+    imagePosition: 'left',
+  },
+   {
+    id: 'distribucion',
+    title: 'Distribución',
+    description: 'Nos encargamos del mantenimiento y reemplazo de correas y cadenas de distribución, garantizando la sincronización perfecta del motor. Un sistema de distribución en buen estado evita fallos mecánicos graves y asegura el rendimiento eficiente de tu vehículo.',
+    imageUrl: 'https://st4.depositphotos.com/23262978/40261/i/450/depositphotos_402616618-stock-photo-new-timing-belt-with-rollers.jpg',
+    imagePosition: 'right',
+  },
+  {
     id: 'trendelantero',
     title: 'Tren Delantero',
     description: 'Nos especializamos en la reparación y ajuste del tren delantero: rótulas, parrillas, bujes, extremos de dirección y amortiguadores. Un tren delantero en buen estado brinda seguridad, confort y mayor vida útil a tus neumáticos.',

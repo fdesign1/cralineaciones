@@ -20,6 +20,8 @@ const services = [
   { name: "Balanceo", href: "/services#balanceo" },
   { name: "Lubricentro", href: "/services#lubricentro" },
   { name: "Alineación 3D", href: "/services#alineacion3d" },
+  { name: "Embragues", href: "/services#embragues" },
+  { name: "Distribución", href: "/services#distribucion" },
   { name: "Tren Delantero", href: "/services#trendelantero" },
   { name: "Suspensión", href: "/services#suspension" },
   { name: "Baterías", href: "/services#baterias" },

@@ -38,6 +38,20 @@ const services = [
     gridClass: "md:col-span-1",
     overlay: "bg-black/60"
   },
+   {
+    title: "Embragues",
+    imageUrl: "https://salamancachile.cl/wp-content/uploads/2024/04/cesta-disco-mecanismo-embrague-automotriz-cojinete-auto-sobre-fondo-negro.jpg",
+    href: "/services#embragues",
+    gridClass: "md:col-span-1",
+    overlay: "bg-red-900/70"
+  },
+  {
+    title: "Distribución",
+    imageUrl: "https://st4.depositphotos.com/23262978/40261/i/450/depositphotos_402616618-stock-photo-new-timing-belt-with-rollers.jpg",
+    href: "/services#distribucion",
+    gridClass: "md:col-span-1",
+    overlay: "bg-black/60"
+  },
   {
     title: "Tren Delantero",
     imageUrl: "https://paautos.gt/inicio/wp-content/uploads/2021/06/05.-Tren-delantero.jpg",

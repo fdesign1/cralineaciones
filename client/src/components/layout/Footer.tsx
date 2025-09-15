@@ -59,10 +59,14 @@ export function Footer() {
         </div>
         <div className="border-t border-border/40 mt-8 pt-6 text-center text-sm text-muted-foreground">
           <p>
-            &copy; {new Date().getFullYear()} CR alineaciones. Todos los
-            derechos reservados. | <Link to="/privacy-policy" className="hover:text-primary">Política de Privacidad</Link>
+            &copy; {new Date().getFullYear()} CR Alineaciones. Todos los derechos reservados. |{' '}
+            <Link to="/privacy-policy" className="hover:text-primary">Política de Privacidad</Link>
+          </p>
+          <p className="mt-2 text-xs text-muted-foreground">
+            Desarrollado por <strong>MWeb Development</strong>
           </p>
         </div>
+
       </div>
     </footer>
   );
