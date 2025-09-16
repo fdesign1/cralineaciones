@@ -14,6 +14,7 @@ import {
 import {
   SheetClose,
 } from "@/components/ui/sheet";
+import { ChevronDown } from "lucide-react";
 
 interface NavigationProps {
   isMobile?: boolean;
@@ -62,6 +63,7 @@ ListItem.displayName = "ListItem";
 
 export function Navigation({ isMobile = false, onLinkClick }: NavigationProps) {
   const navigate = useNavigate();
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = React.useState(false);
 
   const handleServiceClick = (href: string) => {
     navigate(href);
@@ -113,24 +115,32 @@ export function Navigation({ isMobile = false, onLinkClick }: NavigationProps) {
 
   if (isMobile) {
     return (
-      <nav className="flex flex-col items-start gap-4">
+      <nav className="flex w-full flex-col items-start gap-2">
         <SheetClose asChild>
           <NavLink to="/" className="w-full text-left justify-start">Inicio</NavLink>
         </SheetClose>
         <div className="w-full">
-          <p className="px-4 py-2 text-sm font-medium text-muted-foreground">Servicios</p>
-          <div className="grid grid-cols-1 gap-1 pl-4">
-            {services.map((service) => (
-              <SheetClose asChild key={service.name}>
-                <button
-                  onClick={() => handleServiceClick(service.href)}
-                  className="w-full text-left px-2 py-1.5 text-sm font-medium text-muted-foreground rounded-sm transition-colors hover:bg-accent hover:text-accent-foreground"
-                >
-                  {service.name}
-                </button>
-              </SheetClose>
-            ))}
-          </div>
+          <button
+            onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+            className={cn(navigationMenuTriggerStyle(), "bg-transparent w-full flex justify-between items-center")}
+          >
+            Servicios
+            <ChevronDown className={`h-4 w-4 transition-transform ${isMobileServicesOpen ? 'rotate-180' : ''}`} />
+          </button>
+          {isMobileServicesOpen && (
+            <div className="grid grid-cols-1 gap-1 pl-8 pr-4 py-2">
+              {services.map((service) => (
+                <SheetClose asChild key={service.name}>
+                  <button
+                    onClick={() => handleServiceClick(service.href)}
+                    className="w-full text-left px-2 py-1.5 text-sm font-medium text-muted-foreground rounded-sm transition-colors hover:bg-accent hover:text-accent-foreground"
+                  >
+                    {service.name}
+                  </button>
+                </SheetClose>
+              ))}
+            </div>
+          )}
         </div>
         <SheetClose asChild>
           <NavLink to="https://cralineacionestienda.infinityfree.me/tienda" isExternal className="w-full text-left justify-start">Catálogo</NavLink>
