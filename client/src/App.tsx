@@ -7,6 +7,7 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { HomePage } from '@/pages/HomePage';
 import { ServicesPage } from '@/pages/ServicesPage';
+import { GalleryPage } from '@/pages/GalleryPage';
 import { ContactPage} from '@/pages/ContactPage';
 import { PrivacyPolicyPage } from '@/pages/PrivacyPolicyPage';
 //import { ProductsPage } from '@/pages/ProductsPage';
@@ -29,11 +30,9 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/services" element={<ServicesPage />} />
+            <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
-
-
-            {/* Define other routes here for Contact page when it is created */}
           </Routes>
         </main>
         <FloatingWhatsApp />

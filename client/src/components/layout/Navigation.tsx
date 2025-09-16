@@ -143,6 +143,9 @@ export function Navigation({ isMobile = false, onLinkClick }: NavigationProps) {
           )}
         </div>
         <SheetClose asChild>
+          <NavLink to="/gallery" className="w-full text-left justify-start">Galería</NavLink>
+        </SheetClose>
+        <SheetClose asChild>
           <NavLink to="https://cralineacionestienda.infinityfree.me/tienda" isExternal className="w-full text-left justify-start">Catálogo</NavLink>
         </SheetClose>
         <SheetClose asChild>
@@ -178,6 +181,9 @@ export function Navigation({ isMobile = false, onLinkClick }: NavigationProps) {
               ))}
             </ul>
           </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavLink to="/gallery">Galería</NavLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavLink to="https://cralineacionestienda.infinityfree.me/tienda" isExternal>Catálogo</NavLink>

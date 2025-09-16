@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import { WeatherWidget } from "@/components/layout/Weather";
 import { ServicesGrid } from "@/components/features/services/ServicesGrid";
+import { FeaturedGallery } from "@/components/features/gallery/FeaturedGallery";
 import { ProductsAndBrands } from "@/components/features/products/ProductsAndBrands";
 
 //import { Insta } from "@/components/features/products/Insta";
@@ -132,6 +133,8 @@ export function HomePage() {
       {/* Servicios debajo del Hero */}
       <ServicesGrid />
 
+      {/* Galería Destacada */}
+      <FeaturedGallery />
 
       {/* Insta */}
       {/*<Insta />*/}
