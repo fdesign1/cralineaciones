@@ -23,7 +23,7 @@ export function Footer() {
               Teléfono: +54 9 291 446-0056
             </p>
             <p className="text-sm text-muted-foreground mt-1">
-              Email: contacto@cralineaciones.com
+              Email: Jonaiturre@icloud.com
             </p>
             <div className="mt-4">
               <SocialLinks />
