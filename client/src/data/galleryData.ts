@@ -16,7 +16,7 @@ export const galleryData: GalleryItem[] = [
   },
   {
     id: 'alineacion-2',
-    title: 'Alineación de Camioneta 4x4',
+    title: 'Alineación de Camioneta',
     category: 'alineacion',
     image: Alignment,
     description: 'Alineación especializada para vehículo 4x4 con suspensión modificada. Ajuste preciso para uso mixto ciudad/campo.',
