@@ -1,10 +1,15 @@
 
 import React, { useEffect, useState  } from "react";
 import { Button } from "@/components/ui/button";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 //import { Link } from "react-router-dom";
 
 export function ContactPage() {
+  usePageTitle({
+    title: "Contacto y Ubicación - Bahía Blanca",
+    description: "Contacta con CR Alineaciones Lubricentro. Ubicados en Remedios de Escalada 366, Bahía Blanca. Tel: 291 446-0056. ¡Solicita tu turno!"
+  });
   const [iframeLoaded, setIframeLoaded] = useState(false);
 
     useEffect(() => {

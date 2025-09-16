@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 
-
+import { usePageTitle } from "@/hooks/usePageTitle";
 import { WeatherWidget } from "@/components/layout/Weather";
 import { ServicesGrid } from "@/components/features/services/ServicesGrid";
 import { ProductsAndBrands } from "@/components/features/products/ProductsAndBrands";
@@ -14,6 +14,10 @@ import { ProductsAndBrands } from "@/components/features/products/ProductsAndBra
 //import { Insta } from "@/components/features/products/Insta";
 
 export function HomePage() {
+  usePageTitle({
+    title: "Inicio - Taller Mecánico en Bahía Blanca",
+    description: "CR Alineaciones Lubricentro en Bahía Blanca. Especialistas en alineación 3D, cambio de aceite, frenos, balanceo y más servicios automotrices. ¡Agenda tu turno!"
+  });
 
 
   useEffect(() => {

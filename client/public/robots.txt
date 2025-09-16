@@ -1,0 +1,32 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://fdesign1.github.io/cralineaciones/sitemap.xml
+
+# Allow all common crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Disallow admin or private areas (if any in the future)
+Disallow: /admin/
+Disallow: /private/
+
+# Allow CSS and JS files for better crawling
+Allow: /assets/
+Allow: *.css
+Allow: *.js
+Allow: *.png
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.svg
+Allow: *.webp
+
+# Crawl-delay (optional, helps prevent overloading)
+Crawl-delay: 1

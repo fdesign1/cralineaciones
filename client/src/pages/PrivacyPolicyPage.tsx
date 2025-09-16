@@ -1,7 +1,12 @@
 
 import * as React from 'react';
+import { usePageTitle } from '@/hooks/usePageTitle';
 
 export function PrivacyPolicyPage() {
+  usePageTitle({
+    title: "Política de Privacidad",
+    description: "Política de privacidad de CR Alineaciones Lubricentro. Información sobre el tratamiento de datos personales y cookies."
+  });
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

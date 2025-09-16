@@ -2,6 +2,7 @@
 import * as React from 'react';
 import { useLocation } from 'react-router-dom';
 import { ServiceSection } from '@/components/features/services/ServiceSection';
+import { usePageTitle } from '@/hooks/usePageTitle';
 
 
 const servicesData = [
@@ -87,6 +88,11 @@ const servicesData = [
 
 export function ServicesPage() {
   const location = useLocation();
+
+  usePageTitle({
+    title: "Servicios Automotrices - Alineación, Frenos, Lubricentro",
+    description: "Servicios completos de taller mecánico: alineación 3D, cambio de aceite, frenos, balanceo, suspensión, embragues y más en Bahía Blanca."
+  });
 
   React.useEffect(() => {
     if (location.hash) {
