@@ -1,8 +1,19 @@
 
 import * as React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu";
+import {
+  SheetClose,
+} from "@/components/ui/sheet";
 
 interface NavigationProps {
   isMobile?: boolean;
@@ -23,8 +34,33 @@ const services = [
   { name: "Enderezado de llantas", href: "/services#enderezadodellantas" },
 ];
 
+const ListItem = React.forwardRef<
+  React.ElementRef<"a">,
+  React.ComponentPropsWithoutRef<"a">
+>(({ className, title, children, ...props }, ref) => {
+  return (
+    <li>
+      <NavigationMenuLink asChild>
+        <a
+          ref={ref}
+          className={cn(
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            className
+          )}
+          {...props}
+        >
+          <div className="text-sm font-medium leading-none">{title}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+            {children}
+          </p>
+        </a>
+      </NavigationMenuLink>
+    </li>
+  );
+});
+ListItem.displayName = "ListItem";
+
 export function Navigation({ isMobile = false, onLinkClick }: NavigationProps) {
-  const [isServicesOpen, setIsServicesOpen] = React.useState(false);
   const navigate = useNavigate();
 
   const handleServiceClick = (href: string) => {
@@ -32,17 +68,18 @@ export function Navigation({ isMobile = false, onLinkClick }: NavigationProps) {
     if (onLinkClick) {
       onLinkClick();
     }
-    setIsServicesOpen(false);
   };
 
   const NavLink = ({
     to,
     children,
     isExternal = false,
+    className,
   }: {
     to: string;
     children: React.ReactNode;
     isExternal?: boolean;
+    className?: string;
   }) => {
     const handleClick = () => {
       if (onLinkClick) {
@@ -57,7 +94,7 @@ export function Navigation({ isMobile = false, onLinkClick }: NavigationProps) {
           target="_blank"
           rel="noopener noreferrer"
           onClick={handleClick}
-          className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+          className={cn(navigationMenuTriggerStyle(), "bg-transparent", className)}
         >
           {children}
         </a>
@@ -67,54 +104,81 @@ export function Navigation({ isMobile = false, onLinkClick }: NavigationProps) {
       <Link
         to={to}
         onClick={handleClick}
-        className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+        className={cn(navigationMenuTriggerStyle(), "bg-transparent", className)}
       >
         {children}
       </Link>
     );
   };
 
-  const navClasses = cn(
-    "flex items-center gap-6",
-    isMobile && "flex-col items-start gap-4"
-  );
-
-  return (
-    <nav className={navClasses}>
-      <NavLink to="/">Inicio</NavLink>
-      <div className="relative">
-        <button
-          onClick={() => setIsServicesOpen(!isServicesOpen)}
-          onBlur={() => setTimeout(() => setIsServicesOpen(false), 150)}
-          className="flex items-center gap-1 text-sm font-medium text-muted-foreground transition-colors hover:text-primary focus:outline-none"
-        >
-          Servicios <ChevronDown className={`h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
-        </button>
-        {isServicesOpen && (
-          <div className={cn(
-            "absolute z-50 mt-2 w-48 rounded-md border bg-popover p-1 text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95",
-            isMobile && "relative !w-full !mt-1 !border-none !shadow-none !bg-transparent !p-0"
-          )}>
-            <div className={cn(
-              "grid gap-1",
-              isMobile && "grid-cols-1 gap-2 pl-4"
-            )}>
-              {services.map((service) => (
+  if (isMobile) {
+    return (
+      <nav className="flex flex-col items-start gap-4">
+        <SheetClose asChild>
+          <NavLink to="/" className="w-full text-left justify-start">Inicio</NavLink>
+        </SheetClose>
+        <div className="w-full">
+          <p className="px-4 py-2 text-sm font-medium text-muted-foreground">Servicios</p>
+          <div className="grid grid-cols-1 gap-1 pl-4">
+            {services.map((service) => (
+              <SheetClose asChild key={service.name}>
                 <button
-                  key={service.name}
                   onClick={() => handleServiceClick(service.href)}
                   className="w-full text-left px-2 py-1.5 text-sm font-medium text-muted-foreground rounded-sm transition-colors hover:bg-accent hover:text-accent-foreground"
                 >
                   {service.name}
                 </button>
-              ))}
-            </div>
+              </SheetClose>
+            ))}
           </div>
-        )}
-      </div>
-      <NavLink to="https://cralineacionestienda.infinityfree.me/tienda" isExternal>Catálogo</NavLink>
-      <NavLink to="https://cralineacionestienda.infinityfree.me/turnos" isExternal>Turnos</NavLink>
-      <NavLink to="/contact">Quiénes somos?</NavLink>
-    </nav>
+        </div>
+        <SheetClose asChild>
+          <NavLink to="https://cralineacionestienda.infinityfree.me/tienda" isExternal className="w-full text-left justify-start">Catálogo</NavLink>
+        </SheetClose>
+        <SheetClose asChild>
+          <NavLink to="https://cralineacionestienda.infinityfree.me/turnos" isExternal className="w-full text-left justify-start">Turnos</NavLink>
+        </SheetClose>
+        <SheetClose asChild>
+          <NavLink to="/contact" className="w-full text-left justify-start">Quiénes somos?</NavLink>
+        </SheetClose>
+      </nav>
+    );
+  }
+
+  return (
+    <NavigationMenu>
+      <NavigationMenuList>
+        <NavigationMenuItem>
+          <NavLink to="/">Inicio</NavLink>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger className="bg-transparent">Servicios</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+              {services.map((service) => (
+                <ListItem
+                  key={service.name}
+                  title={service.name}
+                  href={service.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate(service.href);
+                  }}
+                />
+              ))}
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavLink to="https://cralineacionestienda.infinityfree.me/tienda" isExternal>Catálogo</NavLink>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavLink to="https://cralineacionestienda.infinityfree.me/turnos" isExternal>Turnos</NavLink>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavLink to="/contact">Quiénes somos?</NavLink>
+        </NavigationMenuItem>
+      </NavigationMenuList>
+    </NavigationMenu>
   );
 }
