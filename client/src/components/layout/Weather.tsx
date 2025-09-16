@@ -18,8 +18,12 @@ export function WeatherWidget() {
     
     const fetchWeather = async () => {
       try {
-        // Reemplazar con tu API key y endpoint real
-        const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=77a5859932e5456e964152927251309&q=${encodeURIComponent("Bahia Blanca")}&aqi=no&lang=es`);
+        // Usar variable de entorno para la API key
+        const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
+        if (!apiKey) {
+          throw new Error('Weather API key not configured');
+        }
+        const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${encodeURIComponent("Bahia Blanca")}&aqi=no&lang=es`);
         const data = await response.json();
         setWeather(data.current);
       } catch (error) {
