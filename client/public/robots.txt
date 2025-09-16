@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://fdesign1.github.io/cralineaciones/sitemap.xml
+Sitemap: https://www.cralineaciones.com.ar/sitemap.xml
 
 # Allow all common crawlers
 User-agent: Googlebot

@@ -8,7 +8,7 @@
 
   <!-- Página Principal -->
   <url>
-    <loc>https://fdesign1.github.io/cralineaciones/</loc>
+    <loc>https://www.cralineaciones.com.ar/</loc>
     <lastmod>2025-01-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -16,7 +16,7 @@
 
   <!-- Página de Servicios -->
   <url>
-    <loc>https://fdesign1.github.io/cralineaciones/services</loc>
+    <loc>https://www.cralineaciones.com.ar/services</loc>
     <lastmod>2025-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -24,77 +24,77 @@
 
   <!-- Servicios Específicos -->
   <url>
-    <loc>https://fdesign1.github.io/cralineaciones/services#aceite</loc>
+    <loc>https://www.cralineaciones.com.ar/services#aceite</loc>
     <lastmod>2025-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://fdesign1.github.io/cralineaciones/services#alineacion3d</loc>
+    <loc>https://www.cralineaciones.com.ar/services#alineacion3d</loc>
     <lastmod>2025-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://fdesign1.github.io/cralineaciones/services#frenos</loc>
+    <loc>https://www.cralineaciones.com.ar/services#frenos</loc>
     <lastmod>2025-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://fdesign1.github.io/cralineaciones/services#balanceo</loc>
+    <loc>https://www.cralineaciones.com.ar/services#balanceo</loc>
     <lastmod>2025-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://fdesign1.github.io/cralineaciones/services#lubricentro</loc>
+    <loc>https://www.cralineaciones.com.ar/services#lubricentro</loc>
     <lastmod>2025-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://fdesign1.github.io/cralineaciones/services#embragues</loc>
+    <loc>https://www.cralineaciones.com.ar/services#embragues</loc>
     <lastmod>2025-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://fdesign1.github.io/cralineaciones/services#distribucion</loc>
+    <loc>https://www.cralineaciones.com.ar/services#distribucion</loc>
     <lastmod>2025-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://fdesign1.github.io/cralineaciones/services#trendelantero</loc>
+    <loc>https://www.cralineaciones.com.ar/services#trendelantero</loc>
     <lastmod>2025-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://fdesign1.github.io/cralineaciones/services#suspension</loc>
+    <loc>https://www.cralineaciones.com.ar/services#suspension</loc>
     <lastmod>2025-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://fdesign1.github.io/cralineaciones/services#baterias</loc>
+    <loc>https://www.cralineaciones.com.ar/services#baterias</loc>
     <lastmod>2025-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://fdesign1.github.io/cralineaciones/services#enderezadodellantas</loc>
+    <loc>https://www.cralineaciones.com.ar/services#enderezadodellantas</loc>
     <lastmod>2025-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -102,7 +102,7 @@
 
   <!-- Página de Contacto -->
   <url>
-    <loc>https://fdesign1.github.io/cralineaciones/contact</loc>
+    <loc>https://www.cralineaciones.com.ar/contact</loc>
     <lastmod>2025-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -110,7 +110,7 @@
 
   <!-- Política de Privacidad -->
   <url>
-    <loc>https://fdesign1.github.io/cralineaciones/privacy-policy</loc>
+    <loc>https://www.cralineaciones.com.ar/privacy-policy</loc>
     <lastmod>2025-01-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
