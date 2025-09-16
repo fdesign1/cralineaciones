@@ -29,11 +29,11 @@ export function GalleryPage() {
       {/* Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
         <div className="text-center">
-          <div className="text-3xl font-bold text-red-700 mb-2">500+</div>
+          <div className="text-3xl font-bold text-red-700 mb-2">300+</div>
           <div className="text-sm text-muted-foreground">Trabajos Realizados</div>
         </div>
         <div className="text-center">
-          <div className="text-3xl font-bold text-red-700 mb-2">15+</div>
+          <div className="text-3xl font-bold text-red-700 mb-2">10+</div>
           <div className="text-sm text-muted-foreground">Años de Experiencia</div>
         </div>
         <div className="text-center">

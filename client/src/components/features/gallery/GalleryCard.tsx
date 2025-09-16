@@ -11,7 +11,7 @@ export function GalleryCard({ item, onClick }: GalleryCardProps) {
   const [imageLoaded, setImageLoaded] = React.useState(false);
   const [imageError, setImageError] = React.useState(false);
 
-  const displayImage = item.afterImage || item.image;
+  const displayImage = item.beforeImage || item.image || item.afterImage;
   const isBeforeAfter = !!(item.beforeImage && item.afterImage);
 
   const handleImageLoad = () => {
