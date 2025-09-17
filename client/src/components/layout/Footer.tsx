@@ -74,7 +74,7 @@ export function Footer() {
                 className="h-8 sm:h-10 w-auto object-contain transition-all duration-300 group-hover:scale-125 filter brightness-110 contrast-110 drop-shadow-lg"
               />
               <span className="text-xs font-bold text-muted-foreground transition-colors duration-300 group-hover:text-white">
-                Ferre Dev | Tecnnología web
+                Ferre Dev | Tecnología web
               </span>
             </div>
           </div>
