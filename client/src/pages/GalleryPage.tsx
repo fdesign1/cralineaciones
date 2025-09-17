@@ -50,7 +50,7 @@ export function GalleryPage() {
       <GalleryGrid items={galleryData} showCategories={true} />
 
       {/* Call to Action */}
-      <div className="text-center mt-16 p-8 bg-gray-50 rounded-lg">
+      <div className="text-center mt-16 p-8 bg-black-50 rounded-lg">
         <h2 className="text-2xl font-bold mb-4">
           ¿Tu Auto Necesita Atención?
         </h2>
