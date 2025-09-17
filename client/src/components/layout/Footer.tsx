@@ -63,18 +63,18 @@ export function Footer() {
             &copy; {new Date().getFullYear()} CR Alineaciones. Todos los derechos reservados. |{' '}
             <Link to="/privacy-policy" className="hover:text-primary">Política de Privacidad</Link>
           </p>
-          <div className="mt-2 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2">
+          <div className="mt-3 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3">
             <span className="text-xs text-muted-foreground">
-              Desarrollado por
+              Sitio desarrollado por
             </span>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 group cursor-pointer bg-white/5 px-2 py-1 rounded-md hover:bg-white/10 transition-all duration-300">
               <img 
                 src={FerreDev} 
                 alt="Ferre Dev" 
-                className="h-4 sm:h-5 w-auto object-contain"
+                className="h-8 sm:h-10 w-auto object-contain transition-all duration-300 group-hover:scale-125 filter brightness-110 contrast-110 drop-shadow-lg"
               />
-              <span className="text-xs font-bold text-muted-foreground">
-                Ferre Dev | Desarrollo web
+              <span className="text-xs font-bold text-muted-foreground transition-colors duration-300 group-hover:text-white">
+                Ferre Dev | Tecnnología web
               </span>
             </div>
           </div>
