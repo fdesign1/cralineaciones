@@ -67,7 +67,7 @@ export function Footer() {
             <span className="text-xs text-muted-foreground">
               Sitio desarrollado por
             </span>
-            <div className="flex items-center gap-2 group cursor-pointer bg-white/5 px-2 py-1 rounded-md hover:bg-white/10 transition-all duration-300">
+            <div className="flex items-center gap-2 group cursor-pointer bg-white/5 px-0 py-1 rounded-md hover:bg-white/10 transition-all duration-300">
               <img 
                 src={FerreDev} 
                 alt="Ferre Dev" 
