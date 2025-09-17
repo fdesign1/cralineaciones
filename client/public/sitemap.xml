@@ -108,6 +108,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Página de Preguntas Frecuentes -->
+  <url>
+    <loc>https://www.cralineaciones.com.ar/faq</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Página de Contacto -->
   <url>
     <loc>https://www.cralineaciones.com.ar/contact</loc>
