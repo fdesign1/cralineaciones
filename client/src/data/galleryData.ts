@@ -1,25 +1,23 @@
 import { GalleryItem } from '@/components/features/gallery/GalleryGrid';
 import Wheel from '@/assets/wheel.png';
-import Alignment from '@/assets/alignment.png';
-import Cambios from '@/assets/cambios.png';
+import Alignment2 from '@/assets/alignment.jpeg';
+import Pastilla from '@/assets/pastilla.jpeg';
+import Suspension from '@/assets/suspension.jpeg';
+import Distribucion from '@/assets/distribucion3.jpeg';
+import Distribucion2 from '@/assets/distribucion4.jpeg';
+import Distribucion4 from '@/assets/distribucion2.jpeg';
+import Autoblanco2 from '@/assets/autoblanco2.jpeg';
+import Autoblanco1 from '@/assets/autoblanco1.jpeg';
+import Autogris from '@/assets/autogris.jpeg';
 
 export const galleryData: GalleryItem[] = [
   // Alineación 3D
   {
     id: 'alineacion-1',
-    title: 'Alineación 3D Completa',
+    title: 'Alineación de Toyota',
     category: 'alineacion',
-    beforeImage: Cambios,
-    afterImage: Cambios,
-    description: 'Corrección completa de alineación en vehículo con desgaste irregular de neumáticos. Resultado: mejor manejo y vida útil extendida de las cubiertas.',
-    service: 'Alineación 3D'
-  },
-  {
-    id: 'alineacion-2',
-    title: 'Alineación de Camioneta',
-    category: 'alineacion',
-    image: Alignment,
-    description: 'Alineación especializada para vehículo 4x4 con suspensión modificada. Ajuste preciso para uso mixto ciudad/campo.',
+    image: Alignment2,
+    description: 'Alineación especializada para vehículo Toyota con suspensión modificada. Ajuste preciso para uso mixto ciudad/campo.',
     service: 'Alineación 3D'
   },
 
@@ -28,8 +26,8 @@ export const galleryData: GalleryItem[] = [
     id: 'frenos-1',
     title: 'Cambio de Pastillas y Discos',
     category: 'frenos',
-    beforeImage: 'https://images.unsplash.com/photo-1656232976683-7b688560e427?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    afterImage: 'https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&auto=format&fit=crop&q=60',
+    beforeImage: Pastilla,
+    afterImage: Pastilla,
     description: 'Reemplazo completo del sistema de frenos delanteros. Pastillas gastadas y discos rayados restaurados a condición óptima.',
     service: 'Sistema de Frenos'
   },
@@ -37,7 +35,7 @@ export const galleryData: GalleryItem[] = [
     id: 'frenos-2',
     title: 'Reparación Sistema de Frenos',
     category: 'frenos',
-    image: 'https://images.unsplash.com/photo-1588017530244-c57df911f73b?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: 'https://images.unsplash.com/photo-1656232976683-7b688560e427?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     description: 'Diagnóstico y reparación completa del sistema de frenos con reemplazo de componentes hidráulicos.',
     service: 'Sistema de Frenos'
   },
@@ -47,23 +45,32 @@ export const galleryData: GalleryItem[] = [
     id: 'suspension-1',
     title: 'Cambio de Amortiguadores',
     category: 'suspension',
-    beforeImage: 'https://images.unsplash.com/photo-1669136048337-5daa3adef7b2?q=80&w=1542&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    afterImage: 'https://images.unsplash.com/photo-1669136048337-5daa3adef7b2?q=80&w=1542&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    beforeImage: Suspension,
+    afterImage: Suspension,
     description: 'Reemplazo de amortiguadores delanteros y traseros. Mejora notable en estabilidad y confort de manejo.',
     service: 'Suspensión'
   },
-  {
-    id: 'suspension-2',
-    title: 'Reparación Tren Delantero',
-    category: 'suspension',
-    image: 'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    description: 'Reparación completa del tren delantero incluyendo rótulas, bujes y terminales de dirección.',
-    service: 'Tren Delantero'
-  },
 
-  // Motor
+  // Motor - Distribución
   {
     id: 'motor-1',
+    title: 'Cambio de Cadena de Distribución',
+    category: 'motor',
+    beforeImage: Distribucion,
+    afterImage: Distribucion2,
+    description: 'Cambio completo de cadena de distribución y componentes relacionados. Trabajo de precisión para garantizar el correcto funcionamiento del motor.',
+    service: 'Distribución'
+  },
+  {
+    id: 'motor-2',
+    title: 'Regulación de Tensión de Distribución',
+    category: 'motor',
+    image: Distribucion4,
+    description: 'Ajuste y regulación de la tensión de cadena de distribución para optimizar el rendimiento del motor.',
+    service: 'Distribución'
+  },
+  {
+    id: 'motor-3',
     title: 'Cambio de Aceite y Filtros',
     category: 'motor',
     image: 'https://images.unsplash.com/photo-1487754180451-c456f719a1fc?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
@@ -71,11 +78,11 @@ export const galleryData: GalleryItem[] = [
     service: 'Lubricentro'
   },
   {
-    id: 'motor-2',
+    id: 'motor-4',
     title: 'Reparación de Embrague',
     category: 'motor',
-    beforeImage: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&auto=format&fit=crop&q=60&sepia=1',
-    afterImage: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&auto=format&fit=crop&q=60',
+    beforeImage: Autogris,
+    afterImage: Autogris,
     description: 'Cambio completo de kit de embrague: disco, plato y rodamiento. Problema de patinaje solucionado.',
     service: 'Embragues'
   },
@@ -94,7 +101,7 @@ export const galleryData: GalleryItem[] = [
     id: 'llantas-2',
     title: 'Balanceo Computarizado',
     category: 'llantas',
-    image: 'https://images.unsplash.com/photo-1749223673543-3c9c9100c172?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: Autoblanco1,
     description: 'Balanceo computarizado de las 4 ruedas eliminando vibraciones en el volante a alta velocidad.',
     service: 'Balanceo'
   },
@@ -104,7 +111,7 @@ export const galleryData: GalleryItem[] = [
     id: 'general-1',
     title: 'Servicio Completo',
     category: 'general',
-    image: 'https://images.unsplash.com/photo-1597766325363-f5576d851d6a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: Autoblanco2,
     description: 'Servicio integral: cambio de aceite, revisión de frenos, alineación y balanceo en una sola visita.',
     service: 'Servicio Integral'
   },
@@ -120,5 +127,5 @@ export const galleryData: GalleryItem[] = [
 
 // Datos destacados para la homepage (los mejores trabajos)
 export const featuredGalleryData = galleryData.filter(item => 
-  ['alineacion-1', 'frenos-1', 'suspension-1', 'motor-2', 'llantas-1', 'general-1'].includes(item.id)
+  ['alineacion-1', 'frenos-1', 'suspension-1', 'motor-1', 'llantas-1', 'general-1'].includes(item.id)
 );

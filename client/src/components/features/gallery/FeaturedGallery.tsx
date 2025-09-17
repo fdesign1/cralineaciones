@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 
 export function FeaturedGallery() {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-black-50">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
