@@ -3,6 +3,7 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import { Logo } from "./Logo";
 import { SocialLinks } from "./SocialLinks";
+import FerreDev from '@/assets/ferredev.png';
 
 export function Footer() {
   return (
@@ -62,9 +63,21 @@ export function Footer() {
             &copy; {new Date().getFullYear()} CR Alineaciones. Todos los derechos reservados. |{' '}
             <Link to="/privacy-policy" className="hover:text-primary">Política de Privacidad</Link>
           </p>
-          <p className="mt-2 text-xs text-muted-foreground">
-            Desarrollado por <strong>MWeb Development</strong>
-          </p>
+          <div className="mt-2 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2">
+            <span className="text-xs text-muted-foreground">
+              Desarrollado por
+            </span>
+            <div className="flex items-center gap-2">
+              <img 
+                src={FerreDev} 
+                alt="Ferre Dev" 
+                className="h-4 sm:h-5 w-auto object-contain"
+              />
+              <span className="text-xs font-bold text-muted-foreground">
+                Ferre Dev | Desarrollo web
+              </span>
+            </div>
+          </div>
         </div>
 
       </div>
