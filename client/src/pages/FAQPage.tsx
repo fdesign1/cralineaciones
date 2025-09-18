@@ -32,11 +32,11 @@ export function FAQPage() {
       <FAQSection items={faqData} title="" showCategories={true} />
 
       {/* Contact CTA */}
-      <div className="mt-16 bg-gradient-to-r from-red-50 to-gray-50 rounded-2xl p-8 text-center">
-        <h2 className="text-2xl font-bold mb-4">
+      <div className="mt-16 bg-black border border-gray-800 rounded-2xl p-8 text-center">
+        <h2 className="text-2xl font-bold mb-4 text-white">
           ¿No encontraste la respuesta que buscabas?
         </h2>
-        <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+        <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
           Nuestro equipo está listo para resolver cualquier duda específica sobre tu vehículo. 
           Contáctanos y recibe asesoramiento personalizado sin compromiso.
         </p>
