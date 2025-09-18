@@ -134,15 +134,12 @@ Te asesoramos sobre el lubricante ideal para tu vehículo según el manual del f
 
 💵 **Efectivo:**
 • Pesos argentinos
-• 5% descuento en efectivo
 
 🏧 **Transferencias:**
-• Mercado Pago
 • Transferencia bancaria
-• QR disponible
 
 📱 **Billeteras digitales:**
-• Ualá, Brubank, Naranja X
+
 
 Consultanos por planes de financiación especiales para servicios mayores.`,
     category: 'precios'
