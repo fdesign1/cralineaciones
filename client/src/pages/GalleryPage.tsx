@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { GalleryGrid } from '@/components/features/gallery/GalleryGrid';
 import { galleryData } from '@/data/galleryData';
@@ -58,14 +59,12 @@ export function GalleryPage() {
           No esperes a que el problema empeore. Agenda tu turno y dale a tu vehículo el cuidado que se merece.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="https://cralineacionestienda.infinityfree.me/turnos"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/turnos"
             className="inline-flex items-center justify-center px-6 py-3 bg-red-700 text-white font-medium rounded-lg hover:bg-red-800 transition-colors"
           >
             Solicitar Turno
-          </a>
+          </Link>
           <a
             href="https://wa.me/+5492914460056"
             target="_blank"

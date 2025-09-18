@@ -149,10 +149,10 @@ export function Navigation({ isMobile = false, onLinkClick }: NavigationProps) {
           <NavLink to="/faq" className="w-full text-left justify-start">Preguntas Frecuentes</NavLink>
         </SheetClose>
         <SheetClose asChild>
-          <NavLink to="https://cralineacionestienda.infinityfree.me/tienda" isExternal className="w-full text-left justify-start">Catálogo</NavLink>
+          <NavLink to="/catalogo" className="w-full text-left justify-start">Catálogo</NavLink>
         </SheetClose>
         <SheetClose asChild>
-          <NavLink to="https://cralineacionestienda.infinityfree.me/turnos" isExternal className="w-full text-left justify-start">Turnos</NavLink>
+          <NavLink to="/turnos" className="w-full text-left justify-start">Turnos</NavLink>
         </SheetClose>
         <SheetClose asChild>
           <NavLink to="/contact" className="w-full text-left justify-start">Quiénes somos?</NavLink>
@@ -192,10 +192,10 @@ export function Navigation({ isMobile = false, onLinkClick }: NavigationProps) {
           <NavLink to="/faq">FAQ</NavLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavLink to="https://cralineacionestienda.infinityfree.me/tienda" isExternal>Catálogo</NavLink>
+          <NavLink to="/catalogo">Catálogo</NavLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavLink to="https://cralineacionestienda.infinityfree.me/turnos" isExternal>Turnos</NavLink>
+          <NavLink to="/turnos">Turnos</NavLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavLink to="/contact">¿Quiénes somos?</NavLink>

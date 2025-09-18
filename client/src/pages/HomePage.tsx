@@ -124,7 +124,7 @@ export function HomePage() {
         size="default"
         className="text-white border-white hover:bg-white/10 text-sm sm:text-base px-4 sm:px-6"
       >
-        <Link to="https://cralineacionestienda.infinityfree.me/turnos">Solicita tu turno</Link>
+        <Link to="/turnos">Solicita tu turno</Link>
       </Button>
     </div>
   </section>

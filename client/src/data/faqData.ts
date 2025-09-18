@@ -183,10 +183,10 @@ Consultanos por planes de financiación especiales para servicios mayores.`,
 ✅ Planificación de servicios múltiples
 ✅ Atención personalizada
 
-**Solicita turno:**
-• WhatsApp: 291 446-0056
-• Online: cralineaciones.com.ar/tienda
-• Teléfono: 291 446-0056
+     **Solicita turno:**
+     • WhatsApp: 291 446-0056
+     • Online: www.cralineaciones.com.ar/turnos
+     • Teléfono: 291 446-0056
 
 🚶 **SIN TURNO:**
 • Por orden de llegada

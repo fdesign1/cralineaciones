@@ -11,6 +11,7 @@ import { GalleryPage } from '@/pages/GalleryPage';
 import { FAQPage } from '@/pages/FAQPage';
 import { ContactPage} from '@/pages/ContactPage';
 import { PrivacyPolicyPage } from '@/pages/PrivacyPolicyPage';
+import { UnderConstructionPage } from '@/pages/UnderConstructionPage';
 //import { ProductsPage } from '@/pages/ProductsPage';
 import { FloatingWhatsApp } from '@/components/layout/FloatingWhatsApp';
 
@@ -35,6 +36,8 @@ function App() {
             <Route path="/faq" element={<FAQPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+            <Route path="/catalogo" element={<UnderConstructionPage />} />
+            <Route path="/turnos" element={<UnderConstructionPage />} />
           </Routes>
         </main>
         <FloatingWhatsApp />

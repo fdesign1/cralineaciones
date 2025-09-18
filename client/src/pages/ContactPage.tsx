@@ -2,8 +2,7 @@
 import React, { useEffect, useState  } from "react";
 import { Button } from "@/components/ui/button";
 import { usePageTitle } from "@/hooks/usePageTitle";
-
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export function ContactPage() {
   usePageTitle({
@@ -97,9 +96,9 @@ export function ContactPage() {
                 Utilizamos tecnología de punta, como nuestra alineadora 3D, y trabajamos con las mejores marcas del mercado para asegurarte un servicio confiable y duradero. Tu tranquilidad es nuestra prioridad.
               </p>
               <Button asChild size="lg" className="bg-red-700 text-white hover:bg-red-800">
-                <a href="https://cralineacionestienda.infinityfree.me/turnos" target="_blank" rel="noopener noreferrer">
+                <Link to="/turnos">
                   Solicitá tu Turno
-                </a>
+                </Link>
               </Button>
             </div>
 
