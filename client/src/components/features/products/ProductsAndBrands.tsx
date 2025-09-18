@@ -12,7 +12,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-const storeUrl = "https://cralineacionestienda.infinityfree.me/";
+const storeUrl = "https://www.cralineaciones.com.ar";
 
 const products = [
   {
@@ -110,7 +110,7 @@ export function ProductsAndBrands() {
         <div className="mb-16" data-aos="fade-up" data-aos-delay="100">
           <div className="flex justify-center mb-3">
             <Button asChild size="lg" className="bg-red-700 text-white hover:bg-gray-800">
-              <Link to="https://cralineacionestienda.infinityfree.me/tienda" target="_blank">
+              <Link to="https://cralineaciones.com.ar" target="_blank">
                 Nuestro catálogo
               </Link>
             </Button>
