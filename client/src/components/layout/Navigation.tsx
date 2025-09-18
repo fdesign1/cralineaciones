@@ -198,7 +198,7 @@ export function Navigation({ isMobile = false, onLinkClick }: NavigationProps) {
           <NavLink to="https://cralineacionestienda.infinityfree.me/turnos" isExternal>Turnos</NavLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavLink to="/contact">Quiénes somos?</NavLink>
+          <NavLink to="/contact">¿Quiénes somos?</NavLink>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>

@@ -149,8 +149,8 @@ Consultanos por planes de financiación especiales para servicios mayores.`,
   },
   {
     id: 'precios-3',
-    question: '¿Tienen promociones o programa de puntos?',
-    answer: `**A IMPLEMENTAR ESTAS PROMOCIONES**
+    _question: '¿Tienen promociones o programa de puntos?',
+    _answer: `**A IMPLEMENTAR ESTAS PROMOCIONES**
 
 🎯 **Clientes Frecuentes:**
 • Alineación GRATIS (con tarjeta de puntos en nuestra web) por acumulación de puntos

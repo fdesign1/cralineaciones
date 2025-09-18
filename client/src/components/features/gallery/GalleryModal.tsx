@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState } from 'react';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { GalleryItem } from './GalleryGrid';
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
 
@@ -33,17 +33,9 @@ export function GalleryModal({ item, onClose }: GalleryModalProps) {
         <DialogTitle className="sr-only">{item.title}</DialogTitle>
         
         {/* Header */}
-        <div className="flex items-center justify-between p-4 border-b">
-          <div>
-            <h2 className="text-xl font-semibold">{item.title}</h2>
-            <p className="text-sm text-gray-600">{item.service}</p>
-          </div>
-          <button
-            onClick={onClose}
-            className="p-2 hover:bg-gray-100 rounded-full transition-colors"
-          >
-            <X className="w-5 h-5" />
-          </button>
+        <div className="p-4 border-b">
+          <h2 className="text-xl font-semibold">{item.title}</h2>
+          <p className="text-sm text-gray-600">{item.service}</p>
         </div>
 
         {/* Image Container */}
