@@ -60,7 +60,7 @@ const brands = [
   {
     name: "Castrol",
     logoUrl:
-      "https://cdn.freebiesupply.com/logos/large/2x/castrol-12-logo-png-transparent.png",
+      "https://logos-world.net/wp-content/uploads/2022/06/Castrol-Logo-2006.png",
   },
   {
     name: "Shell Helix",
