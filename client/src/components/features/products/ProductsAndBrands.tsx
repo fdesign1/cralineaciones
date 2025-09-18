@@ -18,39 +18,39 @@ const products = [
   {
     name: "Aceites Sintéticos-Semi Sintéticos ",
     description:
-      "Protección y rendimiento superior para tu motor. Ideal para cuidar tu vehículo en cada kilómetro.",
+      "",
     imageUrl:
       "https://www.shell.com.ar/motorists/oils-lubricants/helix-for-cars/helix-fully-synthetic/shell-helix-ultra-5w-40/_jcr_content/root/main/section/standalone_asset.shellimg.png/1702283589706/shell-helix-ultra-5w-40.png?imwidth=301&impolicy=amidala-image&imdensity=1",
   },
   {
     name: "Pastillas de Freno",
     description:
-      "Frenado seguro, silencioso y de larga duración. Conduce con confianza en todo momento.",
+      "",
     imageUrl:
       "https://m.media-amazon.com/images/I/41J9VgxiYQL._AC_UF894,1000_QL80_.jpg",
   },
   {
     name: "Filtro de Aire, Nafta y Cabina",
     description:
-      "Mantén tu motor limpio y eficiente. Mejora el rendimiento y reduce el consumo de combustible.",
+      "",
     imageUrl: "https://www.filtrosmareno.com.ar/assets/img/aire/aire_2.jpg",
   },
   {
     name: "Baterías",
     description:
-      "Energía confiable y arranque seguro en todo momento. Diseñadas para durar más.",
+      "",
     imageUrl: "https://www.sermat.com.ar/wp-content/uploads/2023/01/bateria65am.png",
   },
   {
     name: "Neumáticos",
     description:
-      "Neumáticos para cada estilo de manejo. Seguridad, confort y el mejor rendimiento en tus viajes.",
+      "",
     imageUrl: "https://www.oponeo.pl/ndcr/temp/25620/continental-allseasoncontact-2-s2-f-f-l672x750-sk7.png",
   },
   {
     name: "Amortiguadores",
     description:
-      "Conduce con suavidad y estabilidad. Amortiguadores que garantizan seguridad en cada trayecto.",
+      "",
     imageUrl: "https://cdn.club-magazin.autodoc.de/uploads/sites/11/2020/11/amortiguador-de-coche.jpg",
   },
 ];
