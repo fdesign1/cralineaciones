@@ -103,8 +103,8 @@ Te asesoramos sobre el lubricante ideal para tu vehículo según el manual del f
   // Precios y Pagos
   {
     id: 'precios-1',
-    question: '¿Cuánto cuesta la alineación y balanceo?',
-    answer: `**PRECIOS APROXIMADOS (consultar vigencia):**
+    _question: '¿Cuánto cuesta la alineación y balanceo?',
+    _answer: `**PRECIOS APROXIMADOS (consultar vigencia):**
 
 🔧 **Alineación 3D:**
 • Alineación delantera: desde $
@@ -228,8 +228,8 @@ Consultanos por planes de financiación especiales para servicios mayores.`,
   // Garantía y Seguridad
   {
     id: 'garantia-1',
-    question: '¿Ofrecen garantía en los trabajos de alineación y balanceo?',
-    answer: `**GARANTÍAS INCLUIDAS:**
+    _question: '¿Ofrecen garantía en los trabajos de alineación y balanceo?',
+    _answer: `**GARANTÍAS INCLUIDAS:**
 
 🔧 **ALINEACIÓN:**
 • 30 días o 1,000 km (lo que ocurra primero)
@@ -256,8 +256,8 @@ Consultanos por planes de financiación especiales para servicios mayores.`,
   },
   {
     id: 'garantia-2',
-    question: '¿Qué pasa si después de la alineación el auto sigue tirando hacia un lado?',
-    answer: `**PROTOCOLO DE ATENCIÓN:**
+    _question: '¿Qué pasa si después de la alineación el auto sigue tirando hacia un lado?',
+    _answer: `**PROTOCOLO DE ATENCIÓN:**
 
 🔍 **REVISIÓN INMEDIATA:**
 • Regresa al taller dentro de los 30 días
@@ -276,7 +276,7 @@ Consultanos por planes de financiación especiales para servicios mayores.`,
 ✅ **Asesoramiento:** Te explicamos las causas y soluciones
 
 **COMPROMISO:**
-No te vas hasta que tu auto esté perfecto. Nuestra reputación depende de tu satisfacción.
+No te vas hasta que tu auto esté perfecto.
 
 📞 **Contacto inmediato:** 291 446-0056`,
     category: 'garantia'
