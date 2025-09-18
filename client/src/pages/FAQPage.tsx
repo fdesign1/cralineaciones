@@ -64,26 +64,26 @@ export function FAQPage() {
 
       {/* Quick Tips */}
       <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-blue-50 p-6 rounded-lg text-center">
+        <div className="bg-black p-6 rounded-lg text-center border border-gray-800">
           <div className="text-3xl mb-3">🔧</div>
-          <h3 className="font-semibold mb-2">Mantenimiento Preventivo</h3>
-          <p className="text-sm text-muted-foreground">
+          <h3 className="font-semibold mb-2 text-white">Mantenimiento Preventivo</h3>
+          <p className="text-sm text-gray-300">
             Un mantenimiento regular puede ahorrarte costosas reparaciones futuras.
           </p>
         </div>
         
-        <div className="bg-green-50 p-6 rounded-lg text-center">
+        <div className="bg-black p-6 rounded-lg text-center border border-gray-800">
           <div className="text-3xl mb-3">⏰</div>
-          <h3 className="font-semibold mb-2">Agenda tu Turno</h3>
-          <p className="text-sm text-muted-foreground">
+          <h3 className="font-semibold mb-2 text-white">Agenda tu Turno</h3>
+          <p className="text-sm text-gray-300">
             Evita esperas innecesarias reservando tu horario preferido.
           </p>
         </div>
         
-        <div className="bg-yellow-50 p-6 rounded-lg text-center">
+        <div className="bg-black p-6 rounded-lg text-center border border-gray-800">
           <div className="text-3xl mb-3">🛡️</div>
-          <h3 className="font-semibold mb-2">Garantía Incluida</h3>
-          <p className="text-sm text-muted-foreground">
+          <h3 className="font-semibold mb-2 text-white">Garantía Incluida</h3>
+          <p className="text-sm text-gray-300">
             Todos nuestros servicios incluyen garantía para tu tranquilidad.
           </p>
         </div>
