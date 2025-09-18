@@ -2,7 +2,6 @@
 import * as React from 'react';
 import { useLocation } from 'react-router-dom';
 import { ServiceSection } from '@/components/features/services/ServiceSection';
-import { usePageTitle } from '@/hooks/usePageTitle';
 
 
 const servicesData = [
@@ -23,7 +22,7 @@ const servicesData = [
   {
     id: 'balanceo',
     title: 'Balanceo',
-    description: 'El balanceo de ruedas evita vibraciones al conducir y mejora la estabilidad del vehículo. Utilizamos equipamiento computarizado para asegurar un desgaste uniforme de los neumáticos y mayor confort al manejar. Es muy fácil sentir cuando el auto está mal balanceado. Al llegar a ciertas velocidades sentirás en el volante la vibración del vehículo, esto significa que la cubierta tiene un “abultamiento” o que los neumáticos están desbalanceados. Lo recomendable es verificar cuál de las dos causas es. Si es un abultamiento, cambia el neumático. Es importante saber que las cubiertas se cambian por par, si la cubierta trasera izquierda tiene este problema, tendrás que cambiar de igual manera la derecha. Si está desbalanceado, balancearlo. Así se evitará un desgaste irregular del neumático, además de no sentir esa molestia de las vibraciones en el volante. Otro beneficio del balanceo, es que se economiza un poco la gasolina porque la cubierta tiene un buen agarre en el piso y no va bailando.',
+    description: 'El balanceo de ruedas evita vibraciones al conducir y mejora la estabilidad del vehículo. Utilizamos equipamiento computarizado para asegurar un desgaste uniforme de los neumáticos y mayor confort al manejar. Es muy fácil sentir cuando el auto está mal balanceado. Al llegar a ciertas velocidades sentirás en el volante la vibración del vehículo, esto significa que la cubierta tiene un “abultamiento” o que los neumáticos están desbalanceados. Lo recomendable es verificar cuál de las dos causas es. Si es un abultamiento, cambia el neumático. Es importante saber que las cubiertas se cambian por par, si la cubierta trasera izquierda tiene este problema, tendrás que cambiar de igual manera la derecha. Si está desbalanceado, balancearlo. Así se evitará un desgaste irregular del neumático, además de no sentir esa molestia de las vibraciones en el volante. Otro beneficio del balanceo, es que se economiza un poco el combustible porque la cubierta tiene un buen agarre en el piso y no va bailando.',
     imageUrl: 'https://img.zsmotor.cl/wp-content/uploads/2023/05/balanceo-rueda-2-1024x682-1.jpg',
     imagePosition: 'right',
   },
@@ -37,7 +36,7 @@ const servicesData = [
   {
     id: 'alineacion3d',
     title: 'Alineación 3D',
-    description: 'Se recomienda realizar la alineación de neumáticos dos veces al año. Aunque esto, no es una ciencia cierta, ya que cada vehículo es diferente. Por lo que te sugerimos consultar en el manual del fabricante, el tiempo estimado para hacerlo. De igual manera, se recomiendan alinear ambos ejes del auto, es decir la parte delantera y la trasera. ¿Por qué los dos y no solo uno? Si uno de los neumáticos está un poco abierto, cerrado o con una diferente inclinación, además de que crea un mayor desgaste sobre los otros neumáticos, ocasiona que el vehículo se comporte errático, es decir, que no sea tan preciso en sus movimientos, trayendo como consecuencia accidentes automovilísticos.Por seguridad o durabilidad de los neumáticos es importante hacer estas alineaciones. ¡No te olvides! De esta manera, tu vehículo será más seguro y el desgaste más parejo en tus cubiertas.',
+    description: 'Se recomienda realizar la alineación de neumáticos dos veces al año. Aunque esto, no es una ciencia cierta, ya que cada vehículo es diferente. De igual manera, se recomiendan alinear ambos ejes del auto, es decir la parte delantera y la trasera. ¿Por qué los dos y no solo uno? Si uno de los neumáticos está un poco abierto, cerrado o con una diferente inclinación, además de que crea un mayor desgaste sobre los otros neumáticos, ocasiona que el vehículo se comporte errático, es decir, que no sea tan preciso en sus movimientos, trayendo como consecuencia accidentes automovilísticos.Por seguridad o durabilidad de los neumáticos es importante hacer estas alineaciones. ¡No te olvides! De esta manera, tu vehículo será más seguro y el desgaste más parejo en tus cubiertas.',
     imageUrl: 'https://i.imgur.com/pNJC9wT.jpeg',
     imagePosition: 'right',
   },
@@ -88,11 +87,6 @@ const servicesData = [
 
 export function ServicesPage() {
   const location = useLocation();
-
-  usePageTitle({
-    title: "Servicios Automotrices - Alineación, Frenos, Lubricentro",
-    description: "Servicios completos de taller mecánico: alineación 3D, cambio de aceite, frenos, balanceo, suspensión, embragues y más en Bahía Blanca."
-  });
 
   React.useEffect(() => {
     if (location.hash) {
