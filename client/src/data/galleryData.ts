@@ -118,11 +118,11 @@ export const galleryData: GalleryItem[] = [
   },
   {
     id: 'general-2',
-    title: 'Diagnóstico general',
+    title: 'Reemplazo de bomba de agua y termostato',
     category: 'general',
     image: 'https://images.unsplash.com/photo-1686082307524-c89fb0bfadde?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     description: 'Realizamos cambio de bomba de agua y termostato.',
-    service: 'Diagnóstico'
+    service: 'Bomba de agua y termostato'
   }
 ];
 
