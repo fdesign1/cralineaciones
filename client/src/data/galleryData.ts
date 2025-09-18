@@ -17,7 +17,7 @@ export const galleryData: GalleryItem[] = [
     title: 'Alineación de Toyota',
     category: 'alineacion',
     image: Alignment2,
-    description: 'Alineación especializada para vehículo Toyota con suspensión modificada. Ajuste preciso para uso mixto ciudad/campo.',
+    description: 'Alineación especializada para vehículo Toyota con suspensión modificada. Ajuste preciso',
     service: 'Alineación 3D'
   },
 
@@ -28,7 +28,7 @@ export const galleryData: GalleryItem[] = [
     category: 'frenos',
     beforeImage: Pastilla,
     afterImage: Pastilla,
-    description: 'Reemplazo completo del sistema de frenos delanteros. Pastillas gastadas y discos rayados restaurados a condición óptima.',
+    description: 'Reemplazo completo del sistema de frenos delanteros a condición óptima.',
     service: 'Sistema de Frenos'
   },
   {
@@ -36,7 +36,7 @@ export const galleryData: GalleryItem[] = [
     title: 'Reparación Sistema de Frenos',
     category: 'frenos',
     image: 'https://images.unsplash.com/photo-1656232976683-7b688560e427?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    description: 'Diagnóstico y reparación completa del sistema de frenos con reemplazo de componentes hidráulicos.',
+    description: 'Diagnóstico y reparación completa del sistema de frenos con reemplazo de componentes principales.',
     service: 'Sistema de Frenos'
   },
 
@@ -83,7 +83,7 @@ export const galleryData: GalleryItem[] = [
     category: 'motor',
     beforeImage: Autogris,
     afterImage: Autogris,
-    description: 'Cambio completo de kit de embrague: disco, plato y rodamiento. Problema de patinaje solucionado.',
+    description: 'Cambio completo de kit de embrague. Problema de patinaje solucionado.',
     service: 'Embragues'
   },
 
@@ -94,7 +94,7 @@ export const galleryData: GalleryItem[] = [
     category: 'llantas',
     beforeImage: Wheel,
     afterImage: Wheel,
-    description: 'Enderezado de llanta de aleación dañada por bache. Recuperación completa sin pérdida de hermeticidad.',
+    description: 'Enderezado de llanta de aleación dañada por bache.',
     service: 'Enderezado de Llantas'
   },
   {
@@ -117,10 +117,10 @@ export const galleryData: GalleryItem[] = [
   },
   {
     id: 'general-2',
-    title: 'Diagnóstico Computarizado',
+    title: 'Diagnóstico general',
     category: 'general',
     image: 'https://images.unsplash.com/photo-1686082307524-c89fb0bfadde?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    description: 'Diagnóstico completo con scanner automotriz para detectar fallas en sistemas electrónicos.',
+    description: 'Diagnóstico general del vehiculo para detectar fallas.',
     service: 'Diagnóstico'
   }
 ];
