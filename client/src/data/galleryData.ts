@@ -9,35 +9,36 @@ import Distribucion4 from '@/assets/distribucion2.jpeg';
 import Autoblanco2 from '@/assets/autoblanco2.jpeg';
 import Autoblanco1 from '@/assets/autoblanco1.jpeg';
 import Autogris from '@/assets/autogris.jpeg';
+import Eje from '@/assets/ejes.jpg';
 
 export const galleryData: GalleryItem[] = [
   // Alineación 3D
   {
     id: 'alineacion-1',
-    title: 'Alineación de Toyota',
+    title: 'Alineación de Toyota Corolla',
     category: 'alineacion',
     image: Alignment2,
-    description: 'Alineación especializada para vehículo Toyota con suspensión modificada. Ajuste preciso',
+    description: 'Alineación especializada para vehículo Toyota. Ajuste preciso',
     service: 'Alineación 3D'
   },
 
   // Frenos
   {
     id: 'frenos-1',
-    title: 'Cambio de Pastillas y Discos',
+    title: 'Cambio de cintas y rectificación de campanas',
     category: 'frenos',
     beforeImage: Pastilla,
     afterImage: Pastilla,
     description: 'Reemplazo completo del sistema de frenos delanteros a condición óptima.',
-    service: 'Sistema de Frenos'
+    service: 'Ejes'
   },
   {
-    id: 'frenos-2',
-    title: 'Reparación Sistema de Frenos',
-    category: 'frenos',
-    image: 'https://images.unsplash.com/photo-1656232976683-7b688560e427?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    description: 'Diagnóstico y reparación completa del sistema de frenos con reemplazo de componentes principales.',
-    service: 'Sistema de Frenos'
+    id: 'general-3',
+    title: 'Reparación eje trasero citroen / Peugeot',
+    category: 'general',
+    image: Eje,
+    description: 'Reparaciones de ejes',
+    service: 'Reparación de Ejes'
   },
 
   // Suspensión
@@ -120,7 +121,7 @@ export const galleryData: GalleryItem[] = [
     title: 'Diagnóstico general',
     category: 'general',
     image: 'https://images.unsplash.com/photo-1686082307524-c89fb0bfadde?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    description: 'Diagnóstico general del vehiculo para detectar fallas.',
+    description: 'Realizamos cambio de bomba de agua y termostato.',
     service: 'Diagnóstico'
   }
 ];
