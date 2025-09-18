@@ -27,10 +27,9 @@ export const galleryData: GalleryItem[] = [
     id: 'frenos-1',
     title: 'Cambio de cintas y rectificación de campanas',
     category: 'frenos',
-    beforeImage: Pastilla,
-    afterImage: Pastilla,
+    image: Pastilla,
     description: 'Reemplazo completo del sistema de frenos delanteros a condición óptima.',
-    service: 'Ejes'
+    service: 'Sistema de Frenos'
   },
   {
     id: 'general-3',
@@ -46,8 +45,7 @@ export const galleryData: GalleryItem[] = [
     id: 'suspension-1',
     title: 'Cambio de Amortiguadores',
     category: 'suspension',
-    beforeImage: Suspension,
-    afterImage: Suspension,
+    image: Suspension,
     description: 'Reemplazo de amortiguadores delanteros y traseros. Mejora notable en estabilidad y confort de manejo.',
     service: 'Suspensión'
   },
@@ -57,8 +55,7 @@ export const galleryData: GalleryItem[] = [
     id: 'motor-1',
     title: 'Cambio de Cadena de Distribución',
     category: 'motor',
-    beforeImage: Distribucion,
-    afterImage: Distribucion2,
+    image: Distribucion,
     description: 'Cambio completo de cadena de distribución y componentes relacionados. Trabajo de precisión para garantizar el correcto funcionamiento del motor.',
     service: 'Distribución'
   },
@@ -82,8 +79,7 @@ export const galleryData: GalleryItem[] = [
     id: 'motor-4',
     title: 'Reparación de Embrague',
     category: 'motor',
-    beforeImage: Autogris,
-    afterImage: Autogris,
+    image: Autogris,
     description: 'Cambio completo de kit de embrague. Problema de patinaje solucionado.',
     service: 'Embragues'
   },
@@ -93,8 +89,7 @@ export const galleryData: GalleryItem[] = [
     id: 'llantas-1',
     title: 'Enderezado de Llanta',
     category: 'llantas',
-    beforeImage: Wheel,
-    afterImage: Wheel,
+    image: Wheel,
     description: 'Enderezado de llanta de aleación dañada por bache.',
     service: 'Enderezado de Llantas'
   },
