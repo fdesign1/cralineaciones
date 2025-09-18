@@ -26,9 +26,9 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen flex flex-col bg-background text-foreground overflow-x-hidden">
+      <div className="min-h-screen flex flex-col bg-background text-foreground">
         <Header />
-        <main className="flex-grow flex flex-col overflow-x-hidden">
+        <main className="flex-grow">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/services" element={<ServicesPage />} />

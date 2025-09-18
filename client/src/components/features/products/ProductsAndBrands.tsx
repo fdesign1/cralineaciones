@@ -145,23 +145,25 @@ export function ProductsAndBrands() {
           <h3 className="text-2xl font-semibold text-center mb-8">
             Marcas con las que trabajamos
           </h3>
-          <div
-            className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
-          >
-            <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
-              {brands.map((brand) => (
-                <li key={brand.name}>
-                  <img src={brand.logoUrl} alt={brand.name} className="h-8 md:h-10 lg:h-12 object-contain grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
-                </li>
-              ))}
-            </ul>
-            <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
-              {brands.map((brand) => (
-                <li key={brand.name}>
-                  <img src={brand.logoUrl} alt={brand.name} className="h-8 md:h-10 lg:h-12 object-contain grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
-                </li>
-              ))}
-            </ul>
+          <div className="max-w-full overflow-hidden">
+            <div
+              className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
+            >
+              <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+                {brands.map((brand) => (
+                  <li key={brand.name}>
+                    <img src={brand.logoUrl} alt={brand.name} className="h-8 md:h-10 lg:h-12 object-contain grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+                  </li>
+                ))}
+              </ul>
+              <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
+                {brands.map((brand) => (
+                  <li key={brand.name}>
+                    <img src={brand.logoUrl} alt={brand.name} className="h-8 md:h-10 lg:h-12 object-contain grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
