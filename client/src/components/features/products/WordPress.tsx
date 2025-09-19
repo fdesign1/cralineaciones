@@ -292,14 +292,14 @@ export default function WordPress() {
           return (
             <div
               key={p.id}
-              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
+              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-2xl hover:scale-105 hover:bg-gray-50 transition-all duration-300 ease-in-out cursor-pointer group"
               onClick={() => openModal(p)}
             >
               <div className="relative">
                 <img
                   src={p.images[0]?.src || "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Crect width='150' height='150' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%239ca3af' font-family='Arial' font-size='14'%3EProducto%3C/text%3E%3C/svg%3E"}
                   alt={p.images[0]?.alt || p.name}
-                  className="w-full h-48 object-contain bg-gray-100"
+                  className="w-full h-48 object-contain bg-gray-100 group-hover:scale-110 transition-transform duration-300 ease-in-out"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
                     target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Crect width='150' height='150' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%239ca3af' font-family='Arial' font-size='14'%3EProducto%3C/text%3E%3C/svg%3E";
@@ -314,7 +314,7 @@ export default function WordPress() {
               </div>
 
               <div className="p-4">
-                <h3 className="text-lg font-semibold mb-2 text-gray-900 line-clamp-2">
+                <h3 className="text-lg font-semibold mb-2 text-gray-900 group-hover:text-red-600 line-clamp-2 transition-colors duration-300">
                   {p.name}
                 </h3>
                 
@@ -360,7 +360,7 @@ export default function WordPress() {
                   </div>
                   
                   {/* Icono de ver más */}
-                  <div className="text-blue-600 hover:text-blue-800 transition-colors">
+                  <div className="text-blue-600 group-hover:text-blue-800 group-hover:scale-110 transition-all duration-300">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
