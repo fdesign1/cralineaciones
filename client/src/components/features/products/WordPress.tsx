@@ -246,9 +246,9 @@ export default function WordPress() {
     <div className="container mx-auto px-4 py-8">
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">Catálogo de Productos</h1>
-        <p className="text-gray-600">
-          Explora nuestra amplia gama de productos automotrices de alta calidad
+        <h1 className="text-3xl font-bold text-white-900 mb-4">Catálogo de Productos</h1>
+        <p className="text-white-600">
+          Explora nuestra amplia gama de productos del automotor
         </p>
       </div>
 
@@ -388,7 +388,7 @@ export default function WordPress() {
               {/* Botón cerrar */}
               <button
                 onClick={closeModal}
-                className="absolute top-4 right-4 z-10 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors"
+                className="absolute top-4 right-4 z-10 bg-black rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
