@@ -18,15 +18,15 @@ export function ProductCard({ name, description, imageUrl, href, category }: Pro
           <img src={imageUrl} alt={name} className="w-full h-48 object-cover" />
         </CardHeader>
         <CardContent className="p-6">
-          <CardTitle className="text-lg font-bold mb-2">{name}</CardTitle>
+          <CardTitle className="text-lg font-bold mb-2 text-gray-900">{name}</CardTitle>
           {category && (
             <div className="mb-3">
-              <span className="inline-block bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded-full border border-blue-200">
+              <span className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full border border-blue-300">
                 {category}
               </span>
             </div>
           )}
-          <p className="text-sm text-muted-foreground">{description}</p>
+          <p className="text-sm text-gray-700">{description}</p>
         </CardContent>
       </Card>
     </a>
