@@ -7,7 +7,9 @@ export const vitePort = 3000;
 export default defineConfig(({ mode }) => {
   return {
     plugins: [
-      react(),
+      react({
+        fastRefresh: false,
+      }),
       // Custom plugin to handle source map requests
       {
         name: 'handle-source-map-requests',
@@ -66,6 +68,7 @@ export default defineConfig(({ mode }) => {
     server: {
       hmr: {
         overlay: false,
+        port: vitePort + 1,
       },
       host: true,
       port: vitePort,
@@ -86,5 +89,7 @@ export default defineConfig(({ mode }) => {
     esbuild: {
       sourcemap: true,
     },
+    // Fix for HTML processing issue
+    assetsInclude: ['**/*.html'],
   };
 });
