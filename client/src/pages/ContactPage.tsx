@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export function ContactPage() {
   usePageTitle({
-    title: "Contacto y Ubicación - Bahía Blanca,
+    title: "Contacto y Ubicación - Bahía Blanca",
     description: "Contacta con CR Alineaciones Lubricentro. Ubicados en Remedios de Escalada 366, Bahía Blanca. Tel: 291 446-0056. ¡Solicita tu turno!"
   });
   const [iframeLoaded, setIframeLoaded] = useState(false);
@@ -62,7 +62,7 @@ export function ContactPage() {
   }, []);
   return (
      <div className="flex flex-col">
-      {/* Banner Map.*/}
+      {/* Banner Map*/}
       <div
         className={`w-full h-[300px] md:h-[400px] transition-opacity duration-1000 ease-out ${
           iframeLoaded ? "opacity-100" : "opacity-0"
