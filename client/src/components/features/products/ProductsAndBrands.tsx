@@ -1,4 +1,3 @@
-
 import * as React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -24,14 +23,12 @@ interface WPProduct {
   short_description: string;
 }
 
-
 interface DynamicProduct {
   name: string;
   description: string;
   imageUrl: string;
   category?: string;
 }
-
 
 const products = [
   {
@@ -124,9 +121,17 @@ export function ProductsAndBrands() {
   // Función para obtener productos de WordPress
   const fetchWPProducts = async () => {
     try {
-      const response = await fetch("http://localhost:8888/.netlify/functions/products");
+      // Usar URL relativa en producción, localhost en desarrollo
+      const apiUrl = process.env.NODE_ENV === 'development' 
+        ? "http://localhost:8888/.netlify/functions/products"
+        : "/.netlify/functions/products";
+        
+      console.log("Fetching products from:", apiUrl);
+      const response = await fetch(apiUrl);
+      
       if (response.ok) {
         const wpProducts: WPProduct[] = await response.json();
+        console.log("WordPress products loaded:", wpProducts.length);
         
         // Convertir productos de WP al formato necesario
         const convertedProducts: DynamicProduct[] = wpProducts.slice(0, 6).map(product => ({
@@ -137,14 +142,17 @@ export function ProductsAndBrands() {
         }));
         
         setDynamicProducts(convertedProducts);
+      } else {
+        console.error("API response not ok:", response.status, response.statusText);
+        throw new Error(`API responded with ${response.status}`);
       }
     } catch (error) {
       console.error("Error fetching WP products:", error);
+      console.log("Falling back to static products");
       // Fallback a productos estáticos si hay error
       setDynamicProducts(products);
     }
   };
-
 
   // Función para limpiar HTML
   const stripHtml = (html: string) => {
