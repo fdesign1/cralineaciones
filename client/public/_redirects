@@ -1,5 +1,5 @@
-# Redirect from Netlify subdomain to custom domain
-https://cralineaciones.netlify.app/* https://www.cralineaciones.com.ar/:splat 301!
-
 # SPA fallback - todas las rutas van a index.html para React Router
 /*    /index.html   200
+
+# Redirect from Netlify subdomain to custom domain (solo si acceden directamente a .netlify.app)
+https://cralineaciones.netlify.app/* https://www.cralineaciones.com.ar/:splat 301!
