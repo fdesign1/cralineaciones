@@ -1,4 +1,4 @@
-// Netlify Function para obtener productos de WooCommerce
+// Netlify Function para obtener categorías de WooCommerce
 export async function handler(event, context) {
   // Headers CORS
   const headers = {
@@ -18,15 +18,15 @@ export async function handler(event, context) {
   }
 
   try {
-    // Configuración de la API de WooCommerce - usar la URL que sabemos que funciona
-    const baseUrl = "https://cralineacionestienda.hstn.me/wp-json/wc/v3/products";
+    // Configuración de la API de WooCommerce para categorías
+    const baseUrl = "https://cralineacionestienda.hstn.me/wp-json/wc/v3/products/categories";
     const consumerKey = "ck_a47df54f63e8ec2a1c0247f81e4fb94a3a50814c";
     const consumerSecret = "cs_50a62db82ff046e432f7bd7a48a637a5fced008d";
     
-    // Agregar parámetros para obtener todos los productos
-    const url = `${baseUrl}?consumer_key=${consumerKey}&consumer_secret=${consumerSecret}&per_page=100&status=publish`;
+    // Obtener todas las categorías que tengan productos
+    const url = `${baseUrl}?consumer_key=${consumerKey}&consumer_secret=${consumerSecret}&per_page=100&hide_empty=true`;
     
-    console.log("Fetching from:", url);
+    console.log("Fetching categories from:", url);
     
     const response = await fetch(url, {
       method: 'GET',
@@ -36,18 +36,16 @@ export async function handler(event, context) {
       }
     });
     
-    console.log("Response status:", response.status);
-    console.log("Response headers content-type:", response.headers.get('content-type'));
+    console.log("Categories response status:", response.status);
     
     if (!response.ok) {
       const errorText = await response.text();
-      console.error("API Error:", response.status, response.statusText);
-      console.error("Error response:", errorText.substring(0, 500));
+      console.error("Categories API Error:", response.status, response.statusText);
       return {
         statusCode: response.status,
         headers,
         body: JSON.stringify({ 
-          error: `API Error: ${response.status} ${response.statusText}`,
+          error: `Categories API Error: ${response.status} ${response.statusText}`,
           response: errorText.substring(0, 500),
           url: baseUrl 
         }),
@@ -55,7 +53,7 @@ export async function handler(event, context) {
     }
 
     const data = await response.json();
-    console.log("SUCCESS! API Response received, products count:", data.length || 0);
+    console.log("SUCCESS! Categories received, count:", data.length || 0);
     
     return {
       statusCode: 200,
@@ -64,13 +62,13 @@ export async function handler(event, context) {
     };
     
   } catch (error) {
-    console.error("Function Error:", error);
+    console.error("Categories Function Error:", error);
     return {
       statusCode: 500,
       headers,
       body: JSON.stringify({ 
         error: error.message,
-        details: "Error en la función de Netlify" 
+        details: "Error en la función de categorías de Netlify" 
       }),
     };
   }
