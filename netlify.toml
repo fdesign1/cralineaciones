@@ -1,6 +1,6 @@
 [build]
   publish = "dist"
-  command = "vite build"
+  command = "npx vite build"
 
 [dev]
   command = "npx vite --port 3000 --host"
