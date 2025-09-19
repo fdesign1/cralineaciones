@@ -26,9 +26,23 @@ export function FAQSection({ items, title = "Preguntas Frecuentes", showCategori
   const [selectedCategory, setSelectedCategory] = React.useState('all');
   const [openItems, setOpenItems] = React.useState<Set<string>>(new Set());
 
+  // Filter out items that have underscore properties (_question, _answer) or missing required fields
+  const validItems = items.filter(item => 
+    item.question && 
+    item.answer && 
+    item.category &&
+    !('_question' in item) && 
+    !('_answer' in item)
+  );
+
+  // Get unique categories from valid items
+  const availableCategories = categories.filter(category => 
+    validItems.some(item => item.category === category.id)
+  );
+
   const filteredItems = selectedCategory === 'all' 
-    ? items 
-    : items.filter(item => item.category === selectedCategory);
+    ? validItems 
+    : validItems.filter(item => item.category === selectedCategory);
 
   const toggleItem = (id: string) => {
     const newOpenItems = new Set(openItems);
@@ -51,7 +65,7 @@ export function FAQSection({ items, title = "Preguntas Frecuentes", showCategori
       </div>
 
       {/* Category Filter */}
-      {showCategories && (
+      {showCategories && availableCategories.length > 0 && (
         <div className="flex flex-wrap justify-center gap-2 mb-8">
           <button
             onClick={() => setSelectedCategory('all')}
@@ -64,7 +78,7 @@ export function FAQSection({ items, title = "Preguntas Frecuentes", showCategori
           >
             📋 Todas
           </button>
-          {categories.map((category) => (
+          {availableCategories.map((category) => (
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
