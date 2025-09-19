@@ -8,7 +8,7 @@ interface PageTitleOptions {
 export function usePageTitle({ title, description }: PageTitleOptions) {
   useEffect(() => {
     // Update page title
-    const fullTitle = `${title} | CR Alineaciones Lubricentro`;
+    const fullTitle = title === 'Inicio' ? 'CR Alineaciones Lubricentro - Taller Mecánico en Bahía Blanca' : `${title} | CR Alineaciones Lubricentro`;
     document.title = fullTitle;
 
     // Update meta description if provided
