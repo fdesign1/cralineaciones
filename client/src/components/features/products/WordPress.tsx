@@ -292,7 +292,7 @@ export default function WordPress() {
           return (
             <div
               key={p.id}
-              className="bg-background rounded-lg shadow-md overflow-hidden hover:shadow-2xl hover:scale-105 hover:bg-gray-800 transition-all duration-300 ease-in-out cursor-pointer group"
+              className="bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-2xl hover:scale-105 hover:bg-gray-700 transition-all duration-300 ease-in-out cursor-pointer group"
               onClick={() => openModal(p)}
             >
               <div className="relative">
@@ -384,7 +384,7 @@ export default function WordPress() {
 
           {/* Modal */}
           <div className="flex items-center justify-center min-h-screen p-4">
-            <div className="relative bg-background rounded-lg max-w-4xl w-full max-h-screen overflow-y-auto">
+            <div className="relative bg-gray-800 rounded-lg max-w-4xl w-full max-h-screen overflow-y-auto">
               {/* Botón cerrar */}
               <button
                 onClick={closeModal}
