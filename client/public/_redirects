@@ -1,2 +1,5 @@
-/tienda/*  https://cralineacionestienda.infinityfreeapp.com/:splat  200
+# Redirect from Netlify subdomain to custom domain
+https://cralineaciones.netlify.app/* https://www.cralineaciones.com.ar/:splat 301!
+
+# SPA fallback - todas las rutas van a index.html para React Router
 /*    /index.html   200
