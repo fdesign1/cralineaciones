@@ -18,13 +18,25 @@ export async function handler(event, context) {
   }
 
   try {
-    // Configuración de la API de WooCommerce para categorías
-    const baseUrl = "https://cralineacionestienda.hstn.me/wp-json/wc/v3/products/categories";
-    const consumerKey = "ck_a47df54f63e8ec2a1c0247f81e4fb94a3a50814c";
-    const consumerSecret = "cs_50a62db82ff046e432f7bd7a48a637a5fced008d";
+    // Configuración de la API de WooCommerce usando variables de entorno
+    const baseUrl = process.env.WOOCOMMERCE_BASE_URL || "https://cralineacionestienda.hstn.me/wp-json/wc/v3";
+    const consumerKey = process.env.WOOCOMMERCE_CONSUMER_KEY;
+    const consumerSecret = process.env.WOOCOMMERCE_CONSUMER_SECRET;
+
+    // Verificar que las variables de entorno estén configuradas
+    if (!consumerKey || !consumerSecret) {
+      console.error("Missing WooCommerce API credentials");
+      return {
+        statusCode: 500,
+        headers,
+        body: JSON.stringify({ 
+          error: "WooCommerce API credentials not configured. Please set WOOCOMMERCE_CONSUMER_KEY and WOOCOMMERCE_CONSUMER_SECRET environment variables." 
+        }),
+      };
+    }
     
     // Obtener todas las categorías que tengan productos
-    const url = `${baseUrl}?consumer_key=${consumerKey}&consumer_secret=${consumerSecret}&per_page=100&hide_empty=true`;
+    const url = `${baseUrl}/products/categories?consumer_key=${consumerKey}&consumer_secret=${consumerSecret}&per_page=100&hide_empty=true`;
     
     console.log("Fetching categories from:", url);
     
