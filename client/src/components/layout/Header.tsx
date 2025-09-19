@@ -22,8 +22,8 @@ export function Header() {
         <div className="md:hidden">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
+              <Button variant="ghost" size="icon" className="h-12 w-12">
+                <Menu className="h-8 w-8" />
                 <span className="sr-only">Open Menu</span>
               </Button>
             </SheetTrigger>
