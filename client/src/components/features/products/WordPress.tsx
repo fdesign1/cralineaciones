@@ -245,12 +245,12 @@ export default function WordPress() {
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Header */}
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-white-900 mb-4">Catálogo de Productos</h1>
-        <p className="text-white-600">
-          Explora nuestra amplia gama de productos del automotor
-        </p>
-      </div>
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold text-white mb-4">Catálogo de Productos</h1>
+          <p className="text-gray-200">
+            Explora nuestra amplia gama de productos del automotor
+          </p>
+        </div>
 
       {/* Filtros */}
       <div className="mb-8 space-y-4">
@@ -292,14 +292,14 @@ export default function WordPress() {
           return (
             <div
               key={p.id}
-              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-2xl hover:scale-105 hover:bg-gray-50 transition-all duration-300 ease-in-out cursor-pointer group"
+              className="bg-background rounded-lg shadow-md overflow-hidden hover:shadow-2xl hover:scale-105 hover:bg-gray-800 transition-all duration-300 ease-in-out cursor-pointer group"
               onClick={() => openModal(p)}
             >
               <div className="relative">
                 <img
                   src={p.images[0]?.src || "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Crect width='150' height='150' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%239ca3af' font-family='Arial' font-size='14'%3EProducto%3C/text%3E%3C/svg%3E"}
                   alt={p.images[0]?.alt || p.name}
-                  className="w-full h-48 object-contain bg-gray-100 group-hover:scale-110 transition-transform duration-300 ease-in-out"
+                  className="w-full h-48 object-contain bg-gray-700 group-hover:scale-110 transition-transform duration-300 ease-in-out"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
                     target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Crect width='150' height='150' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%239ca3af' font-family='Arial' font-size='14'%3EProducto%3C/text%3E%3C/svg%3E";
@@ -314,13 +314,13 @@ export default function WordPress() {
               </div>
 
               <div className="p-4">
-                <h3 className="text-lg font-semibold mb-2 text-gray-900 group-hover:text-red-600 line-clamp-2 transition-colors duration-300">
+                <h3 className="text-lg font-semibold mb-2 text-white group-hover:text-red-400 line-clamp-2 transition-colors duration-300">
                   {p.name}
                 </h3>
                 
                 {/* Descripción corta */}
                 {p.short_description && (
-                  <p className="text-gray-700 text-sm mb-3 line-clamp-2">
+                  <p className="text-gray-200 text-sm mb-3 line-clamp-2">
                     {stripHtml(p.short_description)}
                   </p>
                 )}
@@ -355,12 +355,12 @@ export default function WordPress() {
                         )}
                       </>
                     ) : (p.regular_price && p.regular_price !== "0" && p.regular_price !== "") || (p.price && p.price !== "0" && p.price !== "") ? (
-                      <span className="text-xl font-bold text-gray-800">${p.regular_price || p.price}</span>
+                      <span className="text-xl font-bold text-white">${p.regular_price || p.price}</span>
                     ) : null}
                   </div>
                   
                   {/* Icono de ver más */}
-                  <div className="text-blue-600 group-hover:text-blue-800 group-hover:scale-110 transition-all duration-300">
+                  <div className="text-blue-400 group-hover:text-blue-300 group-hover:scale-110 transition-all duration-300">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
@@ -384,7 +384,7 @@ export default function WordPress() {
 
           {/* Modal */}
           <div className="flex items-center justify-center min-h-screen p-4">
-            <div className="relative bg-white rounded-lg max-w-4xl w-full max-h-screen overflow-y-auto">
+            <div className="relative bg-background rounded-lg max-w-4xl w-full max-h-screen overflow-y-auto">
               {/* Botón cerrar */}
               <button
                 onClick={closeModal}
@@ -401,7 +401,7 @@ export default function WordPress() {
                   <img
                     src={selectedProduct.images[0]?.src || "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect width='400' height='300' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%239ca3af' font-family='Arial' font-size='18'%3EImagen no disponible%3C/text%3E%3C/svg%3E"}
                     alt={selectedProduct.name}
-                    className="w-full h-96 object-contain bg-gray-100 rounded-lg"
+                    className="w-full h-96 object-contain bg-gray-700 rounded-lg"
                   />
                   
                   {/* Miniaturas adicionales si hay más imágenes */}
@@ -412,7 +412,7 @@ export default function WordPress() {
                           key={index}
                           src={image.src}
                           alt={image.alt || `${selectedProduct.name} ${index + 2}`}
-                          className="w-20 h-20 object-contain bg-gray-100 rounded cursor-pointer hover:opacity-75 transition-opacity"
+                          className="w-20 h-20 object-contain bg-gray-700 rounded cursor-pointer hover:opacity-75 transition-opacity"
                         />
                       ))}
                     </div>
@@ -422,7 +422,7 @@ export default function WordPress() {
                 {/* Información del producto */}
                 <div className="space-y-6">
                   <div>
-                    <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                    <h2 className="text-3xl font-bold text-white mb-4">
                       {selectedProduct.name}
                     </h2>
                     
@@ -453,7 +453,7 @@ export default function WordPress() {
                           )}
                         </div>
                       ) : (selectedProduct.regular_price && selectedProduct.regular_price !== "0" && selectedProduct.regular_price !== "") || (selectedProduct.price && selectedProduct.price !== "0" && selectedProduct.price !== "") ? (
-                        <span className="text-3xl font-bold text-gray-900">${selectedProduct.regular_price || selectedProduct.price}</span>
+                        <span className="text-3xl font-bold text-white">${selectedProduct.regular_price || selectedProduct.price}</span>
                       ) : null}
                     </div>
                   </div>
@@ -461,7 +461,7 @@ export default function WordPress() {
                   {/* Categorías */}
                   {selectedProduct.categories && selectedProduct.categories.length > 0 && (
                     <div>
-                      <h3 className="text-lg font-semibold mb-2 text-gray-900">Categorías</h3>
+                      <h3 className="text-lg font-semibold mb-2 text-white">Categorías</h3>
                       <div className="flex flex-wrap gap-2">
                         {selectedProduct.categories.map((category) => (
                           <span
@@ -478,9 +478,9 @@ export default function WordPress() {
                   {/* Descripción */}
                   {selectedProduct.description && (
                     <div>
-                      <h3 className="text-lg font-semibold mb-2 text-gray-900">Descripción</h3>
+                      <h3 className="text-lg font-semibold mb-2 text-white">Descripción</h3>
                       <div 
-                        className="text-gray-700 prose prose-sm max-w-none"
+                        className="text-gray-200 prose prose-sm max-w-none"
                         dangerouslySetInnerHTML={{ __html: selectedProduct.description }}
                       />
                     </div>
