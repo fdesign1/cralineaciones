@@ -127,7 +127,7 @@ export function Navigation({ isMobile = false, onLinkClick }: NavigationProps) {
             Servicios
             <ChevronDown className={`h-4 w-4 transition-transform duration-300 ease-in-out ${isMobileServicesOpen ? 'rotate-180' : ''}`} />
           </button>
-          <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isMobileServicesOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+          <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isMobileServicesOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
             <div className="grid grid-cols-1 gap-1 pl-8 pr-4 py-2">
               {services.map((service) => (
                 <SheetClose asChild key={service.name}>
