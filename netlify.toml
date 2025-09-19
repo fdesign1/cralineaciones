@@ -1,0 +1,18 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[dev]
+  command = "npx vite --port 3000 --host"
+  targetPort = 3000
+  port = 8888
+  publish = "dist"
+
+# Temporarily commented out to fix function calls
+# [[redirects]]
+#   from = "/*"
+#   to = "/index.html"
+#   status = 200
+
+[functions]
+  directory = "netlify/functions"
