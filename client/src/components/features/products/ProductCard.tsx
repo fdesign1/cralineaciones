@@ -7,9 +7,10 @@ interface ProductCardProps {
   description: string;
   imageUrl: string;
   href: string;
+  category?: string;
 }
 
-export function ProductCard({ name, description, imageUrl, href }: ProductCardProps) {
+export function ProductCard({ name, description, imageUrl, href, category }: ProductCardProps) {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" className="block hover:shadow-lg transition-shadow duration-300 rounded-xl h-full">
       <Card className="overflow-hidden h-full">
@@ -18,6 +19,13 @@ export function ProductCard({ name, description, imageUrl, href }: ProductCardPr
         </CardHeader>
         <CardContent className="p-6">
           <CardTitle className="text-lg font-bold mb-2">{name}</CardTitle>
+          {category && (
+            <div className="mb-3">
+              <span className="inline-block bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded-full border border-blue-200">
+                {category}
+              </span>
+            </div>
+          )}
           <p className="text-sm text-muted-foreground">{description}</p>
         </CardContent>
       </Card>

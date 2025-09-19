@@ -1,5 +1,6 @@
 
 import * as React from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ProductCard } from "./ProductCard";
 import { Button } from "@/components/ui/button";
@@ -13,6 +14,24 @@ import {
 } from "@/components/ui/carousel";
 
 const storeUrl = "https://www.cralineaciones.com.ar";
+
+// Interfaces para los datos de WordPress
+interface WPProduct {
+  id: number;
+  name: string;
+  images: { src: string; alt?: string }[];
+  categories: { id: number; name: string; slug: string }[];
+  short_description: string;
+}
+
+
+interface DynamicProduct {
+  name: string;
+  description: string;
+  imageUrl: string;
+  category?: string;
+}
+
 
 const products = [
   {
@@ -99,6 +118,64 @@ const brands = [
 ];
 
 export function ProductsAndBrands() {
+  const [dynamicProducts, setDynamicProducts] = useState<DynamicProduct[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  // Función para obtener productos de WordPress
+  const fetchWPProducts = async () => {
+    try {
+      const response = await fetch("http://localhost:8888/.netlify/functions/products");
+      if (response.ok) {
+        const wpProducts: WPProduct[] = await response.json();
+        
+        // Convertir productos de WP al formato necesario
+        const convertedProducts: DynamicProduct[] = wpProducts.slice(0, 6).map(product => ({
+          name: product.name,
+          description: product.short_description ? stripHtml(product.short_description) : '',
+          imageUrl: product.images[0]?.src || "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200'%3E%3Crect width='300' height='200' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%239ca3af' font-family='Arial' font-size='16'%3EProducto%3C/text%3E%3C/svg%3E",
+          category: product.categories.length > 0 ? product.categories[0].name : undefined
+        }));
+        
+        setDynamicProducts(convertedProducts);
+      }
+    } catch (error) {
+      console.error("Error fetching WP products:", error);
+      // Fallback a productos estáticos si hay error
+      setDynamicProducts(products);
+    }
+  };
+
+
+  // Función para limpiar HTML
+  const stripHtml = (html: string) => {
+    const tmp = document.createElement('div');
+    tmp.innerHTML = html;
+    return tmp.textContent || tmp.innerText || '';
+  };
+
+  useEffect(() => {
+    const loadData = async () => {
+      setLoading(true);
+      await fetchWPProducts();
+      setLoading(false);
+    };
+    
+    loadData();
+  }, []);
+
+  if (loading) {
+    return (
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-red-700 mx-auto mb-4"></div>
+            <p className="text-gray-600">Cargando productos...</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="py-16 bg-background">
       <div className="container mx-auto px-4">
@@ -110,8 +187,8 @@ export function ProductsAndBrands() {
         <div className="mb-16" data-aos="fade-up" data-aos-delay="100">
           <div className="flex justify-center mb-3">
             <Button asChild size="lg" className="bg-red-700 text-white hover:bg-gray-800">
-              <Link to="https://cralineaciones.com.ar" target="_blank">
-                Nuestro catálogo
+              <Link to="/catalogo">
+                Ver catálogo completo
               </Link>
             </Button>
           </div>
@@ -126,10 +203,16 @@ export function ProductsAndBrands() {
               className="w-full max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-6xl mx-auto"
             >
               <CarouselContent className="-ml-2 md:-ml-4">
-                {products.map((product, index) => (
+                {dynamicProducts.map((product, index) => (
                   <CarouselItem key={index} className="pl-2 md:pl-4 basis-[95%] sm:basis-1/2 md:basis-1/2 lg:basis-1/3">
                     <div className="p-1 h-full">
-                      <ProductCard {...product} href={storeUrl} />
+                      <ProductCard 
+                        name={product.name}
+                        description={product.description}
+                        imageUrl={product.imageUrl}
+                        category={product.category}
+                        href="/catalogo" 
+                      />
                     </div>
                   </CarouselItem>
                 ))}
@@ -143,23 +226,41 @@ export function ProductsAndBrands() {
         {/* Marcas */}
         <div data-aos="fade-up" data-aos-delay="200">
           <h3 className="text-2xl font-semibold text-center mb-8">
-            Marcas con las que trabajamos
+            Marcas de Confianza
           </h3>
           <div className="max-w-full overflow-hidden">
             <div
               className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
             >
               <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
-                {brands.map((brand) => (
-                  <li key={brand.name}>
-                    <img src={brand.logoUrl} alt={brand.name} className="h-8 md:h-10 lg:h-12 object-contain grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+                {brands.map((brand, index) => (
+                  <li key={`${brand.name}-${index}`}>
+                    <img 
+                      src={brand.logoUrl} 
+                      alt={brand.name} 
+                      className="h-8 md:h-10 lg:h-12 object-contain grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                      onError={(e) => {
+                        // Fallback si la imagen no carga
+                        const target = e.target as HTMLImageElement;
+                        target.src = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='60'%3E%3Crect width='120' height='60' fill='%23e5e7eb' stroke='%236b7280' stroke-width='1'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%236b7280' font-family='Arial' font-size='12' font-weight='bold'%3E${brand.name}%3C/text%3E%3C/svg%3E`;
+                      }}
+                    />
                   </li>
                 ))}
               </ul>
               <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
-                {brands.map((brand) => (
-                  <li key={brand.name}>
-                    <img src={brand.logoUrl} alt={brand.name} className="h-8 md:h-10 lg:h-12 object-contain grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+                {brands.map((brand, index) => (
+                  <li key={`${brand.name}-duplicate-${index}`}>
+                    <img 
+                      src={brand.logoUrl} 
+                      alt={brand.name} 
+                      className="h-8 md:h-10 lg:h-12 object-contain grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                      onError={(e) => {
+                        // Fallback si la imagen no carga
+                        const target = e.target as HTMLImageElement;
+                        target.src = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='60'%3E%3Crect width='120' height='60' fill='%23e5e7eb' stroke='%236b7280' stroke-width='1'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%236b7280' font-family='Arial' font-size='12' font-weight='bold'%3E${brand.name}%3C/text%3E%3C/svg%3E`;
+                      }}
+                    />
                   </li>
                 ))}
               </ul>
