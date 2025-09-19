@@ -11,6 +11,7 @@ import { WeatherWidget } from "@/components/layout/Weather";
 import { ServicesGrid } from "@/components/features/services/ServicesGrid";
 import { FeaturedGallery } from "@/components/features/gallery/FeaturedGallery";
 import { ProductsAndBrands } from "@/components/features/products/ProductsAndBrands";
+import { HeroImage } from "@/components/layout/HeroImage";
 
 //import { Insta } from "@/components/features/products/Insta";
 
@@ -77,11 +78,12 @@ export function HomePage() {
     <>
       {/* Hero Section */}
   <div className="relative w-full h-[80vh] sm:h-[85vh] md:h-screen overflow-hidden">
-  {/* Imagen de fondo con fade-in */}
-  <div className="absolute inset-0 bg-[url('https://i.postimg.cc/RF3Yr19C/Copilot-20250915-013847.png')] bg-cover bg-center animate-fade-in" />
-
-  {/* Overlay */}
-  <div className="absolute inset-0 bg-black/70 backdrop-blur-sm animate-fade-in" />
+  {/* Optimized Hero Image */}
+  <HeroImage
+    src="https://i.postimg.cc/RF3Yr19C/Copilot-20250915-013847.png"
+    alt="CR Alineaciones Lubricentro - Taller Mecánico en Bahía Blanca"
+    className="animate-fade-in"
+  />
 
   {/* Contenido centrado */}
   <section className="relative z-10 container mx-auto h-full flex flex-col justify-center items-center text-center px-4 py-8 sm:py-12">
