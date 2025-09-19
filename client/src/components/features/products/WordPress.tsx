@@ -299,7 +299,7 @@ export default function WordPress() {
                 <img
                   src={p.images[0]?.src || "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Crect width='150' height='150' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%239ca3af' font-family='Arial' font-size='14'%3EProducto%3C/text%3E%3C/svg%3E"}
                   alt={p.images[0]?.alt || p.name}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-48 object-contain bg-gray-100"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
                     target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Crect width='150' height='150' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%239ca3af' font-family='Arial' font-size='14'%3EProducto%3C/text%3E%3C/svg%3E";
@@ -388,7 +388,7 @@ export default function WordPress() {
               {/* Botón cerrar */}
               <button
                 onClick={closeModal}
-                className="absolute top-4 right-4 z-10 bg-black rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors"
+                className="absolute top-4 right-4 z-10 bg-black rounded-full p-2 shadow-lg hover:bg-red-100 transition-colors"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -401,7 +401,7 @@ export default function WordPress() {
                   <img
                     src={selectedProduct.images[0]?.src || "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect width='400' height='300' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%239ca3af' font-family='Arial' font-size='18'%3EImagen no disponible%3C/text%3E%3C/svg%3E"}
                     alt={selectedProduct.name}
-                    className="w-full h-96 object-cover rounded-lg"
+                    className="w-full h-96 object-contain bg-gray-100 rounded-lg"
                   />
                   
                   {/* Miniaturas adicionales si hay más imágenes */}
@@ -412,7 +412,7 @@ export default function WordPress() {
                           key={index}
                           src={image.src}
                           alt={image.alt || `${selectedProduct.name} ${index + 2}`}
-                          className="w-20 h-20 object-cover rounded cursor-pointer hover:opacity-75 transition-opacity"
+                          className="w-20 h-20 object-contain bg-gray-100 rounded cursor-pointer hover:opacity-75 transition-opacity"
                         />
                       ))}
                     </div>
