@@ -271,7 +271,7 @@ export default function WordPress() {
             <select
               value={selectedCategory}
               onChange={(e) => handleCategoryChange(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-gray-900"
             >
               <option value="all">Todas las categorías ({products.length})</option>
               {categories.map((category) => (
@@ -461,12 +461,12 @@ export default function WordPress() {
                   {/* Categorías */}
                   {selectedProduct.categories && selectedProduct.categories.length > 0 && (
                     <div>
-                      <h3 className="text-lg font-semibold mb-2">Categorías</h3>
+                      <h3 className="text-lg font-semibold mb-2 text-gray-900">Categorías</h3>
                       <div className="flex flex-wrap gap-2">
                         {selectedProduct.categories.map((category) => (
                           <span
                             key={category.id}
-                            className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm border border-blue-200"
+                            className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm border border-blue-300"
                           >
                             {category.name}
                           </span>
@@ -478,7 +478,7 @@ export default function WordPress() {
                   {/* Descripción */}
                   {selectedProduct.description && (
                     <div>
-                      <h3 className="text-lg font-semibold mb-2">Descripción</h3>
+                      <h3 className="text-lg font-semibold mb-2 text-gray-900">Descripción</h3>
                       <div 
                         className="text-gray-700 prose prose-sm max-w-none"
                         dangerouslySetInnerHTML={{ __html: selectedProduct.description }}
@@ -489,7 +489,7 @@ export default function WordPress() {
                   {/* Botón de acción */}
                   <div className="flex justify-center">
                     <a 
-                      href="https://wa.me/5491123456789?text=Hola, me interesa el producto: " 
+                      href="https://wa.me/5492914460056?text=Hola, me interesa el producto: " 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-colors flex items-center gap-2"
