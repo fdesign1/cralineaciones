@@ -31,6 +31,11 @@ export default function WordPress() {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
+  // Reset scroll position when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // Función para obtener el estado del stock
   const getStockStatus = (status: string) => {
     switch (status) {
