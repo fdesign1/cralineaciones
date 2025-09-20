@@ -106,7 +106,7 @@ export function HomePage() {
         </section>
 
         {/* Gallery Section - Full Width */}
-        <section className="py-20 bg-black" ref={ref3}>
+        <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900" ref={ref3}>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={inView3 ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
@@ -126,7 +126,7 @@ export function HomePage() {
         </section>
 
         {/* Products Section */}
-        <section className="py-20 bg-black" ref={ref4}>
+        <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900" ref={ref4}>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={inView4 ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
