@@ -324,12 +324,53 @@ export function HomePage() {
           </div>
         </section>
 
-        {/* Services Section */}
+        {/* Hero Image Section */}
         <section className="py-20 bg-black" ref={ref2}>
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={inView2 ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <div className="relative h-96 lg:h-[500px] rounded-2xl overflow-hidden">
+                <HeroImage 
+                  src="https://i.postimg.cc/4xD7bsd8/b2db1a88-a17a-4de9-80ef-e08cb81923b5.jpg"
+                  alt="CR Alineaciones Lubricentro - Taller mecánico en Bahía Blanca"
+                />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center text-white p-8">
+                    <h2 className="text-3xl lg:text-5xl font-bold mb-4">
+                      Tecnología de Vanguardia
+                    </h2>
+                    <p className="text-lg lg:text-xl text-gray-200 max-w-2xl">
+                      Equipos de última generación para el cuidado perfecto de tu vehículo
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Weather Section */}
+        <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900" ref={ref3}>
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={inView3 ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <WeatherWidget />
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Services Section */}
+        <section className="py-20 bg-black" ref={ref4}>
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={inView4 ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="text-center mb-16"
             >
@@ -346,11 +387,11 @@ export function HomePage() {
         </section>
 
         {/* Gallery Section */}
-        <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900" ref={ref3}>
+        <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900" ref={ref5}>
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
-              animate={inView3 ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              animate={inView5 ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="text-center mb-16"
             >
@@ -367,11 +408,11 @@ export function HomePage() {
         </section>
 
         {/* Products Section */}
-        <section className="py-20 bg-black" ref={ref4}>
+        <section className="py-20 bg-black" ref={ref6}>
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
-              animate={inView4 ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              animate={inView6 ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="text-center mb-16"
             >
@@ -387,32 +428,12 @@ export function HomePage() {
           </div>
         </section>
 
-        {/* Weather Widget */}
-        <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900" ref={ref5}>
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={inView5 ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                Clima en Bahía Blanca
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Consulta las condiciones climáticas actuales para planificar tu visita al taller.
-              </p>
-            </motion.div>
-            <WeatherWidget />
-          </div>
-        </section>
-
         {/* CTA Section */}
-        <section className="py-20 bg-black" ref={ref6}>
+        <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900" ref={ref7}>
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
-              animate={inView6 ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              animate={inView7 ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
