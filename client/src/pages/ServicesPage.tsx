@@ -1,10 +1,8 @@
-
 import * as React from 'react';
 import { useLocation } from 'react-router-dom';
 import { ServiceSection } from '@/components/features/services/ServiceSection';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-<<<<<<< HEAD
 import Aceite from '@/assets/aceite.png';
 import Frenos from '@/assets/brake.png';
 import Alineacion3D from '@/assets/alineacion.png';
@@ -15,9 +13,6 @@ import Suspension from '@/assets/suspension.png';
 import Bateria from '@/assets/battery.jpg';
 import Rims from '@/assets/rims2.png';
 import Balanceo from '@/assets/balanceo2.png';
-
-=======
->>>>>>> test/catalog
 
 
 const servicesData = [
@@ -38,7 +33,7 @@ const servicesData = [
   {
     id: 'balanceo',
     title: 'Balanceo',
-    description: 'El balanceo de ruedas evita vibraciones al conducir y mejora la estabilidad del vehículo. Utilizamos equipamiento computarizado para asegurar un desgaste uniforme de los neumáticos y mayor confort al manejar. Es muy fácil sentir cuando el auto está mal balanceado. Al llegar a ciertas velocidades sentirás en el volante la vibración del vehículo, esto significa que la cubierta tiene un “abultamiento” o que los neumáticos están desbalanceados. Lo recomendable es verificar cuál de las dos causas es. Si es un abultamiento, cambia el neumático. Es importante saber que las cubiertas se cambian por par, si la cubierta trasera izquierda tiene este problema, tendrás que cambiar de igual manera la derecha. Si está desbalanceado, balancearlo. Así se evitará un desgaste irregular del neumático, además de no sentir esa molestia de las vibraciones en el volante. Otro beneficio del balanceo, es que se economiza un poco el combustible porque la cubierta tiene un buen agarre en el piso y no va bailando.',
+    description: 'El balanceo de ruedas evita vibraciones al conducir y mejora la estabilidad del vehículo. Utilizamos equipamiento computarizado para asegurar un desgaste uniforme de los neumáticos y mayor confort al manejar. Es muy fácil sentir cuando el auto está mal balanceado. Al llegar a ciertas velocidades sentirás en el volante la vibración del vehículo, esto significa que la cubierta tiene un "abultamiento" o que los neumáticos están desbalanceados. Lo recomendable es verificar cuál de las dos causas es. Si es un abultamiento, cambia el neumático. Es importante saber que las cubiertas se cambian por par, si la cubierta trasera izquierda tiene este problema, tendrás que cambiar de igual manera la derecha. Si está desbalanceado, balancearlo. Así se evitará un desgaste irregular del neumático, además de no sentir esa molestia de las vibraciones en el volante. Otro beneficio del balanceo, es que se economiza un poco el combustible porque la cubierta tiene un buen agarre en el piso y no va bailando.',
     imageUrl: Balanceo,
     imagePosition: 'right',
   },
