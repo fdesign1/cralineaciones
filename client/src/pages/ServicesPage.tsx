@@ -4,6 +4,16 @@ import { useLocation } from 'react-router-dom';
 import { ServiceSection } from '@/components/features/services/ServiceSection';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Aceite from '@/assets/aceite.png';
+import Frenos from '@/assets/brake.png';
+import Alineacion3D from '@/assets/alineacion.png';
+import Embragues from '@/assets/cambios.png';
+import Distribucion from '@/assets/distribucion2.jpg';
+import TrenDelantero from '@/assets/ejes.jpg';
+import Suspension from '@/assets/suspension.png';
+import Bateria from '@/assets/battery.jpg';
+import Rims from '@/assets/rims2.png';
+
 
 
 const servicesData = [
@@ -11,14 +21,14 @@ const servicesData = [
     id: 'aceite',
     title: 'Cambio de Aceite',
     description: 'Realizamos cambios de aceite con productos de primera calidad, tanto sintéticos como minerales. Mantener el aceite limpio y en buen estado protege el motor, mejora su rendimiento y alarga su vida útil.',
-    imageUrl: 'https://images.unsplash.com/photo-1642075223291-f9ec545889fa?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    imageUrl: Aceite,
     imagePosition: 'right',
   },
   {
     id: 'frenos',
     title: 'Frenos',
     description: 'Revisamos y reemplazamos pastillas, discos y todo el sistema de frenos para garantizar tu seguridad. Un buen mantenimiento de frenos asegura una respuesta rápida y confiable en cada frenada.',
-    imageUrl: 'https://images.unsplash.com/photo-1613214150384-14921ff659b2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YnJha2VzJTIwY2FyfGVufDB8fDB8fHwy',
+    imageUrl: Frenos,
     imagePosition: 'left',
   },
   {
@@ -39,49 +49,49 @@ const servicesData = [
     id: 'alineacion3d',
     title: 'Alineación 3D',
     description: 'Se recomienda realizar la alineación de neumáticos dos veces al año. Aunque esto, no es una ciencia cierta, ya que cada vehículo es diferente. De igual manera, se recomiendan alinear ambos ejes del auto, es decir la parte delantera y la trasera. ¿Por qué los dos y no solo uno? Si uno de los neumáticos está un poco abierto, cerrado o con una diferente inclinación, además de que crea un mayor desgaste sobre los otros neumáticos, ocasiona que el vehículo se comporte errático, es decir, que no sea tan preciso en sus movimientos, trayendo como consecuencia accidentes automovilísticos.Por seguridad o durabilidad de los neumáticos es importante hacer estas alineaciones. ¡No te olvides! De esta manera, tu vehículo será más seguro y el desgaste más parejo en tus cubiertas.',
-    imageUrl: 'https://i.imgur.com/pNJC9wT.jpeg',
+    imageUrl: Alineacion3D,
     imagePosition: 'right',
   },
   {
     id: 'embragues',
     title: 'Embragues',
     description: 'En nuestro taller realizamos mantenimiento y reparación de embragues, asegurando un cambio suave de marchas y prolongando la vida útil de tu vehículo. Sustituimos discos, platillos y rodamientos con repuestos de calidad para un funcionamiento óptimo.',
-    imageUrl: 'https://salamancachile.cl/wp-content/uploads/2024/04/cesta-disco-mecanismo-embrague-automotriz-cojinete-auto-sobre-fondo-negro.jpg',
+    imageUrl: Embragues,
     imagePosition: 'left',
   },
    {
     id: 'distribucion',
     title: 'Distribución',
     description: 'Nos encargamos del mantenimiento y reemplazo de correas y cadenas de distribución, garantizando la sincronización perfecta del motor. Un sistema de distribución en buen estado evita fallos mecánicos graves y asegura el rendimiento eficiente de tu vehículo.',
-    imageUrl: 'https://st4.depositphotos.com/23262978/40261/i/450/depositphotos_402616618-stock-photo-new-timing-belt-with-rollers.jpg',
+    imageUrl: Distribucion,
     imagePosition: 'right',
   },
   {
     id: 'trendelantero',
     title: 'Tren Delantero',
     description: 'Nos especializamos en la reparación y ajuste del tren delantero: rótulas, parrillas, bujes, extremos de dirección y amortiguadores. Un tren delantero en buen estado brinda seguridad, confort y mayor vida útil a tus neumáticos.',
-    imageUrl: 'https://paautos.gt/inicio/wp-content/uploads/2021/06/05.-Tren-delantero.jpg',
+    imageUrl: TrenDelantero,
     imagePosition: 'left',
   },
   {
     id: 'suspension',
     title: 'Suspensión',
     description: 'Revisamos y reparamos amortiguadores, espirales y otros componentes de la suspensión para garantizar un manejo suave y seguro. Una suspensión en buen estado absorbe irregularidades del camino y mejora la estabilidad.',
-    imageUrl: 'https://motor.elpais.com/wp-content/uploads/2022/02/shock-absorber-gd7b088548_1920.jpg',
+    imageUrl: Suspension,
     imagePosition: 'right',
   },
   {
     id: 'baterias',
     title: 'Baterías',
     description: 'Ofrecemos control, diagnóstico y reemplazo de baterías. Trabajamos con las mejores marcas para asegurar un arranque confiable y el correcto funcionamiento del sistema eléctrico de tu vehículo.',
-    imageUrl: 'https://www.suzuki.com.ar/media/aq0hjisp/c%C3%B3mo-desconectar-la-bater%C3%ADa-de-un-auto.webp?rmode=max&width=1000&height=700',
+    imageUrl: Bateria,
     imagePosition: 'left',
   },
   {
     id: 'enderezadodellantas',
     title: 'Enderezado de Llantas',
     description: 'Reparamos llantas deformadas o golpeadas con herramientas especializadas. Un correcto enderezado mejora el contacto de la rueda con el asfalto, evita vibraciones y alarga la vida de neumáticos y suspensión.',
-    imageUrl: 'https://images.unsplash.com/photo-1596923220081-3ed95f568a8f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    imageUrl: Rims,
     imagePosition: 'right',
   }
 ];
