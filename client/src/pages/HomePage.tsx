@@ -46,16 +46,6 @@ export function HomePage() {
     triggerOnce: true,
   });
 
-  const [ref6, inView6] = useInView({
-    threshold: 0.1,
-    triggerOnce: true,
-  });
-
-  const [ref7, inView7] = useInView({
-    threshold: 0.1,
-    triggerOnce: true,
-  });
-
   return (
     <>
       <LocalBusinessSchema />
@@ -88,73 +78,21 @@ export function HomePage() {
                   Tu taller de confianza en Bahía Blanca. Especialistas en alineación 3D, 
                   balanceo, cambio de aceite y servicios automotrices con tecnología de última generación.
                 </p>
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
-                  <div className="flex items-center space-x-2 text-gray-300">
-                    <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse" />
-                    <span className="text-lg font-medium">Alineación 3D</span>
-                  </div>
-                  <div className="flex items-center space-x-2 text-gray-300">
-                    <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse" />
-                    <span className="text-lg font-medium">Tecnología Avanzada</span>
-                  </div>
-                  <div className="flex items-center space-x-2 text-gray-300">
-                    <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse" />
-                    <span className="text-lg font-medium">Atención Personalizada</span>
-                  </div>
+                <div className="pt-8">
+                  <WeatherWidget />
                 </div>
               </motion.div>
             </div>
           </div>
         </section>
 
-        {/* Hero Image and Weather Section */}
-        <section className="py-20 bg-black" ref={ref2}>
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              {/* Hero Image */}
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                animate={inView2 ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                className="order-2 lg:order-1"
-              >
-                <div className="relative h-96 lg:h-[500px] rounded-2xl overflow-hidden">
-                  <HeroImage 
-                    src="https://i.postimg.cc/4xD7bsd8/b2db1a88-a17a-4de9-80ef-e08cb81923b5.jpg"
-                    alt="CR Alineaciones Lubricentro - Taller mecánico en Bahía Blanca"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center text-white p-8">
-                      <h2 className="text-3xl lg:text-5xl font-bold mb-4">
-                        Tecnología de Vanguardia
-                      </h2>
-                      <p className="text-lg lg:text-xl text-gray-200 max-w-2xl">
-                        Equipos de última generación para el cuidado perfecto de tu vehículo
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Weather Widget */}
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                animate={inView2 ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                className="order-1 lg:order-2"
-              >
-                <WeatherWidget />
-              </motion.div>
-            </div>
-          </div>
-        </section>
 
         {/* Services Section */}
-        <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900" ref={ref3}>
+        <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900" ref={ref2}>
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
-              animate={inView3 ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              animate={inView2 ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="text-center mb-16"
             >
@@ -171,32 +109,32 @@ export function HomePage() {
         </section>
 
         {/* Gallery Section - Full Width */}
-        <section className="py-20 bg-black" ref={ref4}>
+        <section className="py-20 bg-black" ref={ref3}>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView3 ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-center mb-16 px-4"
+          >
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Nuestro Taller
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Conoce nuestras instalaciones y el equipo de trabajo que hace posible 
+              brindarte el mejor servicio automotriz.
+            </p>
+          </motion.div>
           <div className="w-full">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={inView4 ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-center mb-16 px-4"
-            >
-              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                Nuestro Taller
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Conoce nuestras instalaciones y el equipo de trabajo que hace posible 
-                brindarte el mejor servicio automotriz.
-              </p>
-            </motion.div>
             <FeaturedGallery />
           </div>
         </section>
 
         {/* Products Section */}
-        <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900" ref={ref5}>
+        <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900" ref={ref4}>
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
-              animate={inView5 ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              animate={inView4 ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="text-center mb-16"
             >
@@ -213,11 +151,11 @@ export function HomePage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-black" ref={ref6}>
+        <section className="py-20 bg-black" ref={ref5}>
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
-              animate={inView6 ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              animate={inView5 ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
