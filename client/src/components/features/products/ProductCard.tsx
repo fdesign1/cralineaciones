@@ -15,7 +15,7 @@ export function ProductCard({ name, description, imageUrl, href, category }: Pro
     <a href={href} target="_blank" rel="noopener noreferrer" className="block hover:shadow-lg transition-shadow duration-300 rounded-xl h-full">
       <Card className="overflow-hidden h-full bg-gray-800">
         <CardHeader className="p-0">
-          <img src={imageUrl} alt={name} className="w-full h-48 object-cover" />
+          <img src={imageUrl} alt={name} className="w-full h-48 object-contain bg-gray-700" />
         </CardHeader>
         <CardContent className="p-6">
           <CardTitle className="text-lg font-bold mb-2 text-white">{name}</CardTitle>
