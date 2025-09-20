@@ -25,7 +25,7 @@ export function Footer() {
               <div className="flex items-center gap-3">
                 <FontAwesomeIcon 
                   icon={['fas', 'phone']} 
-                  className="h-5 w-5 text-green-500 flex-shrink-0" 
+                  className="h-5 w-5 text-gray-400 flex-shrink-0" 
                 />
                 <a 
                   href="tel:+5492914460056" 
@@ -38,7 +38,7 @@ export function Footer() {
               <div className="flex items-center gap-3">
                 <FontAwesomeIcon 
                   icon={['fas', 'envelope']} 
-                  className="h-5 w-5 text-blue-500 flex-shrink-0" 
+                  className="h-5 w-5 text-gray-400 flex-shrink-0" 
                 />
                 <a 
                   href="mailto:jonaiturre@icloud.com" 
@@ -60,7 +60,7 @@ export function Footer() {
             <h3 className="font-bold text-xl mb-6 text-white flex items-center gap-2">
               <FontAwesomeIcon 
                 icon={['fas', 'clock']} 
-                className="h-5 w-5 text-yellow-500" 
+                className="h-5 w-5 text-gray-400" 
               />
               Horario de Atención
             </h3>
@@ -69,7 +69,7 @@ export function Footer() {
               <div className="flex items-center gap-3">
                 <FontAwesomeIcon 
                   icon={['fas', 'calendar-alt']} 
-                  className="h-4 w-4 text-blue-500 flex-shrink-0" 
+                  className="h-4 w-4 text-gray-400 flex-shrink-0" 
                 />
                 <div>
                   <p className="text-sm font-medium text-white">Lunes - Viernes</p>
@@ -80,7 +80,7 @@ export function Footer() {
               <div className="flex items-center gap-3">
                 <FontAwesomeIcon 
                   icon={['fas', 'calendar-alt']} 
-                  className="h-4 w-4 text-green-500 flex-shrink-0" 
+                  className="h-4 w-4 text-gray-400 flex-shrink-0" 
                 />
                 <div>
                   <p className="text-sm font-medium text-white">Sábados</p>
@@ -91,7 +91,7 @@ export function Footer() {
               <div className="flex items-center gap-3">
                 <FontAwesomeIcon 
                   icon={['fas', 'calendar-alt']} 
-                  className="h-4 w-4 text-red-500 flex-shrink-0" 
+                  className="h-4 w-4 text-gray-400 flex-shrink-0" 
                 />
                 <div>
                   <p className="text-sm font-medium text-white">Domingos</p>
@@ -106,7 +106,7 @@ export function Footer() {
             <h3 className="font-bold text-xl mb-6 text-white flex items-center gap-2">
               <FontAwesomeIcon 
                 icon={['fas', 'map-marker-alt']} 
-                className="h-5 w-5 text-red-500" 
+                className="h-5 w-5 text-gray-400" 
               />
               Nuestra Ubicación
             </h3>
@@ -129,7 +129,7 @@ export function Footer() {
               <p className="text-xs text-muted-foreground text-center">
                 <FontAwesomeIcon 
                   icon={['fas', 'map-marker-alt']} 
-                  className="h-3 w-3 text-red-500 mr-1" 
+                  className="h-3 w-3 text-gray-400 mr-1" 
                 />
                 Remedios de Escalada 366, Bahía Blanca
               </p>
