@@ -126,23 +126,21 @@ export function HomePage() {
         </section>
 
         {/* Products Section */}
-        <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900" ref={ref4}>
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={inView4 ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                Productos
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Trabajamos con las mejores marcas del mercado!
-              </p>
-            </motion.div>
-            <ProductsAndBrands />
-          </div>
+        <section className="py-20 bg-black" ref={ref4}>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView4 ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-center mb-16 px-4"
+          >
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Productos
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Trabajamos con las mejores marcas del mercado!
+            </p>
+          </motion.div>
+          <ProductsAndBrands />
         </section>
 
         {/* CTA Section */}

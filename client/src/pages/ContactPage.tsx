@@ -84,11 +84,11 @@ export function ContactPage() {
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight">
               Contáctanos
               <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Estamos Aquí
+                Estamos para vos.
               </span>
             </h1>
             <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
-              ¿Tienes alguna consulta? ¿Necesitas agendar un turno? 
+              ¿Alguna consulta? ¿Necesitas agendar un turno? 
               Estamos listos para ayudarte con el cuidado de tu vehículo.
             </p>
           </div>
@@ -102,9 +102,9 @@ export function ContactPage() {
             {/* Left Column: Description */}
             <div data-aos="fade-right" data-aos-duration="800">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Tu Taller de
+                Tu taller de
                 <span className="block bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
-                  Confianza
+                  confianza
                 </span>
               </h2>
               <p className="text-base sm:text-lg text-gray-300 mb-6 leading-relaxed">

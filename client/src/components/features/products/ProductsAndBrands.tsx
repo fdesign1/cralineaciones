@@ -186,11 +186,10 @@ export function ProductsAndBrands() {
   }
 
   return (
-    <section className="py-16 bg-background">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12" data-aos="fade-up">
-          Nuestros Productos y Marcas
-        </h2>
+    <div className="w-full">
+      <h2 className="text-3xl font-bold text-center mb-12 px-4" data-aos="fade-up">
+        Nuestros Productos y Marcas
+      </h2>
 
         {/* Productos */}
         <div className="mb-16" data-aos="fade-up" data-aos-delay="100">
@@ -276,7 +275,6 @@ export function ProductsAndBrands() {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+    </div>
   );
 }

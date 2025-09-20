@@ -20,7 +20,7 @@ export function FloatingCalendly() {
     <a
       href="/turnos"
       className={cn(
-        'fixed bottom-20 right-6 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-r from-red-600 to-red-700 text-white shadow-lg transition-all duration-300 ease-in-out hover:from-red-500 hover:to-red-600 hover:scale-110',
+        'fixed bottom-24 right-6 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-r from-red-600 to-red-700 text-white shadow-lg transition-all duration-300 ease-in-out hover:from-red-500 hover:to-red-600 hover:scale-110',
         isScrolled ? 'scale-125' : 'scale-100'
       )}
       aria-label="Agendar turno con Calendly"
