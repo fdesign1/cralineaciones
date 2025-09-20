@@ -15,27 +15,13 @@ export function Footer() {
     <footer className="text-secondary-foreground bg-[#191616ff]">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Column 1: Shop Details */}
+          {/* Column 1: Contact Info */}
           <div>
             <h3 className="font-bold text-xl mb-6 text-white">
               CR Alineaciones Lubricentro
             </h3>
             
             <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <FontAwesomeIcon 
-                  icon={['fas', 'map-marker-alt']} 
-                  className="h-5 w-5 text-red-500 mt-1 flex-shrink-0" 
-                />
-                <div>
-                  <p className="text-sm text-muted-foreground">
-                    Remedios de Escalada 366
-                    <br />
-                    Bahía Blanca, B8000
-                  </p>
-                </div>
-              </div>
-              
               <div className="flex items-center gap-3">
                 <FontAwesomeIcon 
                   icon={['fas', 'phone']} 

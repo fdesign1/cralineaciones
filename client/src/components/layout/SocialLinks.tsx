@@ -14,11 +14,11 @@ export function SocialLinks() {
         target="_blank" 
         rel="noopener noreferrer" 
         aria-label="Instagram"
-        className="group flex items-center justify-center w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+        className="group flex items-center justify-center w-10 h-10 border border-gray-600 rounded-full hover:border-gray-400 hover:bg-gray-800/50 transition-all duration-300"
       >
         <FontAwesomeIcon 
           icon={['fab', 'instagram']} 
-          className="h-6 w-6 text-white group-hover:scale-110 transition-transform duration-300" 
+          className="h-5 w-5 text-gray-400 group-hover:text-white transition-colors duration-300" 
         />
       </a>
       
@@ -27,11 +27,11 @@ export function SocialLinks() {
         target="_blank" 
         rel="noopener noreferrer" 
         aria-label="WhatsApp"
-        className="group flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-full hover:from-green-600 hover:to-green-700 transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+        className="group flex items-center justify-center w-10 h-10 border border-gray-600 rounded-full hover:border-gray-400 hover:bg-gray-800/50 transition-all duration-300"
       >
         <FontAwesomeIcon 
           icon={['fab', 'whatsapp']} 
-          className="h-6 w-6 text-white group-hover:scale-110 transition-transform duration-300" 
+          className="h-5 w-5 text-gray-400 group-hover:text-white transition-colors duration-300" 
         />
       </a>
     </div>
