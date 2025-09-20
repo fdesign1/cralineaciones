@@ -14,7 +14,6 @@ import Bateria from '@/assets/battery.jpg';
 import Rims from '@/assets/rims2.png';
 import Balanceo from '@/assets/balanceo2.png';
 
-
 const servicesData = [
   {
     id: 'aceite',
@@ -31,76 +30,67 @@ const servicesData = [
     imagePosition: 'left',
   },
   {
-    id: 'balanceo',
-    title: 'Balanceo',
-    description: 'El balanceo de ruedas evita vibraciones al conducir y mejora la estabilidad del vehículo. Utilizamos equipamiento computarizado para asegurar un desgaste uniforme de los neumáticos y mayor confort al manejar. Es muy fácil sentir cuando el auto está mal balanceado. Al llegar a ciertas velocidades sentirás en el volante la vibración del vehículo, esto significa que la cubierta tiene un "abultamiento" o que los neumáticos están desbalanceados. Lo recomendable es verificar cuál de las dos causas es. Si es un abultamiento, cambia el neumático. Es importante saber que las cubiertas se cambian por par, si la cubierta trasera izquierda tiene este problema, tendrás que cambiar de igual manera la derecha. Si está desbalanceado, balancearlo. Así se evitará un desgaste irregular del neumático, además de no sentir esa molestia de las vibraciones en el volante. Otro beneficio del balanceo, es que se economiza un poco el combustible porque la cubierta tiene un buen agarre en el piso y no va bailando.',
-    imageUrl: Balanceo,
-    imagePosition: 'right',
-  },
-  {
-    id: 'lubricentro',
-    title: 'Lubricentro',
-    description: 'Ofrecemos un servicio completo de lubricación para motor, caja y diferencial, además del control y reposición de fluidos. Esto ayuda a prevenir desgastes prematuros y mantiene tu vehículo siempre en óptimas condiciones.',
-    imageUrl: 'https://neumarep.cl/wp-content/uploads/2025/03/Lubricentro.webp',
-    imagePosition: 'left',
-  },
-  {
-    id: 'alineacion3d',
+    id: 'alineacion',
     title: 'Alineación 3D',
-    description: 'Se recomienda realizar la alineación de neumáticos dos veces al año. Aunque esto, no es una ciencia cierta, ya que cada vehículo es diferente. De igual manera, se recomiendan alinear ambos ejes del auto, es decir la parte delantera y la trasera. ¿Por qué los dos y no solo uno? Si uno de los neumáticos está un poco abierto, cerrado o con una diferente inclinación, además de que crea un mayor desgaste sobre los otros neumáticos, ocasiona que el vehículo se comporte errático, es decir, que no sea tan preciso en sus movimientos, trayendo como consecuencia accidentes automovilísticos.Por seguridad o durabilidad de los neumáticos es importante hacer estas alineaciones. ¡No te olvides! De esta manera, tu vehículo será más seguro y el desgaste más parejo en tus cubiertas.',
+    description: 'Utilizamos tecnología 3D de última generación para alinear perfectamente tu vehículo. La alineación correcta mejora el manejo, reduce el desgaste de neumáticos y optimiza el consumo de combustible.',
     imageUrl: Alineacion3D,
     imagePosition: 'right',
   },
   {
     id: 'embragues',
     title: 'Embragues',
-    description: 'En nuestro taller realizamos mantenimiento y reparación de embragues, asegurando un cambio suave de marchas y prolongando la vida útil de tu vehículo. Sustituimos discos, platillos y rodamientos con repuestos de calidad para un funcionamiento óptimo.',
+    description: 'Reparamos y reemplazamos embragues para vehículos manuales. Un embrague en buen estado garantiza cambios de marcha suaves y un mejor rendimiento del motor.',
     imageUrl: Embragues,
     imagePosition: 'left',
   },
-   {
+  {
     id: 'distribucion',
     title: 'Distribución',
-    description: 'Nos encargamos del mantenimiento y reemplazo de correas y cadenas de distribución, garantizando la sincronización perfecta del motor. Un sistema de distribución en buen estado evita fallos mecánicos graves y asegura el rendimiento eficiente de tu vehículo.',
+    description: 'Mantenemos y reparamos el sistema de distribución de tu motor. Una distribución correcta es fundamental para el funcionamiento óptimo y la durabilidad del motor.',
     imageUrl: Distribucion,
     imagePosition: 'right',
   },
   {
-    id: 'trendelantero',
+    id: 'tren-delantero',
     title: 'Tren Delantero',
-    description: 'Nos especializamos en la reparación y ajuste del tren delantero: rótulas, parrillas, bujes, extremos de dirección y amortiguadores. Un tren delantero en buen estado brinda seguridad, confort y mayor vida útil a tus neumáticos.',
+    description: 'Revisamos y reparamos todos los componentes del tren delantero: amortiguadores, bujes, terminales y rótulas. Un tren delantero en buen estado mejora la estabilidad y el confort de marcha.',
     imageUrl: TrenDelantero,
     imagePosition: 'left',
   },
   {
     id: 'suspension',
     title: 'Suspensión',
-    description: 'Revisamos y reparamos amortiguadores, espirales y otros componentes de la suspensión para garantizar un manejo suave y seguro. Una suspensión en buen estado absorbe irregularidades del camino y mejora la estabilidad.',
+    description: 'Reparamos y mantenemos el sistema de suspensión de tu vehículo. Una suspensión en buen estado garantiza mayor comodidad, estabilidad y seguridad en la conducción.',
     imageUrl: Suspension,
     imagePosition: 'right',
   },
   {
-    id: 'baterias',
-    title: 'Baterías',
-    description: 'Ofrecemos control, diagnóstico y reemplazo de baterías. Trabajamos con las mejores marcas para asegurar un arranque confiable y el correcto funcionamiento del sistema eléctrico de tu vehículo.',
+    id: 'bateria',
+    title: 'Batería',
+    description: 'Revisamos, cargamos y reemplazamos baterías para mantener tu vehículo siempre listo. También verificamos el sistema de carga para asegurar un funcionamiento óptimo.',
     imageUrl: Bateria,
     imagePosition: 'left',
   },
   {
-    id: 'enderezadodellantas',
-    title: 'Enderezado de Llantas',
-    description: 'Reparamos llantas deformadas o golpeadas con herramientas especializadas. Un correcto enderezado mejora el contacto de la rueda con el asfalto, evita vibraciones y alarga la vida de neumáticos y suspensión.',
+    id: 'rims',
+    title: 'Rims y Llantas',
+    description: 'Ofrecemos servicios de montaje, balanceo y reparación de rims y llantas. Trabajamos con las mejores marcas para garantizar durabilidad y rendimiento.',
     imageUrl: Rims,
     imagePosition: 'right',
-  }
+  },
+  {
+    id: 'balanceo',
+    title: 'Balanceo',
+    description: 'Realizamos balanceo computarizado de ruedas para eliminar vibraciones y mejorar el confort de marcha. Un balanceo correcto prolonga la vida útil de los neumáticos.',
+    imageUrl: Balanceo,
+    imagePosition: 'left',
+  },
 ];
-
 
 export function ServicesPage() {
   const location = useLocation();
 
   React.useEffect(() => {
-    // Initialize AOS
     AOS.init({
       duration: 800,
       easing: 'ease-in-out',
@@ -140,8 +130,8 @@ export function ServicesPage() {
               </span>
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Soluciones para el mantenimiento y reparación de tu vehículo. 
-              Calidad garantizada y atención personalizada.
+              Soluciones completas para el mantenimiento y reparación de tu vehículo. 
+              Calidad garantizada y atención personalizada en Bahía Blanca.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
               <div className="flex items-center space-x-2 text-gray-300">

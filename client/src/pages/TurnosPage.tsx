@@ -6,8 +6,10 @@ import 'aos/dist/aos.css';
 
 export function TurnosPage() {
   usePageTitle({
-    title: "Reservar Turno - CR Alineaciones",
-    description: "Agenda tu turno de forma fácil y rápida. Nuestro equipo está listo para atenderte con la mejor tecnología y servicio profesional."
+    title: "Reservar Turno - Taller Mecánico Bahía Blanca",
+    description: "Agenda tu turno online en CR Alineaciones Lubricentro. Alineación 3D, balanceo, cambio de aceite y servicios automotrices en Bahía Blanca. Reserva fácil y rápida.",
+    keywords: "reservar turno Bahía Blanca, agendar cita taller, alineación 3D turno, balanceo ruedas cita, cambio aceite turno, CR Alineaciones reserva",
+    canonicalUrl: "https://cralineaciones.com/turnos"
   });
 
   React.useEffect(() => {
@@ -96,7 +98,7 @@ export function TurnosPage() {
             
             <p className="text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Agenda tu turno de forma fácil y rápida. Nuestro equipo está listo para atenderte 
-              con la mejor tecnología y servicio profesional.
+              con la mejor tecnología y servicio profesional en Bahía Blanca.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8">

@@ -3,9 +3,11 @@ import { useEffect } from 'react';
 interface PageTitleOptions {
   title: string;
   description?: string;
+  keywords?: string;
+  canonicalUrl?: string;
 }
 
-export function usePageTitle({ title, description }: PageTitleOptions) {
+export function usePageTitle({ title, description, keywords, canonicalUrl }: PageTitleOptions) {
   useEffect(() => {
     // Update page title
     const fullTitle = title === 'Inicio' ? 'CR Alineaciones Lubricentro - Taller Mecánico en Bahía Blanca' : `${title} | CR Alineaciones Lubricentro`;
@@ -22,6 +24,28 @@ export function usePageTitle({ title, description }: PageTitleOptions) {
       metaDescription.setAttribute('content', description);
     }
 
+    // Update meta keywords if provided
+    if (keywords) {
+      let metaKeywords = document.querySelector('meta[name="keywords"]');
+      if (!metaKeywords) {
+        metaKeywords = document.createElement('meta');
+        metaKeywords.setAttribute('name', 'keywords');
+        document.head.appendChild(metaKeywords);
+      }
+      metaKeywords.setAttribute('content', keywords);
+    }
+
+    // Update canonical URL if provided
+    if (canonicalUrl) {
+      let canonical = document.querySelector('link[rel="canonical"]');
+      if (!canonical) {
+        canonical = document.createElement('link');
+        canonical.setAttribute('rel', 'canonical');
+        document.head.appendChild(canonical);
+      }
+      canonical.setAttribute('href', canonicalUrl);
+    }
+
     // Update Open Graph title
     let ogTitle = document.querySelector('meta[property="og:title"]');
     if (ogTitle) {
@@ -33,6 +57,14 @@ export function usePageTitle({ title, description }: PageTitleOptions) {
       let ogDescription = document.querySelector('meta[property="og:description"]');
       if (ogDescription) {
         ogDescription.setAttribute('content', description);
+      }
+    }
+
+    // Update Open Graph URL
+    if (canonicalUrl) {
+      let ogUrl = document.querySelector('meta[property="og:url"]');
+      if (ogUrl) {
+        ogUrl.setAttribute('content', canonicalUrl);
       }
     }
 
@@ -50,5 +82,5 @@ export function usePageTitle({ title, description }: PageTitleOptions) {
       }
     }
 
-  }, [title, description]);
+  }, [title, description, keywords, canonicalUrl]);
 }

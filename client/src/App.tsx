@@ -14,6 +14,7 @@ import { TurnosPage } from '@/pages/TurnosPage';
 //import { ProductsPage } from '@/pages/ProductsPage';
 import { FloatingWhatsApp } from '@/components/layout/FloatingWhatsApp';
 import { FloatingCalendly } from '@/components/layout/FloatingCalendly';
+import { LocalBusinessSchema } from '@/components/seo/LocalBusinessSchema';
 import WordPress from '@/components/features/products/WordPress';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen flex flex-col bg-background text-foreground">
+        <LocalBusinessSchema />
         <Header />
         <main className="flex-grow">
           <Routes>
