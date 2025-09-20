@@ -11,6 +11,32 @@ export function TurnosPage() {
   });
 
   React.useEffect(() => {
+    // Add CSS for better mobile centering
+    const style = document.createElement('style');
+    style.textContent = `
+      .calendly-inline-widget {
+        display: block !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+      }
+      
+      .calendly-inline-widget iframe {
+        display: block !important;
+        margin: 0 auto !important;
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+      
+      @media (max-width: 640px) {
+        .calendly-inline-widget {
+          min-width: 280px !important;
+          max-width: 100% !important;
+          width: 100% !important;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+
     // Initialize AOS
     AOS.init({
       duration: 800,
@@ -32,6 +58,12 @@ export function TurnosPage() {
       const existingScript = document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]');
       if (existingScript) {
         document.head.removeChild(existingScript);
+      }
+      
+      // Cleanup style
+      const existingStyle = document.querySelector('style');
+      if (existingStyle && existingStyle.textContent?.includes('calendly-inline-widget')) {
+        document.head.removeChild(existingStyle);
       }
     };
   }, []);
@@ -101,16 +133,24 @@ export function TurnosPage() {
             </div>
 
             {/* Calendly Widget Container */}
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 shadow-2xl" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-white mb-2">Reserva tu turno</h3>
-                <p className="text-gray-300">Selecciona la fecha y hora que mejor te convenga</p>
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-4 sm:p-8 border border-white/10 shadow-2xl" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+              <div className="text-center mb-6 sm:mb-8">
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">Reserva tu turno</h3>
+                <p className="text-sm sm:text-base text-gray-300">Selecciona la fecha y hora que mejor te convenga</p>
               </div>
               
               {/* Calendly Widget */}
-              <div className="calendly-inline-widget rounded-2xl overflow-hidden shadow-lg" 
-                   data-url="https://calendly.com/cralineaciones/reservar-turno-taller?background_color=000000&text_color=ffffff&primary_color=b02121" 
-                   style={{minWidth: '320px', height: '700px'}}>
+              <div className="w-full flex justify-center">
+                <div className="calendly-inline-widget rounded-2xl overflow-hidden shadow-lg w-full max-w-full" 
+                     data-url="https://calendly.com/cralineaciones/reservar-turno-taller?background_color=000000&text_color=ffffff&primary_color=b02121" 
+                     style={{
+                       minWidth: '280px', 
+                       maxWidth: '100%',
+                       width: '100%',
+                       height: '700px',
+                       margin: '0 auto'
+                     }}>
+                </div>
               </div>
             </div>
           </div>
