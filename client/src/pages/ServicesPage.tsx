@@ -2,6 +2,8 @@
 import * as React from 'react';
 import { useLocation } from 'react-router-dom';
 import { ServiceSection } from '@/components/features/services/ServiceSection';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const servicesData = [
@@ -89,6 +91,14 @@ export function ServicesPage() {
   const location = useLocation();
 
   React.useEffect(() => {
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 100,
+    });
+
     if (location.hash) {
       const element = document.getElementById(location.hash.substring(1));
       if (element) {
@@ -100,19 +110,87 @@ export function ServicesPage() {
   }, [location.hash, location.pathname]);
 
   return (
-    <div className="container mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold text-center mb-12">Nuestros Servicios</h1>
-      <div className="space-y-16">
-        {servicesData.map((service) => (
-          <ServiceSection
-            key={service.id}
-            id={service.id}
-            title={service.title}
-            description={service.description}
-            imageUrl={service.imageUrl}
-            imagePosition={service.imagePosition as 'left' | 'right'}
-          />
-        ))}
+    <div className="min-h-screen bg-black">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden bg-gradient-to-r from-gray-900 via-black to-gray-900">
+        <div className="absolute inset-0 bg-black/50" />
+        
+        {/* Decorative elements */}
+        <div className="absolute top-0 left-0 w-full h-full">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-indigo-500/20 rounded-full blur-3xl animate-pulse delay-500" />
+        </div>
+        
+        <div className="relative container mx-auto px-4 py-20 lg:py-32">
+          <div className="text-center space-y-8" data-aos="fade-up" data-aos-duration="1000">
+            <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">
+              Nuestros
+              <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                Servicios
+              </span>
+            </h1>
+            <p className="text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Soluciones para el mantenimiento y reparación de tu vehículo. 
+              Calidad garantizada y atención personalizada.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
+              <div className="flex items-center space-x-2 text-gray-300">
+                <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse" />
+                <span className="text-lg font-medium">Experiencia</span>
+              </div>
+              <div className="flex items-center space-x-2 text-gray-300">
+                <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse" />
+                <span className="text-lg font-medium">Tecnología 3D</span>
+              </div>
+              <div className="flex items-center space-x-2 text-gray-300">
+                <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse" />
+                <span className="text-lg font-medium">Lubricentro premium</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Services Section */}
+      <div className="bg-black">
+        <div className="container mx-auto px-4 py-20">
+          <div className="space-y-24">
+            {servicesData.map((service, index) => (
+              <ServiceSection
+                key={service.id}
+                id={service.id}
+                title={service.title}
+                description={service.description}
+                imageUrl={service.imageUrl}
+                imagePosition={service.imagePosition as 'left' | 'right'}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="bg-gradient-to-r from-gray-800 to-gray-900 py-20">
+        <div className="container mx-auto px-4 text-center">
+          <div data-aos="fade-up" data-aos-duration="800">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              ¿Listo para cuidar tu vehículo?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Contáctanos hoy mismo y agenda tu turno. Nuestro equipo está listo para atenderte.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <button className="group relative inline-flex items-center px-8 py-4 bg-white text-gray-900 font-bold rounded-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+                <span className="relative z-10">Solicitar turno</span>
+                <div className="absolute inset-0 bg-white rounded-xl blur opacity-0 group-hover:opacity-50 transition-opacity duration-300" />
+              </button>
+              <button className="group relative inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:scale-105">
+                <span className="relative z-10">Consultar precios</span>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
