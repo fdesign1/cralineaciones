@@ -190,13 +190,21 @@ export function ServicesPage() {
               Contáctanos hoy mismo y agenda tu turno. Nuestro equipo está listo para atenderte.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button className="group relative inline-flex items-center px-8 py-4 bg-white text-gray-900 font-bold rounded-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+              <a 
+                href="/turnos"
+                className="group relative inline-flex items-center px-8 py-4 bg-white text-gray-900 font-bold rounded-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+              >
                 <span className="relative z-10">Solicitar turno</span>
                 <div className="absolute inset-0 bg-white rounded-xl blur opacity-0 group-hover:opacity-50 transition-opacity duration-300" />
-              </button>
-              <button className="group relative inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:scale-105">
+              </a>
+              <a 
+                href="https://wa.me/+5492914460056"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:scale-105"
+              >
                 <span className="relative z-10">Consultar precios</span>
-              </button>
+              </a>
             </div>
           </div>
         </div>
