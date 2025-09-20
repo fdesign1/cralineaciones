@@ -1,10 +1,10 @@
 
 import * as React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faWhatsapp, faFacebook, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
-library.add(faInstagram, faWhatsapp, faFacebook, faYoutube);
+library.add(faInstagram, faWhatsapp);
 
 export function SocialLinks() {
   return (
@@ -31,32 +31,6 @@ export function SocialLinks() {
       >
         <FontAwesomeIcon 
           icon={['fab', 'whatsapp']} 
-          className="h-6 w-6 text-white group-hover:scale-110 transition-transform duration-300" 
-        />
-      </a>
-      
-      <a 
-        href="https://facebook.com/cralineaciones" 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        aria-label="Facebook"
-        className="group flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
-      >
-        <FontAwesomeIcon 
-          icon={['fab', 'facebook']} 
-          className="h-6 w-6 text-white group-hover:scale-110 transition-transform duration-300" 
-        />
-      </a>
-      
-      <a 
-        href="https://youtube.com/@cralineaciones" 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        aria-label="YouTube"
-        className="group flex items-center justify-center w-12 h-12 bg-gradient-to-r from-red-500 to-red-600 rounded-full hover:from-red-600 hover:to-red-700 transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
-      >
-        <FontAwesomeIcon 
-          icon={['fab', 'youtube']} 
           className="h-6 w-6 text-white group-hover:scale-110 transition-transform duration-300" 
         />
       </a>
