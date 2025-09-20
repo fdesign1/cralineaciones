@@ -82,11 +82,11 @@ export function ContactPage() {
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight">
               Contáctanos
               <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Estamos Aquí
+                Estamos para vos
               </span>
             </h1>
             <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
-              ¿Tienes alguna consulta? ¿Necesitas agendar un turno? 
+              ¿Alguna consulta? ¿Necesitas agendar un turno? 
               Estamos listos para ayudarte con el cuidado de tu vehículo.
             </p>
           </div>
@@ -139,7 +139,7 @@ export function ContactPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
                   <p className="text-white text-sm font-medium bg-black/50 backdrop-blur-sm rounded-lg px-4 py-2">
-                    Equipo profesional trabajando con tecnología de última generación
+                    Equipo profesional trabajando para mejorar tu auto.
                   </p>
                 </div>
               </div>
@@ -177,7 +177,7 @@ export function ContactPage() {
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold text-white">Email</h3>
               </div>
-              <p className="text-gray-300 mb-4 text-sm sm:text-base">Escríbenos para consultas detalladas</p>
+              <p className="text-gray-300 mb-4 text-sm sm:text-base">Escribinos  para consultas detalladas</p>
               <a 
                 href="mailto:jonaiturre@icloud.com" 
                 className="text-blue-400 hover:text-blue-300 font-medium transition-colors duration-300 text-sm sm:text-base break-all"
@@ -237,7 +237,7 @@ export function ContactPage() {
                 Envíanos un Mensaje
               </h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-                Completa el formulario y nos pondremos en contacto contigo lo antes posible
+                Completa el formulario y nos pondremos en contacto con vos lo antes posible
               </p>
             </div>
 
