@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import { ServiceSection } from '@/components/features/services/ServiceSection';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+<<<<<<< HEAD
 import Aceite from '@/assets/aceite.png';
 import Frenos from '@/assets/brake.png';
 import Alineacion3D from '@/assets/alineacion.png';
@@ -15,6 +16,8 @@ import Bateria from '@/assets/battery.jpg';
 import Rims from '@/assets/rims2.png';
 import Balanceo from '@/assets/balanceo2.png';
 
+=======
+>>>>>>> test/catalog
 
 
 const servicesData = [

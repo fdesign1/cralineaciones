@@ -1,4 +1,3 @@
-
 import * as React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import AOS from 'aos';
@@ -11,7 +10,7 @@ import { GalleryPage } from '@/pages/GalleryPage';
 import { FAQPage } from '@/pages/FAQPage';
 import { ContactPage} from '@/pages/ContactPage';
 import { PrivacyPolicyPage } from '@/pages/PrivacyPolicyPage';
-import { UnderConstructionPage } from '@/pages/UnderConstructionPage';
+import { TurnosPage } from '@/pages/TurnosPage';
 //import { ProductsPage } from '@/pages/ProductsPage';
 import { FloatingWhatsApp } from '@/components/layout/FloatingWhatsApp';
 import WordPress from '@/components/features/products/WordPress';
@@ -38,7 +37,7 @@ function App() {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
             <Route path="/catalogo" element={<WordPress />} />
-            <Route path="/turnos" element={<UnderConstructionPage />} />
+            <Route path="/turnos" element={<TurnosPage />} />
           </Routes>
         </main>
         <FloatingWhatsApp />
