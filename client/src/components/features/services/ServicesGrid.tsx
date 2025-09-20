@@ -1,6 +1,11 @@
 
 import * as React from "react";
 import { ServiceCard } from "./ServiceCard";
+import Suspension2 from '@/assets/suspension2.png';
+import Rims2 from '@/assets/rims.png';
+import Balanceo3 from '@/assets/balanceo3.png';
+import Alineacion3 from '@/assets/alineacion3.png';
+import Battery2 from '@/assets/battery2.png';
 
 const services = [
   {
@@ -19,7 +24,7 @@ const services = [
   },
   {
     title: "Balanceo",
-    imageUrl: "https://img.zsmotor.cl/wp-content/uploads/2023/05/balanceo-rueda-2-1024x682-1.jpg",
+    imageUrl: Balanceo3,
     href: "/services#balanceo",
     gridClass: "md:col-span-1",
     overlay: "bg-black/80"
@@ -33,7 +38,7 @@ const services = [
   },
   {
     title: "Alineación 3D",
-    imageUrl: "https://i.imgur.com/pNJC9wT.jpeg",
+    imageUrl: Alineacion3,
     href: "/services#alineacion3d",
     gridClass: "md:col-span-1",
     overlay: "bg-black/60"
@@ -61,21 +66,21 @@ const services = [
   },
   {
     title: "Suspensión",
-    imageUrl: "https://www.jeep.es/content/dam/moc/common/parts_tips/suspension_shock_absorvers/tips/mobile/shock_absorver_springs_thumb.png",
+    imageUrl: Suspension2,
     href: "/services#suspension",
     gridClass: "md:col-span-1",
     overlay: "bg-black/80"
   },
   {
     title: "Baterías",
-    imageUrl: "https://www.suzuki.com.ar/media/aq0hjisp/c%C3%B3mo-desconectar-la-bater%C3%ADa-de-un-auto.webp?rmode=max&width=1000&height=700",
+    imageUrl: Battery2,
     href: "/services#baterias",
     gridClass: "md:col-span-1",
     overlay: "bg-red-900/70"
   },
   {
     title: "Enderezado de Llantas",
-    imageUrl: "https://images.unsplash.com/photo-1596923220081-3ed95f568a8f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imageUrl: Rims2,
     href: "/services#enderezadodellantas",
     gridClass: "md:col-span-1",
     overlay: "bg-black/80"

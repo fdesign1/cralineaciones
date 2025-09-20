@@ -60,7 +60,7 @@ export function FAQSection({ items, title = "Preguntas Frecuentes", showCategori
       <div className="text-center">
         <h2 className="text-3xl font-bold mb-4">{title}</h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Encuentra respuestas a las dudas más comunes sobre nuestros servicios automotrices.
+          Encuentra respuestas a las dudas más comunes sobre nuestros servicios del automotor.
         </p>
       </div>
 

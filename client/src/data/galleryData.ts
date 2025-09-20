@@ -4,7 +4,6 @@ import Alignment2 from '@/assets/alignment.jpeg';
 import Pastilla from '@/assets/pastilla.jpeg';
 import Suspension from '@/assets/suspension.jpeg';
 import Distribucion from '@/assets/distribucion3.jpeg';
-import Distribucion2 from '@/assets/distribucion4.jpeg';
 import Distribucion4 from '@/assets/distribucion2.jpeg';
 import Autoblanco2 from '@/assets/autoblanco2.jpeg';
 import Autoblanco1 from '@/assets/autoblanco1.jpeg';
