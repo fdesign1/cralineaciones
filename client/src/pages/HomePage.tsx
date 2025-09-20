@@ -16,8 +16,8 @@ import { HeroImage } from "@/components/layout/HeroImage";
 export function HomePage() {
   usePageTitle({
     title: "Inicio",
-    description: "CR Alineaciones Lubricentro - Taller mecánico especializado en alineación 3D, balanceo, cambio de aceite y servicios automotrices en Bahía Blanca. Tecnología de última generación y atención personalizada.",
-    keywords: "alineación Bahía Blanca, lubricentro Bahía Blanca, taller mecánico Bahía Blanca, balanceo ruedas, cambio aceite, alineación 3D, suspensión, frenos, CR Alineaciones",
+    description: "CR Alineaciones Lubricentro - Taller mecánico especializado en alineación 3D, balanceo, cambio de aceite y servicios del automotor en Bahía Blanca. Atención personalizada.",
+    keywords: "alineación Bahía Blanca, lubricentro Bahía Blanca, taller mecánico Bahía Blanca, balanceo ruedas, cambio aceite, alineación 3D, suspensión, frenos, embragues, CR Alineaciones",
     canonicalUrl: "https://cralineaciones.com"
   });
 
@@ -76,9 +76,9 @@ export function HomePage() {
                 </h1>
                 <p className="text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed mt-6">
                   Tu taller de confianza en Bahía Blanca. Especialistas en alineación 3D, 
-                  balanceo, cambio de aceite y servicios automotrices con tecnología de última generación.
+                  balanceo, cambio de aceite y servicios del automotor.
                 </p>
-                <div className="pt-8">
+                <div className="pt-8 flex justify-center">
                   <WeatherWidget />
                 </div>
               </motion.div>
@@ -100,8 +100,7 @@ export function HomePage() {
                 Nuestros Servicios
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Ofrecemos una amplia gama de servicios automotrices con la mejor tecnología 
-                y atención profesional en Bahía Blanca.
+                Ofrecemos una amplia gama de servicios del automotor y atención profesional en Bahía Blanca.
               </p>
             </motion.div>
             <ServicesGrid />
@@ -120,8 +119,7 @@ export function HomePage() {
               Nuestro Taller
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Conoce nuestras instalaciones y el equipo de trabajo que hace posible 
-              brindarte el mejor servicio automotriz.
+              Conoce nuestras instalaciones y el equipo de trabajo que hace posible brindarte el mejor servicio.
             </p>
           </motion.div>
           <div className="w-full">
@@ -139,11 +137,10 @@ export function HomePage() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                Productos y Marcas
+                Productos
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Trabajamos con las mejores marcas del mercado para garantizar 
-                la calidad y durabilidad de nuestros servicios.
+                Trabajamos con las mejores marcas del mercado!
               </p>
             </motion.div>
             <ProductsAndBrands />
@@ -162,8 +159,7 @@ export function HomePage() {
                 ¿Listo para cuidar tu vehículo?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Contáctanos hoy mismo y agenda tu turno. Nuestro equipo está listo para atenderte 
-                con la mejor tecnología y servicio profesional.
+                Contáctanos hoy mismo y agenda tu turno. Nuestro equipo está listo para atenderte.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link to="/turnos">

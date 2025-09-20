@@ -89,12 +89,7 @@ const services = [
 
 export function ServicesGrid() {
   return (
-    <section className="py-16 bg-secondary/0">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">
-          Nuestros Servicios
-        </h2>
-      </div>
+    <div className="w-full">
       <div className="grid grid-cols-1 md:grid-cols-3">
         {services.map((service) => (
           <ServiceCard
@@ -104,10 +99,9 @@ export function ServicesGrid() {
             href={service.href}
             className={service.gridClass}
             overlay={service.overlay}
-
           />
         ))}
       </div>
-    </section>
+    </div>
   );
 }
