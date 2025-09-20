@@ -4,6 +4,18 @@ import { Link } from "react-router-dom";
 import { ProductCard } from "./ProductCard";
 import { Button } from "@/components/ui/button";
 
+// Importar logos de marcas
+import castrolLogo from '@/assets/brands/castrol.png';
+import shellLogo from '@/assets/brands/shell-helix.png';
+import motulLogo from '@/assets/brands/motul.png';
+import mahleLogo from '@/assets/brands/mahle.png';
+import continentalLogo from '@/assets/brands/continental.png';
+import quartzLogo from '@/assets/brands/quartz.png';
+import boschLogo from '@/assets/brands/bosch.png';
+import mannFilterLogo from '@/assets/brands/mann-filter.png';
+import wurthLogo from '@/assets/brands/wurth.png';
+
+
 import {
   Carousel,
   CarouselContent,
@@ -33,40 +45,32 @@ interface DynamicProduct {
 const products = [
   {
     name: "Aceites Sintéticos-Semi Sintéticos ",
-    description:
-      "",
-    imageUrl:
-      "https://www.shell.com.ar/motorists/oils-lubricants/helix-for-cars/helix-fully-synthetic/shell-helix-ultra-5w-40/_jcr_content/root/main/section/standalone_asset.shellimg.png/1702283589706/shell-helix-ultra-5w-40.png?imwidth=301&impolicy=amidala-image&imdensity=1",
+    description: "",
+    imageUrl: "https://www.shell.com.ar/motorists/oils-lubricants/helix-for-cars/helix-fully-synthetic/shell-helix-ultra-5w-40/_jcr_content/root/main/section/standalone_asset.shellimg.png/1702283589706/shell-helix-ultra-5w-40.png?imwidth=301&impolicy=amidala-image&imdensity=1",
   },
   {
     name: "Pastillas de Freno",
-    description:
-      "",
-    imageUrl:
-      "https://m.media-amazon.com/images/I/41J9VgxiYQL._AC_UF894,1000_QL80_.jpg",
+    description: "",
+    imageUrl: "https://m.media-amazon.com/images/I/41J9VgxiYQL._AC_UF894,1000_QL80_.jpg",
   },
   {
     name: "Filtro de Aire, Nafta y Cabina",
-    description:
-      "",
+    description: "",
     imageUrl: "https://www.filtrosmareno.com.ar/assets/img/aire/aire_2.jpg",
   },
   {
     name: "Baterías",
-    description:
-      "",
+    description: "",
     imageUrl: "https://www.sermat.com.ar/wp-content/uploads/2023/01/bateria65am.png",
   },
   {
     name: "Neumáticos",
-    description:
-      "",
+    description: "",
     imageUrl: "https://www.oponeo.pl/ndcr/temp/25620/continental-allseasoncontact-2-s2-f-f-l672x750-sk7.png",
   },
   {
     name: "Amortiguadores",
-    description:
-      "",
+    description: "",
     imageUrl: "https://cdn.club-magazin.autodoc.de/uploads/sites/11/2020/11/amortiguador-de-coche.jpg",
   },
 ];
@@ -75,43 +79,40 @@ const products = [
 const brands = [
   {
     name: "Castrol",
-    logoUrl:
-      "https://logos-world.net/wp-content/uploads/2022/06/Castrol-Logo-2006.png",
+    logoUrl: castrolLogo,
   },
   {
     name: "Shell Helix",
-    logoUrl:
-      "https://i.imgur.com/KhdBfU6.png",
+    logoUrl: shellLogo,
   },
   {
     name: "Motul",
-    logoUrl:
-      "https://logos-world.net/wp-content/uploads/2023/03/Motul-Logo.png",
+    logoUrl: motulLogo,
   },
   {
     name: "Mahle",
-    logoUrl: "https://qsv.co.za/wp-content/uploads/2020/06/Mahle.png",
+    logoUrl: mahleLogo,
   },
   {
     name: "Continental",
-    logoUrl:
-      "https://i.imgur.com/vPbF2pO.png",
+    logoUrl: continentalLogo,
   },
   {
     name: "Quartz",
-    logoUrl:
-      "https://i.imgur.com/D3zXYjN.png",
+    logoUrl: quartzLogo,
   },
   {
     name: "Bosch",
-    logoUrl:
-      "https://i.imgur.com/gyfaBG2.png",
+    logoUrl: boschLogo,
   },
   {
     name: "Mann Filter",
-    logoUrl:
-      "https://i.imgur.com/cLaccJN.png",
+    logoUrl: mannFilterLogo,
   },
+  {
+    name: "Wurth",
+    logoUrl: wurthLogo,
+  }
 ];
 
 export function ProductsAndBrands() {

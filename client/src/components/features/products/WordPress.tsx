@@ -248,7 +248,7 @@ export default function WordPress() {
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-white mb-4">Catálogo de Productos</h1>
           <p className="text-gray-200">
-            Explora nuestra amplia gama de productos del automotor
+            Explora nuestros productos del automotor
           </p>
         </div>
 
