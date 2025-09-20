@@ -13,6 +13,7 @@ import { PrivacyPolicyPage } from '@/pages/PrivacyPolicyPage';
 import { TurnosPage } from '@/pages/TurnosPage';
 //import { ProductsPage } from '@/pages/ProductsPage';
 import { FloatingWhatsApp } from '@/components/layout/FloatingWhatsApp';
+import { FloatingCalendly } from '@/components/layout/FloatingCalendly';
 import WordPress from '@/components/features/products/WordPress';
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
             <Route path="/turnos" element={<TurnosPage />} />
           </Routes>
         </main>
+        <FloatingCalendly />
         <FloatingWhatsApp />
         <Footer />
       </div>

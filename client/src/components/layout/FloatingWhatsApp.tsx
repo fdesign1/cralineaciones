@@ -1,4 +1,3 @@
-
 import * as React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
@@ -27,7 +26,7 @@ export function FloatingWhatsApp() {
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        'fixed bottom-6 right-6 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-green-500 text-white shadow-lg transition-transform duration-300 ease-in-out hover:bg-green-600',
+        'fixed bottom-6 right-6 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-green-500 text-white shadow-lg transition-all duration-300 ease-in-out hover:bg-green-600 hover:scale-110',
         isScrolled ? 'scale-125' : 'scale-100'
       )}
       aria-label="Chat on WhatsApp"
