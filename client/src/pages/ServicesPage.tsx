@@ -73,8 +73,8 @@ const servicesData = [
   },
   {
     id: 'rims',
-    title: 'Rims y Llantas',
-    description: 'Ofrecemos servicios de montaje, balanceo y reparación de rims y llantas. Trabajamos con las mejores marcas para garantizar durabilidad y rendimiento.',
+    title: 'Enderezado de llantas',
+    description: 'Ofrecemos servicios de armado, balanceo y reparación de llantas.',
     imageUrl: Rims,
     imagePosition: 'right',
   },
