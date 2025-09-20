@@ -89,22 +89,20 @@ export function HomePage() {
 
         {/* Services Section */}
         <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900" ref={ref2}>
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={inView2 ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                Nuestros Servicios
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Ofrecemos una amplia gama de servicios del automotor y atención profesional en Bahía Blanca.
-              </p>
-            </motion.div>
-            <ServicesGrid />
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView2 ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-center mb-16 px-4"
+          >
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Nuestros Servicios
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Ofrecemos una amplia gama de servicios del automotor y atención profesional en Bahía Blanca.
+            </p>
+          </motion.div>
+          <ServicesGrid />
         </section>
 
         {/* Gallery Section - Full Width */}
