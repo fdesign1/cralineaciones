@@ -9,7 +9,7 @@ import Frenos from '@/assets/brake.png';
 import Alineacion3D from '@/assets/alineacion.png';
 import Embragues from '@/assets/cambios.png';
 import Distribucion from '@/assets/distribucion2.jpg';
-import TrenDelantero from '@/assets/ejes.jpg';
+import TrenDelantero from '@/assets/trendelantero.png';
 import Suspension from '@/assets/suspension.png';
 import Bateria from '@/assets/battery.jpg';
 import Rims from '@/assets/rims2.png';
