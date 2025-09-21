@@ -47,21 +47,70 @@ export function HomePage() {
     triggerOnce: true,
   });
 
+  // Aplicar estilos responsive para la imagen de fondo
+  useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = `
+      @media (max-width: 768px) {
+        .hero-background {
+          background-attachment: scroll !important;
+          background-size: cover !important;
+          background-position: center center !important;
+          min-height: 100vh !important;
+          max-height: 100vh !important;
+          overflow: hidden !important;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .hero-background {
+          background-size: cover !important;
+          background-position: center center !important;
+          min-height: 100vh !important;
+          max-height: 100vh !important;
+        }
+      }
+      
+      @media (min-width: 768px) and (max-height: 900px) {
+        .hero-background {
+          background-attachment: fixed !important;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+    
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, []);
+
   return (
     <>
       <LocalBusinessSchema />
       <div className="min-h-screen bg-black">
         {/* Hero Section */}
-        <section 
-          className="relative overflow-hidden min-h-screen flex items-center"
-          style={{
-            backgroundImage: `url(${mainImage})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
-          }}
-        >
-          <div className="absolute inset-0 bg-black/60" />
+        <section className="relative overflow-hidden min-h-screen flex items-center w-full">
+          {/* Imagen de fondo con blur delicado y efecto fade-in */}
+          <motion.div
+            className="absolute inset-0 w-full h-full hero-background"
+            style={{
+              backgroundImage: `url(${mainImage})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center center',
+              backgroundRepeat: 'no-repeat',
+              backgroundAttachment: 'fixed',
+              filter: 'blur(1px)',
+              minHeight: '100vh',
+              width: '100%',
+              maxWidth: '100vw'
+            }}
+            initial={{ opacity: 0, scale: 1.1 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+          />
+          
+          {/* Overlay para mejorar legibilidad */}
+          <div className="absolute inset-0 bg-black/50" />
           
           {/* Decorative elements - Puntos azules que laten */}
           <div className="absolute top-0 left-0 w-full h-full">
@@ -72,10 +121,11 @@ export function HomePage() {
           
           <div className="relative container mx-auto px-4 w-full">
             <div className="text-center space-y-8" ref={ref}>
+              {/* Título - Aparece primero */}
               <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
+                initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                animate={inView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 30, scale: 0.95 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
               >
                 <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">
                   CR Alineaciones
@@ -83,13 +133,28 @@ export function HomePage() {
                     Lubricentro
                   </span>
                 </h1>
-                <p className="text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed mt-6">
+              </motion.div>
+
+              {/* Subtítulo - Aparece segundo */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+              >
+                <p className="text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
                   Tu taller de confianza en Bahía Blanca. Especialistas en alineación 3D, 
                   balanceo, cambio de aceite y servicios del automotor.
                 </p>
-                <div className="pt-8 flex justify-center">
-                  <WeatherWidget />
-                </div>
+              </motion.div>
+
+              {/* Clima - Aparece tercero */}
+              <motion.div
+                initial={{ opacity: 0, y: 20, scale: 0.9 }}
+                animate={inView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 20, scale: 0.9 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 1.0 }}
+                className="pt-8 flex justify-center"
+              >
+                <WeatherWidget />
               </motion.div>
             </div>
           </div>
