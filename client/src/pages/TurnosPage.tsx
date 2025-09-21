@@ -138,7 +138,7 @@ export function TurnosPage() {
               <div className="text-center mb-6 sm:mb-8">
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">Reserva tu turno</h3>
                 <p className="text-sm sm:text-base text-gray-300">Selecciona la fecha y hora que mejor te convenga</p>
-              </div
+              </div>
               
               {/* Calendly Widget */}
               <div className="w-full flex justify-center">
