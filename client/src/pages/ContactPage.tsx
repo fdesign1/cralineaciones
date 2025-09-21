@@ -27,6 +27,9 @@ export function ContactPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0);
+    
     AOS.init({
       duration: 800,
       easing: 'ease-in-out',
