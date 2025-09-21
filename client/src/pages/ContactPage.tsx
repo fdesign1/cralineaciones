@@ -150,85 +150,6 @@ export function ContactPage() {
         </div>
       </div>
 
-      {/* Contact Information Cards */}
-      <div className="bg-gradient-to-r from-gray-800 to-gray-900 py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-16">
-            {/* Phone Card */}
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-white/20 transition-all duration-300" data-aos="fade-up" data-aos-duration="800">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-green-600/20 rounded-full flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-green-400" />
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold text-white">Teléfono</h3>
-              </div>
-              <p className="text-gray-300 mb-4 text-sm sm:text-base">Llámanos para consultas inmediatas</p>
-              <a 
-                href="tel:+5492914460056" 
-                className="text-green-400 hover:text-green-300 font-medium transition-colors duration-300 text-sm sm:text-base break-all"
-              >
-                +54 9 291 446-0056
-              </a>
-            </div>
-
-            {/* Email Card */}
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-white/20 transition-all duration-300" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-blue-600/20 rounded-full flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-blue-400" />
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold text-white">Email</h3>
-              </div>
-              <p className="text-gray-300 mb-4 text-sm sm:text-base">Escríbenos para consultas detalladas</p>
-              <a 
-                href="mailto:jonaiturre@icloud.com" 
-                className="text-blue-400 hover:text-blue-300 font-medium transition-colors duration-300 text-sm sm:text-base break-all"
-              >
-                jonaiturre@icloud.com
-              </a>
-            </div>
-
-            {/* Location Card */}
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-white/20 transition-all duration-300" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-red-600/20 rounded-full flex items-center justify-center">
-                  <MapPin className="w-6 h-6 text-red-400" />
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold text-white">Ubicación</h3>
-              </div>
-              <p className="text-gray-300 mb-4 text-sm sm:text-base">Visítanos en nuestro taller</p>
-              <p className="text-red-400 font-medium text-sm sm:text-base">
-                Remedios de Escalada 366<br />
-                Bahía Blanca, B8000
-              </p>
-            </div>
-          </div>
-
-          {/* Schedule Card */}
-          <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-6 sm:p-8 border border-white/10" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-12 bg-yellow-600/20 rounded-full flex items-center justify-center">
-                <Clock className="w-6 h-6 text-yellow-400" />
-              </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-white">Horarios de Atención</h3>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
-              <div className="text-center">
-                <p className="text-white font-semibold mb-2 text-sm sm:text-base">Lunes - Viernes</p>
-                <p className="text-gray-300 text-sm sm:text-base">8:00 AM - 17:00 PM</p>
-              </div>
-              <div className="text-center">
-                <p className="text-white font-semibold mb-2 text-sm sm:text-base">Sábados</p>
-                <p className="text-gray-300 text-sm sm:text-base">8:00 AM - 13:00 PM</p>
-              </div>
-              <div className="text-center">
-                <p className="text-white font-semibold mb-2 text-sm sm:text-base">Domingos</p>
-                <p className="text-gray-300 text-red-400 text-sm sm:text-base">Cerrado</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Contact Form Section */}
       <div className="bg-gradient-to-r from-gray-800 to-gray-900 py-20">
@@ -243,9 +164,9 @@ export function ContactPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+            <div className="max-w-2xl mx-auto">
               {/* Contact Form */}
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/10" data-aos="fade-right" data-aos-duration="800">
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/10" data-aos="fade-up" data-aos-duration="800">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     <div>
@@ -358,33 +279,6 @@ export function ContactPage() {
                 </form>
               </div>
 
-              {/* Map and Additional Info */}
-              <div className="space-y-6 sm:space-y-8" data-aos="fade-left" data-aos-duration="800">
-                {/* Map */}
-                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-white/10">
-                  <h3 className="text-lg sm:text-xl font-bold text-white mb-4 flex items-center gap-2">
-                    <MapPin className="w-5 h-5 text-red-400" />
-                    Nuestra Ubicación
-                  </h3>
-                  <div className="aspect-video rounded-lg overflow-hidden">
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.4585442593675!2d-62.24657642402484!3d-38.730238571760324!2m3!1f0!2f0!3f0!3m2!i1024!2i768!4f13.1!3m3!1m2!1s0x95eda312c15fc1cd%3A0x50b1cf900bcdcd5d!2sCR%20ALINEACIONES%20LUBRICENTRO!5e0!3m2!1ses-419!2spl!4v1757430983622!5m2!1ses-419!2spl"
-                      width="100%"
-                      height="100%"
-                      style={{ border: 0 }}
-                      allowFullScreen
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                      title="Ubicación CR Alineaciones"
-                      className="w-full h-full"
-                    />
-                  </div>
-                  <p className="text-gray-300 text-xs sm:text-sm mt-3 text-center">
-                    Remedios de Escalada 366, Bahía Blanca
-                  </p>
-                </div>
-
-              </div>
             </div>
           </div>
         </div>
