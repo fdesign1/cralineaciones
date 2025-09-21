@@ -50,7 +50,7 @@ export function Footer() {
             </div>
             
             <div className="mt-6">
-              <h4 className="text-sm font-semibold text-white mb-3">Síguenos</h4>
+              <h4 className="text-sm font-semibold text-white mb-3">Seguinos</h4>
               <SocialLinks />
             </div>
           </div>
