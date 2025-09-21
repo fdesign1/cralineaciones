@@ -15,6 +15,8 @@ import { HeroImage } from "@/components/layout/HeroImage";
 import mainImage from "@/assets/main.png";
 
 export function HomePage() {
+  const [imageLoaded, setImageLoaded] = React.useState(false);
+
   usePageTitle({
     title: "Inicio",
     description: "CR Alineaciones Lubricentro - Taller mecánico especializado en alineación 3D, balanceo, cambio de aceite y servicios del automotor en Bahía Blanca. Atención personalizada.",
@@ -47,6 +49,15 @@ export function HomePage() {
     triggerOnce: true,
   });
 
+  // Pre-cargar la imagen para mejor rendimiento
+  useEffect(() => {
+    const img = new Image();
+    img.src = mainImage;
+    img.onload = () => {
+      setImageLoaded(true);
+    };
+  }, [mainImage]);
+
   // Aplicar estilos responsive para la imagen de fondo
   useEffect(() => {
     const style = document.createElement('style');
@@ -76,6 +87,13 @@ export function HomePage() {
           background-attachment: fixed !important;
         }
       }
+      
+      /* Mejora para el fade-in suave */
+      .hero-background {
+        will-change: opacity;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+      }
     `;
     document.head.appendChild(style);
     
@@ -94,7 +112,7 @@ export function HomePage() {
           <motion.div
             className="absolute inset-0 w-full h-full hero-background"
             style={{
-              backgroundImage: `url(${mainImage})`,
+              backgroundImage: imageLoaded ? `url(${mainImage})` : 'none',
               backgroundSize: 'cover',
               backgroundPosition: 'center center',
               backgroundRepeat: 'no-repeat',
@@ -104,9 +122,13 @@ export function HomePage() {
               width: '100%',
               maxWidth: '100vw'
             }}
-            initial={{ opacity: 0, scale: 1.1 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.2, ease: "easeOut" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: imageLoaded ? 1 : 0 }}
+            transition={{ 
+              duration: 1.2, 
+              ease: [0.4, 0.0, 0.2, 1],
+              delay: imageLoaded ? 0.2 : 0
+            }}
           />
           
           {/* Overlay para mejorar legibilidad */}
