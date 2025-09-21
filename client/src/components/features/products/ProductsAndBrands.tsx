@@ -187,10 +187,6 @@ export function ProductsAndBrands() {
 
   return (
     <div className="w-full">
-      <h2 className="text-3xl font-bold text-center mb-12 px-4" data-aos="fade-up">
-        Nuestros Productos y Marcas
-      </h2>
-
         {/* Productos */}
         <div className="mb-16" data-aos="fade-up" data-aos-delay="100">
           <div className="flex justify-center mb-3">
