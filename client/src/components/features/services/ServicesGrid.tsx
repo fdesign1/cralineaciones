@@ -41,7 +41,7 @@ const services = [
     imageUrl: Alineacion3,
     href: "/services#alineacion3d",
     gridClass: "md:col-span-1",
-    overlay: "bg-black/60"
+    overlay: "bg-black/80"
   },
    {
     title: "Embragues",
