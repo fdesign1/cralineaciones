@@ -128,7 +128,7 @@ export function TurnosPage() {
                 Selecciona tu horario
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Elige la fecha y hora que mejor se adapte a tu agenda. 
+                Selecciona la fecha y hora que mejor se adapte a tu agenda. 
                 Nuestro sistema te mostrará todos los horarios disponibles.
               </p>
             </div>
