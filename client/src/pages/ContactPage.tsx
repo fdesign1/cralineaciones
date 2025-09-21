@@ -141,7 +141,7 @@ export function ContactPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
                   <p className="text-white text-sm font-medium bg-black/50 backdrop-blur-sm rounded-lg px-4 py-2">
-                    Equipo profesional trabajando con tecnología de última generación
+                    Equipo profesional trabajando para mejorar tu auto.
                   </p>
                 </div>
               </div>
@@ -160,7 +160,7 @@ export function ContactPage() {
                 Envíanos un Mensaje
               </h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-                Completa el formulario y nos pondremos en contacto contigo lo antes posible
+                Completa el formulario y nos pondremos en contacto con vos lo antes posible
               </p>
             </div>
 
