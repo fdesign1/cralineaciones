@@ -68,10 +68,10 @@ export function ServiceSection({
           
           <a 
             href="/turnos"
-            className="group/btn relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-xl hover:from-blue-500 hover:to-purple-500 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+            className="group/btn relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-red-400 to-red-600 text-white font-medium rounded-xl hover:from-red-200 hover:to-red-300 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
           >
             <span className="relative z-10">Solicitar servicio</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl blur opacity-0 group-hover/btn:opacity-75 transition-opacity duration-300" />
+            <div className="absolute inset-0 bg-gradient-to-r from-red-400 to-red-600 rounded-xl blur opacity-0 group-hover/btn:opacity-75 transition-opacity duration-300" />
           </a>
         </div>
       </div>

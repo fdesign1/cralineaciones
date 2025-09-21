@@ -70,7 +70,7 @@ export function HomePage() {
               >
                 <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">
                   CR Alineaciones
-                  <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  <span className="block bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
                     Lubricentro
                   </span>
                 </h1>
