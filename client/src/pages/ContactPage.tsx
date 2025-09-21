@@ -384,31 +384,6 @@ export function ContactPage() {
                   </p>
                 </div>
 
-                {/* Quick Contact */}
-                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-white/10">
-                  <h3 className="text-lg sm:text-xl font-bold text-white mb-4 flex items-center gap-2">
-                    <MessageCircle className="w-5 h-5 text-green-400" />
-                    Contacto Rápido
-                  </h3>
-                  <div className="space-y-3 sm:space-y-4">
-                    <a
-                      href="https://wa.me/+5492914460056"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-3 p-3 bg-green-600/20 rounded-lg hover:bg-green-600/30 transition-all duration-300 group"
-                    >
-                      <MessageCircle className="w-5 h-5 text-green-400 group-hover:scale-110 transition-transform duration-300" />
-                      <span className="text-white font-medium text-sm sm:text-base">WhatsApp</span>
-                    </a>
-                    <Link
-                      to="/turnos"
-                      className="flex items-center gap-3 p-3 bg-blue-600/20 rounded-lg hover:bg-blue-600/30 transition-all duration-300 group"
-                    >
-                      <Clock className="w-5 h-5 text-blue-400 group-hover:scale-110 transition-transform duration-300" />
-                      <span className="text-white font-medium text-sm sm:text-base">Agendar Turno</span>
-                    </Link>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
