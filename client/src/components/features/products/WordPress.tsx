@@ -241,7 +241,7 @@ export default function WordPress() {
           <span className="block sm:inline">{error}</span>
         </div>
         <p className="text-gray-600">
-          No se pudieron cargar los productos desde la API. Se están mostrando productos de ejemplo.
+          No se pudieron cargar los productos.
         </p>
       </div>
     );
