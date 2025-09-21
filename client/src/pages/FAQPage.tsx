@@ -23,7 +23,7 @@ export function FAQPage() {
         </h1>
         <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
           Resolvemos las dudas más comunes sobre nuestros servicios de alineación, balanceo, 
-          cambio de aceite y mantenimiento automotriz. Si no encuentras la respuesta que buscas, 
+          cambio de aceite y mantenimiento. Si no ves la respuesta que buscas, 
           no dudes en contactarnos.
         </p>
       </div>
@@ -38,7 +38,7 @@ export function FAQPage() {
         </h2>
         <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
           Nuestro equipo está listo para resolver cualquier duda específica sobre tu vehículo. 
-          Contáctanos y recibe asesoramiento personalizado sin compromiso.
+          Contáctanos y recibí asesoramiento personalizado sin compromiso.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
