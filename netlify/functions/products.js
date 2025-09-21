@@ -82,7 +82,7 @@ export async function handler(event, context) {
       headers,
       body: JSON.stringify({ 
         error: error.message,
-        details: "Error en la función de Netlify" 
+        details: "Error 500" 
       }),
     };
   }
