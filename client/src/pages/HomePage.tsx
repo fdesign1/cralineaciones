@@ -12,6 +12,7 @@ import { ServicesGrid } from "@/components/features/services/ServicesGrid";
 import { FeaturedGallery } from "@/components/features/gallery/FeaturedGallery";
 import { ProductsAndBrands } from "@/components/features/products/ProductsAndBrands";
 import { HeroImage } from "@/components/layout/HeroImage";
+import mainImage from "@/assets/main.png";
 
 export function HomePage() {
   usePageTitle({
@@ -51,17 +52,25 @@ export function HomePage() {
       <LocalBusinessSchema />
       <div className="min-h-screen bg-black">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-gray-900 via-black to-gray-900">
-          <div className="absolute inset-0 bg-black/50" />
+        <section 
+          className="relative overflow-hidden min-h-screen flex items-center"
+          style={{
+            backgroundImage: `url(${mainImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
+          <div className="absolute inset-0 bg-black/60" />
           
-          {/* Decorative elements */}
+          {/* Decorative elements - Puntos azules que laten */}
           <div className="absolute top-0 left-0 w-full h-full">
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
-            <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-indigo-500/20 rounded-full blur-3xl animate-pulse delay-500" />
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-500" />
           </div>
           
-          <div className="relative container mx-auto px-4 py-20 lg:py-32">
+          <div className="relative container mx-auto px-4 w-full">
             <div className="text-center space-y-8" ref={ref}>
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
