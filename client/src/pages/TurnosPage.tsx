@@ -97,8 +97,7 @@ export function TurnosPage() {
             </h1>
             
             <p className="text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Agenda tu turno de forma fácil y rápida. Nuestro equipo está listo para atenderte 
-              con la mejor tecnología y servicio profesional en Bahía Blanca.
+              Agenda tu turno de forma fácil y rápida. Nuestro equipo está listo para atenderte en Bahía Blanca.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8">
@@ -139,7 +138,7 @@ export function TurnosPage() {
               <div className="text-center mb-6 sm:mb-8">
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">Reserva tu turno</h3>
                 <p className="text-sm sm:text-base text-gray-300">Selecciona la fecha y hora que mejor te convenga</p>
-              </div>
+              </div
               
               {/* Calendly Widget */}
               <div className="w-full flex justify-center">
@@ -186,7 +185,7 @@ export function TurnosPage() {
                   <CheckCircle className="w-8 h-8 text-blue-400" />
                 </div>
                 <h3 className="text-xl font-bold text-white">Confirmación inmediata</h3>
-                <p className="text-gray-300">Recibe confirmación instantánea de tu turno por WhatsApp y email</p>
+                <p className="text-gray-300">Recibirás confirmación instantánea de tu turno y email</p>
               </div>
 
               <div className="text-center space-y-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
@@ -194,7 +193,7 @@ export function TurnosPage() {
                   <Star className="w-8 h-8 text-green-400" />
                 </div>
                 <h3 className="text-xl font-bold text-white">Servicio premium</h3>
-                <p className="text-gray-300">Atención personalizada con la mejor tecnología y equipamiento</p>
+                <p className="text-gray-300">Atención personalizada</p>
               </div>
             </div>
           </div>
@@ -209,8 +208,8 @@ export function TurnosPage() {
               ¿Necesitas ayuda?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Si tienes alguna duda o prefieres contactarnos directamente, 
-              estamos aquí para ayudarte.
+              Si tenés alguna duda o prefieres contactarnos directamente, 
+              estamos acá para ayudarte.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
