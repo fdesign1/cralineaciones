@@ -172,6 +172,60 @@ export function ProductsAndBrands() {
     loadData();
   }, []);
 
+  // Aplicar estilos CSS personalizados para el carrusel de marcas
+  useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = `
+      .brands-scroll {
+        animation: brands-scroll 20s linear infinite;
+        will-change: transform;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+      }
+      
+      @keyframes brands-scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+      
+      /* Optimización específica para iPad */
+      @media (min-width: 768px) and (max-width: 1024px) {
+        .brands-scroll {
+          animation: brands-scroll 25s linear infinite;
+          animation-play-state: running;
+        }
+        
+        .brands-scroll:hover {
+          animation-play-state: paused;
+        }
+      }
+      
+      /* Fallback para dispositivos con problemas de animación */
+      @media (prefers-reduced-motion: reduce) {
+        .brands-scroll {
+          animation: none;
+          transform: none;
+        }
+      }
+      
+      /* Mejora de rendimiento para dispositivos móviles */
+      @media (max-width: 767px) {
+        .brands-scroll {
+          animation: brands-scroll 15s linear infinite;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+    
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, []);
+
   if (loading) {
     return (
       <section className="py-16 bg-background">
@@ -236,7 +290,7 @@ export function ProductsAndBrands() {
             <div
               className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
             >
-              <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+              <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none brands-scroll">
                 {brands.map((brand, index) => (
                   <li key={`${brand.name}-${index}`}>
                     <img 
@@ -252,7 +306,7 @@ export function ProductsAndBrands() {
                   </li>
                 ))}
               </ul>
-              <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
+              <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none brands-scroll" aria-hidden="true">
                 {brands.map((brand, index) => (
                   <li key={`${brand.name}-duplicate-${index}`}>
                     <img 
