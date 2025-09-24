@@ -29,7 +29,7 @@ export function ServiceCard({
     >
       {/* Imagen de fondo */}
       <div
-        className="h-96 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+        className="h-96 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
         style={{ backgroundImage: `url(${imageUrl})` }}
       />
       

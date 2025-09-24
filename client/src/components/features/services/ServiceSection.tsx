@@ -41,9 +41,9 @@ export function ServiceSection({
               className="w-full h-64 sm:h-80 lg:h-96 object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-105"
             />
           </div>
-          {/* Decorative elements */}
-          <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700" />
-          <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-tr from-orange-500/20 to-pink-500/20 rounded-full blur-xl group-hover:scale-125 transition-transform duration-700" />
+          {/* Decorative elements - Ajustados para evitar desbordamiento */}
+          <div className="absolute top-2 right-2 w-24 h-24 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700" />
+          <div className="absolute bottom-2 left-2 w-32 h-32 bg-gradient-to-tr from-orange-500/20 to-pink-500/20 rounded-full blur-xl group-hover:scale-125 transition-transform duration-700" />
         </div>
         
         <div 

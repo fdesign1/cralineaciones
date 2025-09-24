@@ -105,7 +105,7 @@ export function HomePage() {
   return (
     <>
       <LocalBusinessSchema />
-      <div className="min-h-screen bg-black">
+      <div className="min-h-screen bg-black overflow-x-hidden">
         {/* Hero Section */}
         <section className="relative overflow-hidden min-h-screen flex items-center w-full">
           {/* Imagen de fondo con blur delicado y efecto fade-in */}
@@ -184,7 +184,7 @@ export function HomePage() {
 
 
         {/* Services Section */}
-        <section className="py-20 bg-gradient-to-r from-black-700 to-black-900" ref={ref2}>
+        <section className="py-20 bg-gradient-to-r from-black-700 to-black-900 overflow-x-hidden" ref={ref2}>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={inView2 ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}

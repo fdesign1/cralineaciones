@@ -27,40 +27,69 @@ export function GalleryModal({ item, onClose }: GalleryModalProps) {
     setCurrentView(currentView === 'before' ? 'after' : 'before');
   };
 
-  // Aplicar estilos específicos para tablet
+  // Aplicar estilos específicos para tablet y móvil
   React.useEffect(() => {
     const style = document.createElement('style');
     style.textContent = `
+      /* Tablet específico */
       @media (min-width: 768px) and (max-width: 1024px) {
         .gallery-modal-content {
-          max-width: 90vw !important;
-          max-height: 85vh !important;
-        }
-        
-        .gallery-modal-image {
-          max-height: 60vh !important;
-          object-fit: contain !important;
+          max-width: 85vw !important;
+          max-height: 80vh !important;
+          width: 85vw !important;
         }
         
         .gallery-modal-image-container {
+          max-height: 50vh !important;
           padding: 1rem !important;
-          max-height: 60vh !important;
+          overflow: hidden !important;
+        }
+        
+        .gallery-modal-image {
+          max-height: 45vh !important;
+          max-width: 100% !important;
+          width: auto !important;
+          height: auto !important;
+          object-fit: contain !important;
         }
       }
       
+      /* Móvil */
       @media (max-width: 767px) {
         .gallery-modal-content {
           max-width: 95vw !important;
-          max-height: 90vh !important;
-        }
-        
-        .gallery-modal-image {
-          max-height: 50vh !important;
+          max-height: 85vh !important;
+          width: 95vw !important;
         }
         
         .gallery-modal-image-container {
+          max-height: 45vh !important;
           padding: 0.5rem !important;
-          max-height: 50vh !important;
+          overflow: hidden !important;
+        }
+        
+        .gallery-modal-image {
+          max-height: 40vh !important;
+          max-width: 100% !important;
+          width: auto !important;
+          height: auto !important;
+          object-fit: contain !important;
+        }
+      }
+      
+      /* Desktop */
+      @media (min-width: 1025px) {
+        .gallery-modal-content {
+          max-width: 80vw !important;
+          max-height: 85vh !important;
+        }
+        
+        .gallery-modal-image-container {
+          max-height: 60vh !important;
+        }
+        
+        .gallery-modal-image {
+          max-height: 55vh !important;
         }
       }
     `;
@@ -73,30 +102,28 @@ export function GalleryModal({ item, onClose }: GalleryModalProps) {
 
   return (
     <Dialog open={true} onOpenChange={onClose}>
-      <DialogContent className="gallery-modal-content max-w-4xl max-h-[90vh] p-0 overflow-hidden">
+      <DialogContent className="gallery-modal-content w-[90vw] h-[80vh] max-w-4xl p-0 overflow-hidden flex flex-col">
         <DialogTitle className="sr-only">{item.title}</DialogTitle>
         
         {/* Header */}
-        <div className="p-4 border-b">
+        <div className="p-4 border-b flex-shrink-0">
           <h2 className="text-xl font-semibold">{item.title}</h2>
           <p className="text-sm text-gray-600">{item.service}</p>
         </div>
 
         {/* Image Container */}
-        <div className="relative">
-          <div className="gallery-modal-image-container aspect-video bg-gray-100 flex items-center justify-center p-4">
-            <img
-              src={getCurrentImage()}
-              alt={`${item.title} - ${currentView === 'before' ? 'Antes' : currentView === 'after' ? 'Después' : ''}`}
-              className="gallery-modal-image max-w-full max-h-full object-contain"
-              style={{
-                maxWidth: '100%',
-                maxHeight: '100%',
-                width: 'auto',
-                height: 'auto'
-              }}
-            />
-          </div>
+        <div className="relative flex-1 flex items-center justify-center bg-gray-100 p-4 min-h-0">
+          <img
+            src={getCurrentImage()}
+            alt={`${item.title} - ${currentView === 'before' ? 'Antes' : currentView === 'after' ? 'Después' : ''}`}
+            className="max-w-full max-h-full object-contain"
+            style={{
+              maxHeight: '100%',
+              maxWidth: '100%',
+              width: 'auto',
+              height: 'auto'
+            }}
+          />
 
           {/* Before/After Toggle */}
           {isBeforeAfter && (
@@ -120,7 +147,7 @@ export function GalleryModal({ item, onClose }: GalleryModalProps) {
         </div>
 
         {/* Footer */}
-        <div className="p-4 border-t">
+        <div className="p-4 border-t flex-shrink-0">
           <p className="text-gray-700 mb-4">{item.description}</p>
           
           {isBeforeAfter && (
