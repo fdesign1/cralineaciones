@@ -27,9 +27,53 @@ export function GalleryModal({ item, onClose }: GalleryModalProps) {
     setCurrentView(currentView === 'before' ? 'after' : 'before');
   };
 
+  // Aplicar estilos específicos para tablet
+  React.useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = `
+      @media (min-width: 768px) and (max-width: 1024px) {
+        .gallery-modal-content {
+          max-width: 90vw !important;
+          max-height: 85vh !important;
+        }
+        
+        .gallery-modal-image {
+          max-height: 60vh !important;
+          object-fit: contain !important;
+        }
+        
+        .gallery-modal-image-container {
+          padding: 1rem !important;
+          max-height: 60vh !important;
+        }
+      }
+      
+      @media (max-width: 767px) {
+        .gallery-modal-content {
+          max-width: 95vw !important;
+          max-height: 90vh !important;
+        }
+        
+        .gallery-modal-image {
+          max-height: 50vh !important;
+        }
+        
+        .gallery-modal-image-container {
+          padding: 0.5rem !important;
+          max-height: 50vh !important;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+    
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, []);
+
   return (
     <Dialog open={true} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl max-h-[90vh] p-0 overflow-hidden">
+      <DialogContent className="gallery-modal-content max-w-4xl max-h-[90vh] p-0 overflow-hidden">
         <DialogTitle className="sr-only">{item.title}</DialogTitle>
         
         {/* Header */}
@@ -40,11 +84,17 @@ export function GalleryModal({ item, onClose }: GalleryModalProps) {
 
         {/* Image Container */}
         <div className="relative">
-          <div className="aspect-video bg-gray-100 flex items-center justify-center">
+          <div className="gallery-modal-image-container aspect-video bg-gray-100 flex items-center justify-center p-4">
             <img
               src={getCurrentImage()}
               alt={`${item.title} - ${currentView === 'before' ? 'Antes' : currentView === 'after' ? 'Después' : ''}`}
-              className="max-w-full max-h-full object-contain"
+              className="gallery-modal-image max-w-full max-h-full object-contain"
+              style={{
+                maxWidth: '100%',
+                maxHeight: '100%',
+                width: 'auto',
+                height: 'auto'
+              }}
             />
           </div>
 
