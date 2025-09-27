@@ -89,7 +89,7 @@ const services = [
 
 export function ServicesGrid() {
   return (
-    <div className="w-full overflow-x-hidden">
+    <div className="w-full">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
         {services.map((service) => (
           <ServiceCard
