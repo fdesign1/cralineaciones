@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { WeatherWidget } from './Weather';
-import MainImage from '@/assets/main.jpg';
+import MainImage from '@/assets/main.png';
 import Tyre from '@/assets/tyre.jpg';
 import Servicio from '@/assets/servicio.jpg';
 interface Slide {
