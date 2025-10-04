@@ -39,7 +39,7 @@ const servicesData = [
   {
     id: 'embragues',
     title: 'Embragues',
-    description: 'Reparamos y reemplazamos embragues para vehículos manuales. Un embrague en buen estado garantiza cambios de marcha suaves y un mejor rendimiento del motor.',
+    description: 'Reparamos y reemplazamos embragues para vehículos. Un embrague en buen estado garantiza cambios de marcha suaves y un mejor rendimiento del motor.',
     imageUrl: Embragues,
     imagePosition: 'left',
   },

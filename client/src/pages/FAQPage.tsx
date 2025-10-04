@@ -7,7 +7,7 @@ import { MessageCircle, Phone } from 'lucide-react';
 export function FAQPage() {
   usePageTitle({
     title: "Preguntas Frecuentes - Dudas sobre Servicios Automotrices",
-    description: "Encuentra respuestas a las preguntas más comunes sobre alineación, balanceo, cambio de aceite y servicios automotrices en CR Alineaciones Lubricentro."
+    description: "Encontrá respuestas a las preguntas más comunes sobre alineación, balanceo, cambio de aceite y servicios automotrices en CR Alineaciones Lubricentro."
   });
 
   React.useEffect(() => {

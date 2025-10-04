@@ -126,7 +126,7 @@ export function ContactPage() {
               </span>
             </h1>
             <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
-              ¿Alguna consulta? ¿Necesitas agendar un turno? 
+              ¿Alguna consulta? ¿Necesitás agendar un turno? 
               Estamos listos para ayudarte con el cuidado de tu vehículo.
             </p>
           </div>
@@ -198,7 +198,7 @@ export function ContactPage() {
                 Envíanos un Mensaje
               </h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-                Completa el formulario y nos pondremos en contacto con vos lo antes posible
+                Completá el formulario y nos pondremos en contacto con vos lo antes posible
               </p>
             </div>
 
