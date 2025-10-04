@@ -4,7 +4,9 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
 import { WeatherWidget } from './Weather';
-
+import MainImage from '@/assets/main.jpg';
+import Tyre from '@/assets/tyre.jpg';
+import Servicio from '@/assets/servicio.jpg';
 interface Slide {
   id: number;
   title: string;
@@ -24,7 +26,7 @@ const slides: Slide[] = [
     description: "Tu taller de confianza en Bahía Blanca. Especialistas en alineación 3D, balanceo, cambio de aceite y servicios del automotor.",
     buttonText: "Conocer Más",
     buttonLink: "/contact",
-    backgroundImage: "https://i.postimg.cc/4xD7bsd8/b2db1a88-a17a-4de9-80ef-e08cb81923b5.jpg",
+    backgroundImage: MainImage,
     gradient: "from-red-400 to-red-600"
   },
   {
@@ -34,7 +36,7 @@ const slides: Slide[] = [
     description: "Alineación 3D, balanceo, cambio de aceite, sistema de frenos, suspensión y más. Tecnología de punta para tu vehículo.",
     buttonText: "Ver Servicios",
     buttonLink: "/services",
-    backgroundImage: "https://i.postimg.cc/4xD7bsd8/b2db1a88-a17a-4de9-80ef-e08cb81923b5.jpg",
+    backgroundImage: Servicio,
     gradient: "from-blue-400 to-blue-600"
   },
   {
@@ -44,7 +46,7 @@ const slides: Slide[] = [
     description: "Aceites de las mejores marcas, filtros, lubricantes y productos de mantenimiento. Calidad garantizada para tu auto.",
     buttonText: "Ver Catálogo",
     buttonLink: "/products",
-    backgroundImage: "https://i.postimg.cc/4xD7bsd8/b2db1a88-a17a-4de9-80ef-e08cb81923b5.jpg",
+    backgroundImage: Tyre,
     gradient: "from-green-400 to-green-600"
   }
 ];
