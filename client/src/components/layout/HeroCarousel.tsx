@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
 import { WeatherWidget } from './Weather';
 import MainImage from '@/assets/main.jpg';
 import Tyre from '@/assets/tyre.jpg';
@@ -53,19 +52,16 @@ const slides: Slide[] = [
 
 export function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
   const [imageLoaded, setImageLoaded] = useState(false);
 
   // Auto-play functionality
   useEffect(() => {
-    if (!isPlaying) return;
-
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [isPlaying]);
+  }, []);
 
   // Preload images
   useEffect(() => {
@@ -82,20 +78,8 @@ export function HeroCarousel() {
     });
   }, []);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
-  };
-
-  const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
   };
 
   if (!imageLoaded) {
@@ -218,42 +202,8 @@ export function HeroCarousel() {
         </div>
       </div>
 
-      {/* Navigation Controls */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex items-center space-x-4">
-        {/* Previous Button */}
-        <button
-          onClick={prevSlide}
-          className="p-2 rounded-full bg-white/20 hover:bg-white/30 transition-all duration-300 backdrop-blur-sm"
-          aria-label="Slide anterior"
-        >
-          <ChevronLeft className="w-6 h-6 text-white" />
-        </button>
-
-        {/* Play/Pause Button */}
-        <button
-          onClick={togglePlayPause}
-          className="p-2 rounded-full bg-white/20 hover:bg-white/30 transition-all duration-300 backdrop-blur-sm"
-          aria-label={isPlaying ? "Pausar" : "Reproducir"}
-        >
-          {isPlaying ? (
-            <Pause className="w-6 h-6 text-white" />
-          ) : (
-            <Play className="w-6 h-6 text-white" />
-          )}
-        </button>
-
-        {/* Next Button */}
-        <button
-          onClick={nextSlide}
-          className="p-2 rounded-full bg-white/20 hover:bg-white/30 transition-all duration-300 backdrop-blur-sm"
-          aria-label="Siguiente slide"
-        >
-          <ChevronRight className="w-6 h-6 text-white" />
-        </button>
-      </div>
-
       {/* Dots Indicator */}
-      <div className="absolute bottom-8 right-8 flex space-x-2">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {slides.map((_, index) => (
           <button
             key={index}
