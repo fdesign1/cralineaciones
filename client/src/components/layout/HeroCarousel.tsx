@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { WeatherWidget } from './Weather';
-import MainImage from '@/assets/main2.jpg';
+import MainImage from '@/assets/dylan.jpg';
 import Tyre from '@/assets/tyre.jpg';
 import Servicio from '@/assets/servicio.jpg';
 interface Slide {
@@ -25,7 +25,7 @@ const slides: Slide[] = [
     description: "Tu taller de confianza en Bahía Blanca. Especialistas en alineación 3D, balanceo, cambio de aceite y servicios del automotor.",
     buttonText: "Conocer Más",
     buttonLink: "/contact",
-    backgroundImage: MainImage,
+    backgroundImage: Servicio,
     gradient: "from-red-400 to-red-600"
   },
   {
@@ -35,7 +35,7 @@ const slides: Slide[] = [
     description: "Alineación 3D, balanceo, cambio de aceite, sistema de frenos, suspensión y más. Tecnología de punta para tu vehículo.",
     buttonText: "Ver Servicios",
     buttonLink: "/services",
-    backgroundImage: Servicio,
+    backgroundImage: MainImage,
     gradient: "from-blue-400 to-blue-600"
   },
   {
