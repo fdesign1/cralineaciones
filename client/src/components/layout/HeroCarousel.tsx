@@ -133,9 +133,9 @@ export function HeroCarousel() {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-500" />
       </div>
 
-      {/* Content */}
-      <div className="relative container mx-auto px-4 w-full">
-        <div className="text-center space-y-8">
+       {/* Content */}
+       <div className="relative container mx-auto px-4 w-full">
+         <div className="text-center space-y-4 md:space-y-8">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentSlide}
@@ -144,12 +144,12 @@ export function HeroCarousel() {
               exit={{ opacity: 0, y: -30, scale: 0.95 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">
-                {slides[currentSlide].title}
-                <span className={`block bg-gradient-to-r ${slides[currentSlide].gradient} bg-clip-text text-transparent`}>
-                  {slides[currentSlide].subtitle}
-                </span>
-              </h1>
+               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight">
+                 {slides[currentSlide].title}
+                 <span className={`block bg-gradient-to-r ${slides[currentSlide].gradient} bg-clip-text text-transparent`}>
+                   {slides[currentSlide].subtitle}
+                 </span>
+               </h1>
             </motion.div>
           </AnimatePresence>
 
@@ -161,34 +161,34 @@ export function HeroCarousel() {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             >
-              <p className="text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                {slides[currentSlide].description}
-              </p>
+               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                 {slides[currentSlide].description}
+               </p>
             </motion.div>
           </AnimatePresence>
 
-          {/* Weather Widget - Only show on first slide */}
-          {currentSlide === 0 && (
-            <motion.div
-              initial={{ opacity: 0, y: 20, scale: 0.9 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
-              className="pt-8 flex justify-center"
-            >
-              <WeatherWidget />
-            </motion.div>
-          )}
+           {/* Weather Widget - Only show on first slide */}
+           {currentSlide === 0 && (
+             <motion.div
+               initial={{ opacity: 0, y: 20, scale: 0.9 }}
+               animate={{ opacity: 1, y: 0, scale: 1 }}
+               transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+               className="pt-4 md:pt-8 flex justify-center"
+             >
+               <WeatherWidget />
+             </motion.div>
+           )}
 
-          {/* CTA Button */}
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={`btn-${currentSlide}`}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-              className="pt-8"
-            >
+           {/* CTA Button */}
+           <AnimatePresence mode="wait">
+             <motion.div
+               key={`btn-${currentSlide}`}
+               initial={{ opacity: 0, y: 20 }}
+               animate={{ opacity: 1, y: 0 }}
+               exit={{ opacity: 0, y: -20 }}
+               transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+               className={`${currentSlide === 0 ? 'pt-4 md:pt-8' : 'pt-8'}`}
+             >
               <Link to={slides[currentSlide].buttonLink}>
                 <Button 
                   size="lg" 
