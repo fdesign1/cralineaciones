@@ -88,7 +88,7 @@ export function HomePage() {
         </section>
 
         {/* Products Section */}
-        <section className="py-20 bg-gradient-to-r from-black-700 to-black-900" ref={ref3}>
+        <section id="products" className="py-20 bg-gradient-to-r from-black-700 to-black-900" ref={ref3}>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={inView3 ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}

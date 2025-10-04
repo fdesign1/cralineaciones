@@ -179,26 +179,39 @@ export function HeroCarousel() {
              </motion.div>
            )}
 
-           {/* CTA Button */}
-           <AnimatePresence mode="wait">
-             <motion.div
-               key={`btn-${currentSlide}`}
-               initial={{ opacity: 0, y: 20 }}
-               animate={{ opacity: 1, y: 0 }}
-               exit={{ opacity: 0, y: -20 }}
-               transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-               className={`${currentSlide === 0 ? 'pt-4 md:pt-8' : 'pt-8'}`}
-             >
-              <Link to={slides[currentSlide].buttonLink}>
-                <Button 
-                  size="lg" 
-                  className={`bg-gradient-to-r ${slides[currentSlide].gradient} text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg font-bold`}
-                >
-                  {slides[currentSlide].buttonText}
-                </Button>
-              </Link>
-            </motion.div>
-          </AnimatePresence>
+           {/* CTA Button - Only show on slides 1 and 2 (not on main.png slide) */}
+           {currentSlide !== 0 && (
+             <AnimatePresence mode="wait">
+               <motion.div
+                 key={`btn-${currentSlide}`}
+                 initial={{ opacity: 0, y: 20 }}
+                 animate={{ opacity: 1, y: 0 }}
+                 exit={{ opacity: 0, y: -20 }}
+                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+                 className="pt-8"
+               >
+                 {currentSlide === 2 ? (
+                   <a href="#products">
+                     <Button 
+                       size="lg" 
+                       className={`bg-gradient-to-r ${slides[currentSlide].gradient} text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg font-bold`}
+                     >
+                       {slides[currentSlide].buttonText}
+                     </Button>
+                   </a>
+                 ) : (
+                   <Link to={slides[currentSlide].buttonLink}>
+                     <Button 
+                       size="lg" 
+                       className={`bg-gradient-to-r ${slides[currentSlide].gradient} text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg font-bold`}
+                     >
+                       {slides[currentSlide].buttonText}
+                     </Button>
+                   </Link>
+                 )}
+               </motion.div>
+             </AnimatePresence>
+           )}
         </div>
       </div>
 
