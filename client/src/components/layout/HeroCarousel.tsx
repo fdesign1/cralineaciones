@@ -63,40 +63,44 @@ export function HeroCarousel() {
     return () => clearInterval(interval);
   }, []);
 
-  // Preload images
+  // Load first slide ASAP for better LCP, then preload the rest in the background
   useEffect(() => {
-    const imagePromises = slides.map((slide) => {
-      return new Promise((resolve) => {
-        const img = new Image();
-        img.onload = resolve;
-        img.src = slide.backgroundImage;
-      });
-    });
-
-    Promise.all(imagePromises).then(() => {
-      setImageLoaded(true);
-    });
+    let isMounted = true;
+    const first = new Image();
+    first.src = slides[0].backgroundImage;
+    // Prefer decode() when available for non-blocking decode
+    // Fallback to onload/onerror
+    const markLoaded = () => {
+      if (isMounted) setImageLoaded(true);
+    };
+    if (typeof (first as any).decode === 'function') {
+      (first as any).decode().then(markLoaded).catch(markLoaded);
+    } else {
+      first.onload = markLoaded;
+      first.onerror = markLoaded;
+    }
+    return () => {
+      isMounted = false;
+    };
   }, []);
+
+  useEffect(() => {
+    if (!imageLoaded) return;
+    // Preload remaining slides once the first is ready
+    slides.slice(1).forEach((slide) => {
+      const img = new Image();
+      img.src = slide.backgroundImage;
+    });
+  }, [imageLoaded]);
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
   };
 
-  if (!imageLoaded) {
-    return (
-      <div className="relative overflow-hidden min-h-screen flex items-center w-full bg-black">
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="relative container mx-auto px-4 w-full">
-          <div className="text-center space-y-8">
-            <div className="w-16 h-16 border-4 border-white border-t-transparent rounded-full animate-spin mx-auto" />
-          </div>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <section className="relative overflow-hidden min-h-screen flex items-center w-full">
+      {/* Fallback background while first image loads */}
+      <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-gray-900 to-black" />
       {/* Background Images */}
       <div className="absolute inset-0 w-full h-full">
         {slides.map((slide, index) => (
@@ -112,8 +116,8 @@ export function HeroCarousel() {
             }}
             initial={{ opacity: 0 }}
             animate={{ 
-              opacity: index === currentSlide ? 1 : 0,
-              scale: index === currentSlide ? 1 : 1.1
+              opacity: imageLoaded && index === currentSlide ? 1 : 0,
+              scale: imageLoaded && index === currentSlide ? 1 : 1.02
             }}
             transition={{ 
               duration: 1.2, 
