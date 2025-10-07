@@ -1,0 +1,10 @@
+{
+  "name": "netlify-functions",
+  "version": "1.0.0",
+  "description": "Netlify Functions for CR Alineaciones",
+  "main": "index.js",
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  },
+  "private": true
+}
