@@ -10,7 +10,7 @@ export const faqData: FAQItem[] = [
 El balanceo se debe hacer:
 • Cada 5,000-10,000 km
 • Al cambiar neumáticos
-• Si sientes vibraciones en el volante
+• Si notas vibraciones en el volante
 • Después de golpear un bache fuerte
 
 En condiciones de manejo urbano intenso o caminos en mal estado, estos intervalos pueden ser menores.`,
