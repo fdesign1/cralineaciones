@@ -302,11 +302,19 @@ export default function WordPress() {
             >
               <div className="relative">
                 <img
-                  src={p.images[0]?.src || "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Crect width='150' height='150' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%239ca3af' font-family='Arial' font-size='14'%3EProducto%3C/text%3E%3C/svg%3E"}
+                  src={p.images[0]?.src ? `/.netlify/functions/image-proxy?url=${encodeURIComponent(p.images[0].src)}` : "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Crect width='150' height='150' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%239ca3af' font-family='Arial' font-size='14'%3EProducto%3C/text%3E%3C/svg%3E"}
                   alt={p.images[0]?.alt || p.name}
                   className="w-full h-48 object-contain bg-gray-700 group-hover:scale-110 transition-transform duration-300 ease-in-out"
+                  loading="lazy"
+                  decoding="async"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
+                    // Si falla el proxy, intentar con la URL original
+                    if (p.images[0]?.src && target.src.includes('/.netlify/functions/image-proxy')) {
+                      target.src = p.images[0].src;
+                      return;
+                    }
+                    // Fallback final
                     target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Crect width='150' height='150' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%239ca3af' font-family='Arial' font-size='14'%3EProducto%3C/text%3E%3C/svg%3E";
                   }}
                 />
@@ -404,9 +412,19 @@ export default function WordPress() {
                 {/* Imagen */}
                 <div className="space-y-4">
                   <img
-                    src={selectedProduct.images[0]?.src || "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect width='400' height='300' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%239ca3af' font-family='Arial' font-size='18'%3EImagen no disponible%3C/text%3E%3C/svg%3E"}
+                    src={selectedProduct.images[0]?.src ? `/.netlify/functions/image-proxy?url=${encodeURIComponent(selectedProduct.images[0].src)}` : "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect width='400' height='300' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%239ca3af' font-family='Arial' font-size='18'%3EImagen no disponible%3C/text%3E%3C/svg%3E"}
                     alt={selectedProduct.name}
                     className="w-full h-96 object-contain bg-gray-700 rounded-lg"
+                    loading="lazy"
+                    decoding="async"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      if (selectedProduct.images[0]?.src && target.src.includes('/.netlify/functions/image-proxy')) {
+                        target.src = selectedProduct.images[0].src;
+                        return;
+                      }
+                      target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect width='400' height='300' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%239ca3af' font-family='Arial' font-size='18'%3EImagen no disponible%3C/text%3E%3C/svg%3E";
+                    }}
                   />
                   
                   {/* Miniaturas adicionales si hay más imágenes */}
@@ -415,9 +433,15 @@ export default function WordPress() {
                       {selectedProduct.images.slice(1, 4).map((image, index) => (
                         <img
                           key={index}
-                          src={image.src}
+                          src={`/.netlify/functions/image-proxy?url=${encodeURIComponent(image.src)}`}
                           alt={image.alt || `${selectedProduct.name} ${index + 2}`}
                           className="w-20 h-20 object-contain bg-gray-700 rounded cursor-pointer hover:opacity-75 transition-opacity"
+                          loading="lazy"
+                          decoding="async"
+                          onError={(e) => {
+                            const target = e.target as HTMLImageElement;
+                            target.src = image.src;
+                          }}
                         />
                       ))}
                     </div>
