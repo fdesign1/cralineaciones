@@ -98,7 +98,10 @@ export function HeroCarousel() {
   };
 
   return (
-    <section className="relative overflow-hidden min-h-screen flex items-center w-full">
+    <section
+      className="relative overflow-hidden flex items-center w-full"
+      style={{ minHeight: '100dvh', height: '100dvh' }}
+    >
       {/* Fallback background while first image loads */}
       <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-gray-900 to-black" />
       {/* Background Images */}
@@ -112,12 +115,12 @@ export function HeroCarousel() {
               backgroundSize: 'cover',
               backgroundPosition: 'center center',
               backgroundRepeat: 'no-repeat',
-              filter: 'blur(1px)',
+              filter: 'blur(0.5px)',
             }}
             initial={{ opacity: 0 }}
             animate={{ 
               opacity: imageLoaded && index === currentSlide ? 1 : 0,
-              scale: imageLoaded && index === currentSlide ? 1 : 1.02
+              scale: imageLoaded && index === currentSlide ? 1 : 1.005
             }}
             transition={{ 
               duration: 1.2, 
@@ -131,15 +134,15 @@ export function HeroCarousel() {
       <div className="absolute inset-0 bg-black/50" />
       
       {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-full h-full">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-500" />
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none select-none">
+        <div className="hidden sm:block absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
+        <div className="hidden sm:block absolute bottom-20 right-10 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="hidden sm:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-500" />
       </div>
 
        {/* Content */}
-       <div className="relative container mx-auto px-4 w-full">
-         <div className="text-center space-y-4 md:space-y-8">
+      <div className="relative container mx-auto px-4 w-full">
+        <div className="text-center space-y-3 sm:space-y-4 md:space-y-8">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentSlide}
@@ -148,7 +151,7 @@ export function HeroCarousel() {
               exit={{ opacity: 0, y: -30, scale: 0.95 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight">
+              <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight">
                  {slides[currentSlide].title}
                  <span className={`block bg-gradient-to-r ${slides[currentSlide].gradient} bg-clip-text text-transparent`}>
                    {slides[currentSlide].subtitle}
@@ -165,7 +168,7 @@ export function HeroCarousel() {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             >
-               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
                  {slides[currentSlide].description}
                </p>
             </motion.div>
@@ -220,7 +223,7 @@ export function HeroCarousel() {
       </div>
 
       {/* Dots Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {slides.map((_, index) => (
           <button
             key={index}
