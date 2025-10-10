@@ -297,6 +297,8 @@ export function ProductsAndBrands() {
                       src={brand.logoUrl} 
                       alt={brand.name} 
                       className="h-8 md:h-10 lg:h-12 object-contain grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                      loading="lazy"
+                      decoding="async"
                       onError={(e) => {
                         // Fallback si la imagen no carga
                         const target = e.target as HTMLImageElement;
@@ -313,6 +315,8 @@ export function ProductsAndBrands() {
                       src={brand.logoUrl} 
                       alt={brand.name} 
                       className="h-8 md:h-10 lg:h-12 object-contain grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                      loading="lazy"
+                      decoding="async"
                       onError={(e) => {
                         // Fallback si la imagen no carga
                         const target = e.target as HTMLImageElement;

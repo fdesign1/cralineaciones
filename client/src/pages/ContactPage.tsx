@@ -175,6 +175,8 @@ export function ContactPage() {
                   src="https://i.postimg.cc/4xD7bsd8/b2db1a88-a17a-4de9-80ef-e08cb81923b5.jpg"
                   alt="Taller CR Alineaciones - Equipo profesional trabajando"
                   className="w-full h-64 sm:h-80 md:h-72 lg:h-96 object-cover transition-all duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">

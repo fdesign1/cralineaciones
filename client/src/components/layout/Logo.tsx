@@ -9,10 +9,13 @@ interface LogoProps {
 export function Logo({ className, imgUrl }: LogoProps) {
   return (
     <Link to="/" className={cn("flex items-center space-x-2", className)}>
- <img
+      <img
         src="https://i.imgur.com/zhJjDfK.png"
         alt="Logo CR Alineaciones"
-        className="h-14 w-auto ml-4" // Ajusta la altura según necesites
-      />    </Link>
+        className="h-14 w-auto ml-4"
+        loading="lazy"
+        decoding="async"
+      />
+    </Link>
   );
 }
