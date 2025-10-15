@@ -70,7 +70,7 @@ export function HomePage() {
         </section>
 
         {/* Gallery Section - Improved Spacing */}
-        <section className="pt-0 pb-16 md:pb-24 bg-gradient-to-br from-gray-900 via-black to-gray-900" ref={ref2}>
+        <section className="pt-8 pb-16 md:pb-24 bg-gradient-to-br from-gray-900 via-black to-gray-900" ref={ref2}>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={inView2 ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
