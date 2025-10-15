@@ -109,7 +109,7 @@ export function ServicesPage() {
   }, [location.hash, location.pathname]);
 
   return (
-    <div className="min-h-screen bg-black overflow-x-hidden">
+    <div className="min-h-screen bg-black">
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-gradient-to-r from-gray-900 via-black to-gray-900">
         <div className="absolute inset-0 bg-black/50" />
@@ -152,7 +152,7 @@ export function ServicesPage() {
       </div>
 
       {/* Services Section */}
-      <div className="bg-black overflow-x-hidden">
+      <div className="bg-black">
         <div className="container mx-auto px-4 py-20">
           <div className="space-y-24">
             {servicesData.map((service, index) => (
