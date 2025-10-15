@@ -99,10 +99,11 @@ export function HeroCarousel() {
 
   return (
     <section
-      className="hero-carousel-section relative overflow-hidden w-full"
+      className="hero-carousel-section absolute top-0 left-0 w-full overflow-hidden"
       style={{ 
         height: '100vh',
-        maxHeight: '100vh'
+        maxHeight: '100vh',
+        zIndex: 1
       }}
     >
       {/* Fallback background while first image loads */}

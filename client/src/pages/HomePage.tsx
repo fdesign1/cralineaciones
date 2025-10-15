@@ -44,10 +44,12 @@ export function HomePage() {
   return (
     <>
       <LocalBusinessSchema />
-      <div className="min-h-screen bg-black overflow-x-hidden">
-        {/* Hero Carousel */}
+      <div className="relative min-h-screen bg-black overflow-x-hidden">
+        {/* Hero Carousel - Absolute positioned */}
         <HeroCarousel />
-
+        
+        {/* Content below carousel */}
+        <div className="relative z-10 mt-[100vh]">
 
         {/* Services Section */}
         <section className="py-20 bg-gradient-to-r from-black-700 to-black-900" ref={ref1}>
@@ -137,6 +139,7 @@ export function HomePage() {
             </motion.div>
           </div>
         </section>
+        </div>
       </div>
     </>
   );

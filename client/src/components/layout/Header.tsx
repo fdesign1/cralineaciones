@@ -1,6 +1,6 @@
 
 import * as React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Logo } from './Logo';
 import { Navigation } from './Navigation';
@@ -10,10 +10,18 @@ import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/s
 
 export function Header() {
   const [isOpen, setIsOpen] = React.useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 items-center">
+    <header className={`sticky top-0 z-50 w-full ${
+      isHomePage 
+        ? 'bg-transparent border-transparent' 
+        : 'border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'
+    }`}>
+      <div className={`container flex h-14 items-center ${
+        isHomePage ? 'text-white' : ''
+      }`}>
         <div className="mr-4 hidden md:flex">
           <Logo />
         </div>
