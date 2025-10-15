@@ -1,6 +1,6 @@
 [build]
   publish = "client/dist"
-  command = "cd client && npm install && npx vite build"
+  command = "cd client && npm install && npx vite build && cd ../netlify/functions && npm install"
 
 [[redirects]]
   from = "/*"
@@ -9,3 +9,6 @@
 
 [functions]
   directory = "netlify/functions"
+
+[[plugins]]
+  package = "@netlify/plugin-functions-install-core"

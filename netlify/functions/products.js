@@ -1,4 +1,6 @@
 // Netlify Function para obtener productos de WooCommerce
+const fetch = require('node-fetch');
+
 export async function handler(event, context) {
   // Headers CORS
   const headers = {
