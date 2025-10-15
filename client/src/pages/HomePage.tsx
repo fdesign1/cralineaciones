@@ -67,18 +67,21 @@ export function HomePage() {
           <ServicesGrid />
         </section>
 
-        {/* Gallery Section - Full Width */}
-        <section className="py-20 bg-gradient-to-r from-black-700 to-black-900" ref={ref2}>
+        {/* Gallery Section - Improved Spacing */}
+        <section className="py-16 md:py-24 bg-gradient-to-br from-gray-900 via-black to-gray-900" ref={ref2}>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={inView2 ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-center mb-16 px-4"
+            className="text-center mb-12 md:mb-16 px-4"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Nuestro Taller
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <div className="inline-block">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+                Nuestro Taller
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-red-600 mx-auto rounded-full"></div>
+            </div>
+            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mt-6">
               Conoce nuestras instalaciones y el equipo de trabajo que hace posible brindarte el mejor servicio.
             </p>
           </motion.div>
