@@ -142,4 +142,35 @@
       margin-bottom: 1.5rem;
     }
   }
+
+  /* Hero carousel responsive improvements */
+  @media (max-height: 600px) {
+    .hero-content {
+      padding: 1rem 0;
+    }
+    
+    .hero-title {
+      font-size: 2rem !important;
+      line-height: 1.2 !important;
+    }
+    
+    .hero-description {
+      font-size: 0.875rem !important;
+      margin: 0.5rem 0 !important;
+    }
+  }
+  
+  @media (max-height: 500px) {
+    .hero-content {
+      padding: 0.5rem 0;
+    }
+    
+    .hero-title {
+      font-size: 1.75rem !important;
+    }
+    
+    .hero-description {
+      font-size: 0.8rem !important;
+    }
+  }
 }

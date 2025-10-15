@@ -100,7 +100,11 @@ export function HeroCarousel() {
   return (
     <section
       className="relative overflow-hidden flex items-center w-full"
-      style={{ minHeight: '100dvh', height: '100dvh' }}
+      style={{ 
+        minHeight: '100vh',
+        height: '100vh',
+        maxHeight: '100vh'
+      }}
     >
       {/* Fallback background while first image loads */}
       <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-gray-900 to-black" />
@@ -141,8 +145,8 @@ export function HeroCarousel() {
       </div>
 
        {/* Content */}
-      <div className="relative container mx-auto px-4 w-full">
-        <div className="text-center space-y-3 sm:space-y-4 md:space-y-8">
+      <div className="relative container mx-auto px-4 w-full h-full flex items-center justify-center">
+        <div className="hero-content text-center space-y-3 sm:space-y-4 md:space-y-6 max-w-5xl">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentSlide}
@@ -151,7 +155,7 @@ export function HeroCarousel() {
               exit={{ opacity: 0, y: -30, scale: 0.95 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight">
+              <h1 className="hero-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
                  {slides[currentSlide].title}
                  <span className={`block bg-gradient-to-r ${slides[currentSlide].gradient} bg-clip-text text-transparent`}>
                    {slides[currentSlide].subtitle}
@@ -168,7 +172,7 @@ export function HeroCarousel() {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             >
-              <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              <p className="hero-description text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
                  {slides[currentSlide].description}
                </p>
             </motion.div>
@@ -195,7 +199,7 @@ export function HeroCarousel() {
                  animate={{ opacity: 1, y: 0 }}
                  exit={{ opacity: 0, y: -20 }}
                  transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-                 className="pt-8"
+                 className="pt-4 md:pt-6"
                >
                  {currentSlide === 2 ? (
                    <a href="#products">
@@ -223,15 +227,15 @@ export function HeroCarousel() {
       </div>
 
       {/* Dots Indicator */}
-      <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <div className="absolute bottom-6 md:bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-3 z-10">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+            className={`w-4 h-4 rounded-full transition-all duration-300 shadow-lg ${
               index === currentSlide 
-                ? 'bg-white scale-125' 
-                : 'bg-white/50 hover:bg-white/70'
+                ? 'bg-white scale-125 shadow-white/50' 
+                : 'bg-white/60 hover:bg-white/80 hover:scale-110'
             }`}
             aria-label={`Ir al slide ${index + 1}`}
           />
