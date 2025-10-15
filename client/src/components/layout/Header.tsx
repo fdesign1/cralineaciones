@@ -17,7 +17,7 @@ export function Header() {
     <header 
       className={`sticky top-0 w-full ${
         isHomePage 
-          ? 'z-40 transparent-navbar' 
+          ? 'z-20 transparent-navbar' 
           : 'border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 z-50'
       }`}
     >

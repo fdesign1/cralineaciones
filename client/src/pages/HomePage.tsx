@@ -49,7 +49,7 @@ export function HomePage() {
       
       <div className="relative min-h-screen bg-black overflow-x-hidden">
         {/* Content below carousel */}
-        <div className="relative z-10 mt-[100vh]">
+        <div className="relative z-10 mt-[100vh] bg-black">
 
         {/* Services Section */}
         <section className="py-20 bg-gradient-to-r from-black-700 to-black-900" ref={ref1}>
