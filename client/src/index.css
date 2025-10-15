@@ -144,6 +144,20 @@
   }
 
   /* Hero carousel responsive improvements */
+  .hero-carousel-section {
+    height: 100vh !important;
+    max-height: 100vh !important;
+    overflow: hidden !important;
+  }
+  
+  .hero-background-image {
+    height: 100vh !important;
+    max-height: 100vh !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+  }
+  
   @media (max-height: 600px) {
     .hero-content {
       padding: 0.5rem 0;

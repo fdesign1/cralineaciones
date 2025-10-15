@@ -99,7 +99,7 @@ export function HeroCarousel() {
 
   return (
     <section
-      className="relative overflow-hidden w-full"
+      className="hero-carousel-section relative overflow-hidden w-full"
       style={{ 
         height: '100vh',
         maxHeight: '100vh'
@@ -112,13 +112,16 @@ export function HeroCarousel() {
         {slides.map((slide, index) => (
           <motion.div
             key={slide.id}
-            className="absolute inset-0 w-full h-full"
+            className="hero-background-image absolute inset-0 w-full h-full"
             style={{
               backgroundImage: `url(${slide.backgroundImage})`,
               backgroundSize: 'cover',
-              backgroundPosition: 'center center',
+              backgroundPosition: 'center top',
               backgroundRepeat: 'no-repeat',
               filter: 'blur(0.5px)',
+              height: '100vh',
+              maxHeight: '100vh',
+              overflow: 'hidden'
             }}
             initial={{ opacity: 0 }}
             animate={{ 
