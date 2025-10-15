@@ -144,7 +144,23 @@
   }
 
   /* Hero carousel responsive improvements */
-  @media (max-height: 800px) {
+  @media (max-height: 600px) {
+    .hero-content {
+      padding: 0.5rem 0;
+    }
+    
+    .hero-title {
+      font-size: 2rem !important;
+      line-height: 1.2 !important;
+    }
+    
+    .hero-description {
+      font-size: 0.875rem !important;
+      margin: 0.5rem 0 !important;
+    }
+  }
+  
+  @media (max-height: 500px) {
     .hero-content {
       padding: 0.25rem 0;
     }
@@ -156,55 +172,7 @@
     
     .hero-description {
       font-size: 0.75rem !important;
-      margin: 0.125rem 0 !important;
-    }
-  }
-  
-  @media (max-height: 700px) {
-    .hero-content {
-      padding: 0.125rem 0;
-    }
-    
-    .hero-title {
-      font-size: 1.25rem !important;
-      line-height: 1.1 !important;
-    }
-    
-    .hero-description {
-      font-size: 0.7rem !important;
-      margin: 0.1rem 0 !important;
-    }
-  }
-  
-  @media (max-height: 600px) {
-    .hero-content {
-      padding: 0 !important;
-    }
-    
-    .hero-title {
-      font-size: 1rem !important;
-      line-height: 1 !important;
-    }
-    
-    .hero-description {
-      font-size: 0.65rem !important;
-      margin: 0 !important;
-    }
-  }
-  
-  @media (max-height: 500px) {
-    .hero-content {
-      padding: 0 !important;
-    }
-    
-    .hero-title {
-      font-size: 0.875rem !important;
-      line-height: 1 !important;
-    }
-    
-    .hero-description {
-      font-size: 0.6rem !important;
-      margin: 0 !important;
+      margin: 0.25rem 0 !important;
     }
   }
   
@@ -214,12 +182,12 @@
     }
     
     .hero-title {
-      font-size: 0.75rem !important;
+      font-size: 1.25rem !important;
       line-height: 1 !important;
     }
     
     .hero-description {
-      font-size: 0.55rem !important;
+      font-size: 0.65rem !important;
       margin: 0 !important;
     }
   }

@@ -102,10 +102,7 @@ export function HeroCarousel() {
       className="relative overflow-hidden w-full"
       style={{ 
         height: '100vh',
-        maxHeight: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center'
+        maxHeight: '100vh'
       }}
     >
       {/* Fallback background while first image loads */}
@@ -147,8 +144,8 @@ export function HeroCarousel() {
       </div>
 
        {/* Content */}
-      <div className="relative w-full max-w-6xl mx-auto px-4">
-        <div className="hero-content text-center space-y-1 sm:space-y-2 md:space-y-3">
+      <div className="relative w-full h-full flex items-center justify-center px-4">
+        <div className="hero-content text-center space-y-4 sm:space-y-6 md:space-y-8 max-w-5xl">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentSlide}
@@ -157,7 +154,7 @@ export function HeroCarousel() {
               exit={{ opacity: 0, y: -30, scale: 0.95 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <h1 className="hero-title text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight">
+              <h1 className="hero-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
                  {slides[currentSlide].title}
                  <span className={`block bg-gradient-to-r ${slides[currentSlide].gradient} bg-clip-text text-transparent`}>
                    {slides[currentSlide].subtitle}
@@ -174,7 +171,7 @@ export function HeroCarousel() {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             >
-              <p className="hero-description text-xs sm:text-sm md:text-base lg:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
+              <p className="hero-description text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
                  {slides[currentSlide].description}
                </p>
             </motion.div>
@@ -186,7 +183,7 @@ export function HeroCarousel() {
                initial={{ opacity: 0, y: 20, scale: 0.9 }}
                animate={{ opacity: 1, y: 0, scale: 1 }}
                transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
-               className="pt-1 md:pt-2 flex justify-center"
+               className="pt-4 md:pt-6 flex justify-center"
              >
                <WeatherWidget />
              </motion.div>
@@ -201,7 +198,7 @@ export function HeroCarousel() {
                  animate={{ opacity: 1, y: 0 }}
                  exit={{ opacity: 0, y: -20 }}
                  transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-                 className="pt-1 md:pt-2"
+                 className="pt-6 md:pt-8"
                >
                  {currentSlide === 2 ? (
                    <a href="#products">
@@ -229,7 +226,7 @@ export function HeroCarousel() {
       </div>
 
       {/* Dots Indicator */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+      <div className="absolute bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-10">
         {slides.map((_, index) => (
           <button
             key={index}
