@@ -52,7 +52,7 @@ export function HomePage() {
         <div className="relative z-10 mt-[100vh] bg-black">
 
         {/* Services Section */}
-        <section className="py-20 bg-gradient-to-r from-black-700 to-black-900" ref={ref1}>
+        <section className="pt-20 pb-0 bg-gradient-to-r from-black-700 to-black-900" ref={ref1}>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={inView1 ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
@@ -70,7 +70,7 @@ export function HomePage() {
         </section>
 
         {/* Gallery Section - Improved Spacing */}
-        <section className="py-16 md:py-24 bg-gradient-to-br from-gray-900 via-black to-gray-900" ref={ref2}>
+        <section className="pt-0 pb-16 md:pb-24 bg-gradient-to-br from-gray-900 via-black to-gray-900" ref={ref2}>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={inView2 ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
