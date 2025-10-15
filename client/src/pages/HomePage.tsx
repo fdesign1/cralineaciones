@@ -44,10 +44,10 @@ export function HomePage() {
   return (
     <>
       <LocalBusinessSchema />
+      {/* Hero Carousel - Absolute positioned */}
+      <HeroCarousel />
+      
       <div className="relative min-h-screen bg-black overflow-x-hidden">
-        {/* Hero Carousel - Absolute positioned */}
-        <HeroCarousel />
-        
         {/* Content below carousel */}
         <div className="relative z-10 mt-[100vh]">
 

@@ -14,11 +14,13 @@ export function Header() {
   const isHomePage = location.pathname === '/';
 
   return (
-    <header className={`sticky top-0 z-50 w-full ${
-      isHomePage 
-        ? 'bg-transparent border-transparent' 
-        : 'border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'
-    }`}>
+    <header 
+      className={`sticky top-0 w-full ${
+        isHomePage 
+          ? 'z-40 transparent-navbar' 
+          : 'border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 z-50'
+      }`}
+    >
       <div className={`container flex h-14 items-center ${
         isHomePage ? 'text-white' : ''
       }`}>

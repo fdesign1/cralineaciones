@@ -148,6 +148,11 @@
     height: 100vh !important;
     max-height: 100vh !important;
     overflow: hidden !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 10 !important;
   }
   
   .hero-background-image {
@@ -156,6 +161,13 @@
     width: 100% !important;
     object-fit: cover !important;
     object-position: center top !important;
+  }
+  
+  /* Transparent navbar on homepage */
+  .transparent-navbar {
+    background-color: transparent !important;
+    border-color: transparent !important;
+    backdrop-filter: none !important;
   }
   
   @media (max-height: 600px) {

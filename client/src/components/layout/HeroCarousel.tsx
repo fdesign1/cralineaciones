@@ -103,7 +103,7 @@ export function HeroCarousel() {
       style={{ 
         height: '100vh',
         maxHeight: '100vh',
-        zIndex: 1
+        zIndex: 10
       }}
     >
       {/* Fallback background while first image loads */}
