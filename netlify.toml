@@ -2,6 +2,9 @@
   publish = "client/dist"
   command = "cd client && npm install && npx vite build && cd ../netlify/functions && npm install"
 
+[build.environment]
+  NODE_VERSION = "18"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
