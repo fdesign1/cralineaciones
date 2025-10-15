@@ -53,6 +53,19 @@ const slides: Slide[] = [
 export function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect mobile screen
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Auto-play functionality
   useEffect(() => {
@@ -101,8 +114,8 @@ export function HeroCarousel() {
     <section
       className="hero-carousel-section absolute top-0 left-0 w-full overflow-hidden"
       style={{ 
-        height: '100vh',
-        maxHeight: '100vh',
+        height: isMobile ? '100svh' : '100vh',
+        maxHeight: isMobile ? '100svh' : '100vh',
         zIndex: 1
       }}
     >
@@ -120,8 +133,8 @@ export function HeroCarousel() {
               backgroundPosition: 'center top',
               backgroundRepeat: 'no-repeat',
               filter: 'blur(0.5px)',
-              height: '100vh',
-              maxHeight: '100vh',
+              height: isMobile ? '100svh' : '100vh',
+              maxHeight: isMobile ? '100svh' : '100vh',
               overflow: 'hidden'
             }}
             initial={{ opacity: 0 }}
