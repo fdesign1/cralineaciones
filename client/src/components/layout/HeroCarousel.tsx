@@ -101,7 +101,6 @@ export function HeroCarousel() {
     <section
       className="relative overflow-hidden flex items-center w-full"
       style={{ 
-        minHeight: '100vh',
         height: '100vh',
         maxHeight: '100vh'
       }}
@@ -145,8 +144,8 @@ export function HeroCarousel() {
       </div>
 
        {/* Content */}
-      <div className="relative container mx-auto px-4 w-full h-full flex items-center justify-center">
-        <div className="hero-content text-center space-y-3 sm:space-y-4 md:space-y-6 max-w-5xl">
+      <div className="relative container mx-auto px-4 w-full h-full flex items-center justify-center py-8">
+        <div className="hero-content text-center space-y-2 sm:space-y-3 md:space-y-4 max-w-5xl">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentSlide}
@@ -155,7 +154,7 @@ export function HeroCarousel() {
               exit={{ opacity: 0, y: -30, scale: 0.95 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <h1 className="hero-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
+              <h1 className="hero-title text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
                  {slides[currentSlide].title}
                  <span className={`block bg-gradient-to-r ${slides[currentSlide].gradient} bg-clip-text text-transparent`}>
                    {slides[currentSlide].subtitle}
@@ -172,7 +171,7 @@ export function HeroCarousel() {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             >
-              <p className="hero-description text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              <p className="hero-description text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
                  {slides[currentSlide].description}
                </p>
             </motion.div>
@@ -184,7 +183,7 @@ export function HeroCarousel() {
                initial={{ opacity: 0, y: 20, scale: 0.9 }}
                animate={{ opacity: 1, y: 0, scale: 1 }}
                transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
-               className="pt-4 md:pt-8 flex justify-center"
+               className="pt-2 md:pt-4 flex justify-center"
              >
                <WeatherWidget />
              </motion.div>
@@ -199,7 +198,7 @@ export function HeroCarousel() {
                  animate={{ opacity: 1, y: 0 }}
                  exit={{ opacity: 0, y: -20 }}
                  transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-                 className="pt-4 md:pt-6"
+                 className="pt-2 md:pt-4"
                >
                  {currentSlide === 2 ? (
                    <a href="#products">
