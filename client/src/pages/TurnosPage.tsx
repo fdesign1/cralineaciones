@@ -137,7 +137,7 @@ export function TurnosPage() {
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-4 sm:p-8 border border-white/10 shadow-2xl" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
               <div className="text-center mb-6 sm:mb-8">
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">Reserva tu turno</h3>
-                <p className="text-sm sm:text-base text-gray-300">Selecciona la fecha y hora que mejor te convenga</p>
+                <p className="text-sm sm:text-base text-gray-300">Selecciona la fecha y hora que más te guste</p>
               </div>
               
               {/* Calendly Widget */}
