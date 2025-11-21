@@ -143,7 +143,7 @@ export function TurnosPage() {
               {/* Calendly Widget */}
               <div className="w-full flex justify-center">
                 <div className="calendly-inline-widget rounded-2xl overflow-hidden shadow-lg w-full max-w-full" 
-                     data-url="https://calendly.com/cralineaciones/reservar-turno-taller?background_color=000000&text_color=ffffff&primary_color=b02121" 
+                     data-url="https://calendly.com/owifitam/30min?hide_event_type_details=1&hide_gdpr_banner=1" 
                      style={{
                        minWidth: '280px', 
                        maxWidth: '100%',
