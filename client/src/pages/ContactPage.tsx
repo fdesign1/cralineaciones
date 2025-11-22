@@ -126,7 +126,6 @@ export function ContactPage() {
               </span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
-              ¿Alguna consulta? ¿Necesitás agendar un turno? 
               Estamos listos para ayudarte con el cuidado de tu vehículo.
             </p>
           </div>
@@ -149,7 +148,7 @@ export function ContactPage() {
                 En CR Alineaciones Lubricentro, nos dedicamos al cuidado integral de tu vehículo. Con años de experiencia y un equipo de profesionales apasionados, ofrecemos servicios de alta calidad para garantizar tu seguridad y el óptimo rendimiento de tu auto.
               </p>
               <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-6 md:mb-8 leading-relaxed">
-                Utilizamos tecnología de punta, como nuestra alineadora 3D, y trabajamos con las mejores marcas del mercado para asegurarte un servicio confiable y duradero. Tu tranquilidad es nuestra prioridad.
+                Utilizamos tecnología de punta, como nuestra alineadora 3D, y trabajamos con las mejores marcas del mercado para asegurarte un servicio confiable y duradero. Tu tranquilidad y la seguridad de tu auto es nuestra prioridad.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
                 <Link
