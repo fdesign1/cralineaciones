@@ -144,7 +144,7 @@ export function TurnosPage() {
                 <div className="calendly-inline-widget rounded-2xl overflow-hidden shadow-lg w-full max-w-full" 
                      data-url="https://calendly.com/owifitam/30min?hide_event_type_details=1&hide_gdpr_banner=1" 
                      style={{
-                       minWidth: '280px', 
+                       minWidth: '380px', 
                        maxWidth: '100%',
                        width: '100%',
                        height: '700px',
