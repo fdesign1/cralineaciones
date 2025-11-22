@@ -176,7 +176,6 @@ export function TurnosPage() {
                   <Clock className="w-8 h-8 text-red-400" />
                 </div>
                 <h3 className="text-xl font-bold text-white">Horarios flexibles</h3>
-                <p className="text-gray-300">Disponibilidad de lunes a sábado con horarios que se adaptan a tu rutina</p>
               </div>
 
               <div className="text-center space-y-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
@@ -184,7 +183,6 @@ export function TurnosPage() {
                   <CheckCircle className="w-8 h-8 text-blue-400" />
                 </div>
                 <h3 className="text-xl font-bold text-white">Confirmación inmediata</h3>
-                <p className="text-gray-300">Recibirás confirmación instantánea de tu turno y email</p>
               </div>
 
               <div className="text-center space-y-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
@@ -192,7 +190,6 @@ export function TurnosPage() {
                   <Star className="w-8 h-8 text-green-400" />
                 </div>
                 <h3 className="text-xl font-bold text-white">Servicio premium</h3>
-                <p className="text-gray-300">Atención personalizada</p>
               </div>
             </div>
           </div>
